@@ -31,7 +31,7 @@ public class Movement : MonoBehaviour
         }
 
         moveDirection = move.action.ReadValue<Vector2>();
-        velocity = (transform.forward * moveDirection.y * speed * Time.deltaTime + transform.right * moveDirection.x * speed * Time.deltaTime + transform.up * rb.linearVelocity.y);
+        velocity = (transform.forward * moveDirection.y * speed + transform.right * moveDirection.x * speed + transform.up * rb.linearVelocity.y);
         rb.linearVelocity = velocity;
 
         //Movement with player controller, denied.
