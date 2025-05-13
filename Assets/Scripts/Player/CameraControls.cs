@@ -9,6 +9,8 @@ public class CameraControls : MonoBehaviour
 
     public Transform playerBody;
 
+    public bool activeControls = true;
+
     float xRotation = 0f;
 
 
@@ -19,6 +21,19 @@ public class CameraControls : MonoBehaviour
 
 
     void Update()
+    {
+        if (activeControls)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            CameraInput();
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
+
+    public void CameraInput()
     {
         float horizontal = look.action.ReadValue<Vector2>().x * mouseSensitivity * Time.deltaTime;
         float vertical = look.action.ReadValue<Vector2>().y * mouseSensitivity * Time.deltaTime;

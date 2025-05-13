@@ -10,12 +10,10 @@ public class QuestManager : MonoBehaviour
     public List<Quest> Quests { get; } = new();
     private readonly Dictionary<string, List<Quest>> _questMap = new();
 
-    public int currentValue;
-    public string trigger;
+    public GameObject NPC;
 
     public void AddQuest(Quest quest)
     {
-
         Quests.Add(quest);
         if (!string.IsNullOrEmpty(quest.EventTrigger))
         {
@@ -39,13 +37,21 @@ public class QuestManager : MonoBehaviour
         {
             quest.AddProgress(value);
         }
-
-        trigger = eventTrigger;
-        currentValue += value;
     }
 
-    public void Complete()
+    public void Init(Quest quest)
     {
+        quest.OnValueChange += OnQuestValueChange;
+        quest.OnComplete += OnQuestComplete;
+    }
 
+    private void OnQuestComplete()
+    {
+        NPC.GetComponent<QuestTrigger>().QuestComplete();
+    }    
+    
+    private void OnQuestValueChange()
+    {
+        Debug.Log("+1");
     }
 }

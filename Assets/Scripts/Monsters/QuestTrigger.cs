@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class QuestTrigger : MonoBehaviour
 {
     public InputActionReference interaction;
+    public InputActionReference cameraMove;
 
     public LayerMask playerMask;
 
@@ -13,6 +14,8 @@ public class QuestTrigger : MonoBehaviour
     public GameObject acceptButton;
     public GameObject player;
 
+    private Camera mainCamera;
+
     public float checkRadius = 1.0f;
 
     public int currentValue;
@@ -20,7 +23,7 @@ public class QuestTrigger : MonoBehaviour
     private bool isCompleted = false;
 
     [Header("Quest details")]
-    public string questName;
+    public string questName = "Sphere quest";
     public string questDescription;
     public int itemAmount;
 
@@ -28,12 +31,14 @@ public class QuestTrigger : MonoBehaviour
 
     void Start()
     {
+        mainCamera = Camera.main;
         player = GameObject.Find("Player");
         characterUI.SetActive(false);
         completeButton.SetActive(false);
+
+        player.GetComponent<QuestManager>().NPC = gameObject;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (interaction.action.triggered)
@@ -42,8 +47,20 @@ public class QuestTrigger : MonoBehaviour
         }
         if (!Physics.CheckSphere(transform.position, checkRadius, playerMask))
         {
-            Cursor.lockState = CursorLockMode.Locked;
             characterUI.SetActive(false);
+        }
+
+        if (cameraMove.action.inProgress && characterUI.activeInHierarchy)
+        {
+            mainCamera.GetComponent<CameraControls>().activeControls = true;
+        }
+        else if(!cameraMove.action.inProgress && characterUI.activeInHierarchy)
+        {
+            mainCamera.GetComponent<CameraControls>().activeControls = false;
+        }
+        else
+        {
+            mainCamera.GetComponent<CameraControls>().activeControls = true;
         }
     }
 
@@ -51,7 +68,6 @@ public class QuestTrigger : MonoBehaviour
     {
         if (Physics.CheckSphere(transform.position, checkRadius, playerMask))
         {
-            Cursor.lockState = CursorLockMode.None;
             characterUI.SetActive(true);
         }
 
@@ -65,17 +81,14 @@ public class QuestTrigger : MonoBehaviour
     {
         Quest questPreset = new Quest(questName, questDescription, itemAmount);
         player.GetComponent<QuestManager>().AddQuest(questPreset);
+        player.GetComponent<QuestManager>().Init(questPreset);
+
         acceptButton.SetActive(false);
     }
 
     public void QuestComplete()
     {
         isCompleted = true;
-        Finish();
-    }
-
-    public void Finish()
-    {
         Debug.Log("Quest complete!");
     }
 }

@@ -30,7 +30,6 @@ public class ItemPickUp : MonoBehaviour
     public void PickUp()
     {
         player.GetComponent<QuestManager>().AddProgress(npc.GetComponent<QuestTrigger>().questName, 1);
-        Debug.Log("Got the sphere.");
         Destroy(gameObject);
     }
 

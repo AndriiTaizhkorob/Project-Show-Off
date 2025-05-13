@@ -8,10 +8,10 @@ public class Quest
 
     public GameObject npc;
 
-    public string EventTrigger;
+    public string EventTrigger { get; }
     public bool IsComplete { get; private set; }
     public int MaxValue { get; }
-    public int CurrentValue;
+    public int CurrentValue { get; private set; }
 
     private readonly string _statusText;
 
