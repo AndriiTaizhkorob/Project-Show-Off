@@ -1,16 +1,26 @@
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class QuestManager : MonoBehaviour
 {
     public Action<Quest> OnQuestAdded;
 
+    private TextMeshProUGUI _questText;
+
+    private Quest _quest;
+
     public List<Quest> Quests { get; } = new();
     private readonly Dictionary<string, List<Quest>> _questMap = new();
 
     public GameObject NPC;
+
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 
     public void AddQuest(Quest quest)
     {
@@ -39,10 +49,21 @@ public class QuestManager : MonoBehaviour
         }
     }
 
+    public bool HasActiveQuest(string questName)
+    {
+        foreach (var q in Quests)
+        {
+            if (q.EventTrigger == questName && !q.IsComplete)
+                return true;
+        }
+        return false;
+    }
+
     public void Init(Quest quest)
     {
-        quest.OnValueChange += OnQuestValueChange;
-        quest.OnComplete += OnQuestComplete;
+        _quest = quest;
+        _quest.OnValueChange += OnQuestValueChange;
+        _quest.OnComplete += OnQuestComplete;
     }
 
     private void OnQuestComplete()

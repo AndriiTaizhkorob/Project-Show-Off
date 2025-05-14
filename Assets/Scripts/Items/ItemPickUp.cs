@@ -6,22 +6,23 @@ public class ItemPickUp : MonoBehaviour
     public InputActionReference interaction;
 
     public float checkRadius = 1.0f;
+    public int pickUpValue = 1;
 
     private bool isActive = false;
 
     public LayerMask playerMask;
 
-    public GameObject player;
+    public GameObject questManager;
     public GameObject npc;
 
     void Start()
     {
-        player = GameObject.Find("Player");
+        questManager = GameObject.Find("QuestManager");
     }
 
     void Update()
     {
-        if (interaction.action.triggered && Physics.CheckSphere(transform.position, checkRadius, playerMask))
+        if (interaction.action.triggered && Physics.CheckSphere(transform.position, checkRadius, playerMask) && isActive)
         {
             PickUp();
         }
@@ -29,7 +30,9 @@ public class ItemPickUp : MonoBehaviour
 
     public void PickUp()
     {
-        player.GetComponent<QuestManager>().AddProgress(npc.GetComponent<QuestTrigger>().questName, 1);
+        npc.GetComponent<QuestTrigger>().currentValue += pickUpValue;
+        questManager.GetComponent<QuestManager>().AddProgress(npc.GetComponent<QuestTrigger>().questName, pickUpValue);
+        npc.GetComponent<QuestTrigger>().QuestUpdate();
         Destroy(gameObject);
     }
 

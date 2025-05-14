@@ -5,6 +5,7 @@ public class Quest
 {
     public Action OnComplete;
     public Action OnValueChange;
+    public Action<string> OnDescriptionChanged;
 
     public GameObject npc;
 
@@ -14,6 +15,17 @@ public class Quest
     public int CurrentValue { get; private set; }
 
     private readonly string _statusText;
+    private string _description;
+    public string Description
+    {
+        get => _description;
+        set
+        {
+            if (_description == value) return;
+            _description = value;
+            OnDescriptionChanged?.Invoke(_description);
+        }
+    }
 
     public Quest(string eventTrigger, string statusText, int maxValue)
     {

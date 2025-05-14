@@ -1283,11 +1283,17 @@ MonoBehaviour:
   completeButton: {fileID: 1550403021}
   acceptButton: {fileID: 1979854204}
   player: {fileID: 0}
+  questManager: {fileID: 0}
   checkRadius: 3
   currentValue: 0
   questName: Sphere quest
-  questDescription: Find and bring me a sphere.
+  questDescription: 'Find spheres:'
   itemAmount: 2
+  pickUpItems:
+  - {fileID: 806039050}
+  - {fileID: 1599912311}
+  - {fileID: 1678559204}
+  questText: 
 --- !u!136 &762149879
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1488,10 +1494,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interaction: {fileID: 1120369429361536294, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   checkRadius: 2
+  pickUpValue: 1
   playerMask:
     serializedVersion: 2
     m_Bits: 8
-  player: {fileID: 0}
+  questManager: {fileID: 0}
   npc: {fileID: 762149877}
 --- !u!135 &806039052
 SphereCollider:
@@ -1888,7 +1895,31 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 762149878}
         m_TargetAssemblyTypeName: QuestTrigger, Assembly-CSharp
-        m_MethodName: QuestStart
+        m_MethodName: QuestComplete
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1169020979}
+        m_TargetAssemblyTypeName: QuestPanel, Assembly-CSharp
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 762149878}
+        m_TargetAssemblyTypeName: QuestTrigger, Assembly-CSharp
+        m_MethodName: QuestHandedIn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2038,6 +2069,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -391.29004}
   m_SizeDelta: {x: 1520, y: 68.85}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1169020978 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7824938724847874318, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
+  m_PrefabInstance: {fileID: 153152216915900295}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1169020979 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5524560352777693293, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
+  m_PrefabInstance: {fileID: 153152216915900295}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169020978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f70b7fbd371c54486b18c29f78a279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1183191603
 GameObject:
   m_ObjectHideFlags: 0
@@ -2521,10 +2568,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interaction: {fileID: 1120369429361536294, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   checkRadius: 2
+  pickUpValue: 1
   playerMask:
     serializedVersion: 2
     m_Bits: 8
-  player: {fileID: 0}
+  questManager: {fileID: 0}
   npc: {fileID: 762149877}
 --- !u!1 &1615004596
 GameObject:
@@ -2982,10 +3030,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interaction: {fileID: 1120369429361536294, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   checkRadius: 2
+  pickUpValue: 1
   playerMask:
     serializedVersion: 2
     m_Bits: 8
-  player: {fileID: 0}
+  questManager: {fileID: 0}
   npc: {fileID: 762149877}
 --- !u!135 &1678559206
 SphereCollider:
@@ -3392,10 +3441,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4831117264775292756, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
+    - target: {fileID: 5524560352777693293, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
+      propertyPath: _questDisplayParent
+      value: 
+      objectReference: {fileID: 26300020}
     - target: {fileID: 6429592448841891115, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3440,15 +3489,129 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 7824938724847874318, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
+--- !u!1001 &1747678629005389023
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4581365663552294410, guid: 6b6f7b98edfb1d945872a7e8b01c7dab, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1169020978}
+    - target: {fileID: 7353921515919932407, guid: 6b6f7b98edfb1d945872a7e8b01c7dab, type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101921026832994674, guid: 6b6f7b98edfb1d945872a7e8b01c7dab, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 960
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101921026832994674, guid: 6b6f7b98edfb1d945872a7e8b01c7dab, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 540
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101921026832994674, guid: 6b6f7b98edfb1d945872a7e8b01c7dab, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101921026832994674, guid: 6b6f7b98edfb1d945872a7e8b01c7dab, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101921026832994674, guid: 6b6f7b98edfb1d945872a7e8b01c7dab, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101921026832994674, guid: 6b6f7b98edfb1d945872a7e8b01c7dab, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101921026832994674, guid: 6b6f7b98edfb1d945872a7e8b01c7dab, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101921026832994674, guid: 6b6f7b98edfb1d945872a7e8b01c7dab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101921026832994674, guid: 6b6f7b98edfb1d945872a7e8b01c7dab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101921026832994674, guid: 6b6f7b98edfb1d945872a7e8b01c7dab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6b6f7b98edfb1d945872a7e8b01c7dab, type: 3}
+--- !u!1001 &4087489055665863239
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5689322804817925097, guid: 2be3ed2986a6f8249a45260739465841, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.37695
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689322804817925097, guid: 2be3ed2986a6f8249a45260739465841, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.74431
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689322804817925097, guid: 2be3ed2986a6f8249a45260739465841, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.19505
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689322804817925097, guid: 2be3ed2986a6f8249a45260739465841, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689322804817925097, guid: 2be3ed2986a6f8249a45260739465841, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689322804817925097, guid: 2be3ed2986a6f8249a45260739465841, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689322804817925097, guid: 2be3ed2986a6f8249a45260739465841, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689322804817925097, guid: 2be3ed2986a6f8249a45260739465841, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689322804817925097, guid: 2be3ed2986a6f8249a45260739465841, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689322804817925097, guid: 2be3ed2986a6f8249a45260739465841, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6914485460191800974, guid: 2be3ed2986a6f8249a45260739465841, type: 3}
+      propertyPath: m_Name
+      value: QuestManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2be3ed2986a6f8249a45260739465841, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3466,3 +3629,5 @@ SceneRoots:
   - {fileID: 806039055}
   - {fileID: 1599912315}
   - {fileID: 1678559209}
+  - {fileID: 1747678629005389023}
+  - {fileID: 4087489055665863239}

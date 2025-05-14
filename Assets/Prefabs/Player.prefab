@@ -184,6 +184,7 @@ MonoBehaviour:
   look: {fileID: -5630151704836100654, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   mouseSensitivity: 5
   playerBody: {fileID: 6429592448841891115}
+  activeControls: 1
 --- !u!1 &4831117264775292756
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,7 +199,7 @@ GameObject:
   - component: {fileID: 1563459330023130979}
   m_Layer: 3
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -304,12 +305,12 @@ GameObject:
   m_Component:
   - component: {fileID: 6429592448841891115}
   - component: {fileID: 1848232455715120795}
-  - component: {fileID: 4903003101782389399}
   - component: {fileID: 3351738902849938483}
   - component: {fileID: 1124176813416652725}
+  - component: {fileID: 5524560352777693293}
   m_Layer: 3
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -348,20 +349,6 @@ MonoBehaviour:
   rb: {fileID: 0}
   speed: 5
   jumpForce: 5
---- !u!114 &4903003101782389399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7824938724847874318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f6f776530adacb4b89e2643e6d56105, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentValue: 0
-  trigger: 
 --- !u!114 &3351738902849938483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,3 +406,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &5524560352777693293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7824938724847874318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f70b7fbd371c54486b18c29f78a279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _questDisplayPrefab: {fileID: 1035820273147581202, guid: 736e9f4fdf4508045a4dee6aba86ed60, type: 3}
+  _questDisplayParent: {fileID: 0}
