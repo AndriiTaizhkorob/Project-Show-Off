@@ -10,38 +10,38 @@ public class QuestTrigger : MonoBehaviour
     public LayerMask playerMask;
 
     public GameObject characterUI;
-    public GameObject completeButton;
-    public GameObject acceptButton;
+    public GameObject completeObj;
+    public GameObject acceptObj;
     public GameObject player;
     public GameObject questManager;
-
-    private Camera mainCamera;
+    public Button completeButton;
+    public Button acceptButton;
 
     public float checkRadius = 1.0f;
 
     public int currentValue = 1;
 
-    private bool isCompleted = false;
+    public bool isCompleted = false;
+    public bool isAccepted = false;
 
     [Header("Quest details")]
     public string questName = "Sphere quest";
     public string questDescription;
     public int itemAmount;
-    public GameObject[] pickUpItems;
+    public GameObject[] Objects;
 
     public string questText;
 
     public Quest questPreset;
 
+    public bool questAssigned = false;
+
     void Start()
     {
-        mainCamera = Camera.main;
         player = GameObject.Find("Player");
         questManager = GameObject.Find("QuestManager");
         characterUI.SetActive(false);
-        completeButton.SetActive(false);
-
-        questManager.GetComponent<QuestManager>().NPC = gameObject;
+        completeObj.SetActive(false);
     }
 
     void Update()
@@ -52,48 +52,65 @@ public class QuestTrigger : MonoBehaviour
         }
         if (!Physics.CheckSphere(transform.position, checkRadius, playerMask))
         {
-            characterUI.SetActive(false);
-        }
-
-        if(!cameraMove.action.inProgress && characterUI.activeInHierarchy)
-        {
-            mainCamera.GetComponent<CameraControls>().activeControls = false;
-        }
-        else
-        {
-            mainCamera.GetComponent<CameraControls>().activeControls = true;
+            acceptButton.onClick.RemoveListener(QuestStart);
+            completeButton.onClick.RemoveListener(QuestHandedIn);
+            questAssigned = false;
         }
     }
 
     public void NPCInteraction()
     {
+        if (!questAssigned)
+        {
+            acceptButton.onClick.AddListener(QuestStart);
+            completeButton.onClick.AddListener(QuestHandedIn);
+            questAssigned = true;
+        }
+
         if (Physics.CheckSphere(transform.position, checkRadius, playerMask))
         {
             characterUI.SetActive(true);
-        }
 
-        if (isCompleted)
-        {
-            completeButton.SetActive(true);
+            if (isAccepted)
+            {
+                acceptObj.SetActive(false);
+            }
+            else
+            {
+                acceptObj.SetActive(true);
+            }
+
+            if (isCompleted)
+            {
+                completeObj.SetActive(true);
+            }
+            else
+            {
+                completeObj.SetActive(false);
+            }
         }
     }
 
     public void QuestStart()
     {
+        questManager.GetComponent<QuestManager>().NPC = gameObject;
+
         questPreset = new Quest(questName, questDescription, itemAmount);
         questManager.GetComponent<QuestManager>().AddQuest(questPreset);
         questManager.GetComponent<QuestManager>().Init(questPreset);
 
-        if(pickUpItems.Length > 0)
+        if (Objects.Length > 0)
         {
-            for (int i = 0; i < pickUpItems.Length; i++)
+            for(int i  = 0; i < Objects.Length; i++)
             {
-                pickUpItems[i].GetComponent<ItemPickUp>().QuestActive();
+                Objects[i].GetComponent<ProgressManager>().enabled = true;
+                Objects[i].GetComponent<ProgressManager>().npc = gameObject;
             }
         }
+
         questText = currentValue + "/" + itemAmount;
         questPreset.Description = questText;
-        acceptButton.SetActive(false);
+        isAccepted = true;
     }
 
     public void QuestUpdate()

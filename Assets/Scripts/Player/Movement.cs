@@ -25,7 +25,7 @@ public class Movement : MonoBehaviour
     
     void Update()
     {
-        if(jump.action.triggered && Physics.Raycast(transform.position, Vector3.down, 1 + 0.01f))
+        if(jump.action.triggered && Physics.Raycast(transform.position, Vector3.down, 1 + 0.1f))
         {
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.y);
         }

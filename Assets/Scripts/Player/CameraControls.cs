@@ -1,13 +1,18 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.TextCore.Text;
+using static UnityEditor.SceneView;
 
 public class CameraControls : MonoBehaviour
 {
     public InputActionReference look;
+    public InputActionReference aim;
 
     public float mouseSensitivity = 100.0f;
 
     public Transform playerBody;
+    public GameObject characterUI;
 
     public bool activeControls = true;
 
@@ -22,6 +27,15 @@ public class CameraControls : MonoBehaviour
 
     void Update()
     {
+        if (!aim.action.inProgress && characterUI.activeInHierarchy)
+        {
+            activeControls = false;
+        }
+        else
+        {
+            activeControls = true;
+        }
+
         if (activeControls)
         {
             Cursor.lockState = CursorLockMode.Locked;

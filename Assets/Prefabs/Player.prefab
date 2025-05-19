@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1045762858738171366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8753443363898854548}
+  m_Layer: 3
+  m_Name: fruitSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8753443363898854548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045762858738171366}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.3, z: 0.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6429592448841891115}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4358163970720251722
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,6 +336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6429592448841891115}
   - component: {fileID: 1848232455715120795}
+  - component: {fileID: 5964213700589380022}
   - component: {fileID: 3351738902849938483}
   - component: {fileID: 1124176813416652725}
   - component: {fileID: 5524560352777693293}
@@ -330,6 +362,7 @@ Transform:
   m_Children:
   - {fileID: 3742516427968423072}
   - {fileID: 1989143716301276073}
+  - {fileID: 8753443363898854548}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1848232455715120795
@@ -349,6 +382,24 @@ MonoBehaviour:
   rb: {fileID: 0}
   speed: 5
   jumpForce: 5
+--- !u!114 &5964213700589380022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7824938724847874318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6516cbf332469e24182e036b91387c91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shoot: {fileID: 1120369429361536294, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  fruitPrefab: {fileID: 6377545831533735798, guid: 768964a93f7dd61428ad9c997eb6c0e3, type: 3}
+  fruitSpawn: {fileID: 1045762858738171366}
+  fruitsLimit: 5
+  fruitPower: 3
+  fruits: []
 --- !u!114 &3351738902849938483
 MonoBehaviour:
   m_ObjectHideFlags: 0
