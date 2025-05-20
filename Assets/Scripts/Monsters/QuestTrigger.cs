@@ -81,8 +81,6 @@ public class QuestTrigger : MonoBehaviour
             if (isAccepted)
             {
                 acceptObj.SetActive(false);
-                EventSystem.current.SetSelectedGameObject(null);
-                EventSystem.current.SetSelectedGameObject(closeObj);
             }
             else
             {
@@ -120,6 +118,8 @@ public class QuestTrigger : MonoBehaviour
 
         questText = currentValue + "/" + itemAmount;
         questPreset.Description = questText;
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(closeObj);
         isAccepted = true;
     }
 
@@ -147,6 +147,8 @@ public class QuestTrigger : MonoBehaviour
 
     public void QuestHandedIn()
     {
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(closeObj);
         isCompleted = false;
     }
 }
