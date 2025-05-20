@@ -106,7 +106,6 @@ public class QuestTrigger : MonoBehaviour
         questPreset = new Quest(questName, questDescription, itemAmount);
         questManager.GetComponent<QuestManager>().AddQuest(questPreset);
         questManager.GetComponent<QuestManager>().Init(questPreset);
-
         if (Objects.Length > 0)
         {
             for(int i  = 0; i < Objects.Length; i++)

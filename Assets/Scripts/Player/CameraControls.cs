@@ -53,7 +53,7 @@ public class CameraControls : MonoBehaviour
         float vertical = look.action.ReadValue<Vector2>().y * mouseSensitivity * Time.deltaTime;
 
         xRotation -= vertical;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        xRotation = Mathf.Clamp(xRotation, -25f, 45f);
 
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         playerBody.transform.Rotate(Vector3.up * horizontal);
