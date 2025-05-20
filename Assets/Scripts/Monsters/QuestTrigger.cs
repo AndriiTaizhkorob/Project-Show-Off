@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class QuestTrigger : MonoBehaviour
 {
@@ -11,11 +12,13 @@ public class QuestTrigger : MonoBehaviour
 
     public GameObject characterUI;
     public GameObject completeObj;
+    public GameObject closeObj;
     public GameObject acceptObj;
     public GameObject player;
     public GameObject questManager;
     public Button completeButton;
     public Button acceptButton;
+    public Button closeButton;
 
     public float checkRadius = 1.0f;
 
@@ -64,16 +67,22 @@ public class QuestTrigger : MonoBehaviour
         {
             acceptButton.onClick.AddListener(QuestStart);
             completeButton.onClick.AddListener(QuestHandedIn);
+            closeButton.onClick.AddListener(CloseQuest);
+
             questAssigned = true;
         }
 
-        if (Physics.CheckSphere(transform.position, checkRadius, playerMask))
+        if (Physics.CheckSphere(transform.position, checkRadius, playerMask) && !characterUI.activeInHierarchy)
         {
             characterUI.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(closeObj);
 
             if (isAccepted)
             {
                 acceptObj.SetActive(false);
+                EventSystem.current.SetSelectedGameObject(null);
+                EventSystem.current.SetSelectedGameObject(closeObj);
             }
             else
             {
@@ -87,6 +96,7 @@ public class QuestTrigger : MonoBehaviour
             else
             {
                 completeObj.SetActive(false);
+                EventSystem.current.SetSelectedGameObject(closeObj);
             }
         }
     }
@@ -111,6 +121,16 @@ public class QuestTrigger : MonoBehaviour
         questText = currentValue + "/" + itemAmount;
         questPreset.Description = questText;
         isAccepted = true;
+    }
+
+    public void CloseQuest()
+    {
+        acceptButton.onClick.RemoveListener(QuestStart);
+        completeButton.onClick.RemoveListener(QuestHandedIn);
+        questAssigned = false;
+        EventSystem.current.SetSelectedGameObject(null);
+        closeButton.onClick.RemoveListener(CloseQuest);
+        characterUI.SetActive(false);
     }
 
     public void QuestUpdate()
