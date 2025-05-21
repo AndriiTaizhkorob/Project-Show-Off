@@ -5,12 +5,24 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Area 2.unity
     guid: 31c417df18d525842a7fd8fed2030c76
+  - enabled: 1
+    path: Assets/Scenes/Main Area.unity
+    guid: d4c2b4af872cead4793db8b3dfa1e465
+  - enabled: 1
+    path: Assets/Scenes/Forest.unity
+    guid: b3917674e3cd5b4408cba6201eed6240
+  - enabled: 1
+    path: Assets/Scenes/Rainbow Land.unity
+    guid: 5b0ad07e3e9bc554082ed4bb0c06f75e
+  - enabled: 1
+    path: Assets/Scenes/Iceland.unity
+    guid: 90201d94d2468044a90cba99333ce75c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
