@@ -24,12 +24,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045762858738171366}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.3, z: 0.7}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.3, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6429592448841891115}
+  m_Father: {fileID: 3742516427968423072}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4358163970720251722
 GameObject:
@@ -64,7 +64,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8753443363898854548}
   m_Father: {fileID: 6429592448841891115}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &2988737958768643804
@@ -213,8 +214,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   look: {fileID: -5630151704836100654, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  aim: {fileID: 0}
   mouseSensitivity: 5
   playerBody: {fileID: 6429592448841891115}
+  characterUI: {fileID: 0}
   activeControls: 1
 --- !u!1 &4831117264775292756
 GameObject:
@@ -362,7 +365,6 @@ Transform:
   m_Children:
   - {fileID: 3742516427968423072}
   - {fileID: 1989143716301276073}
-  - {fileID: 8753443363898854548}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1848232455715120795
@@ -380,6 +382,7 @@ MonoBehaviour:
   move: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   jump: {fileID: -2099379676528639254, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   rb: {fileID: 0}
+  characterUI: {fileID: 0}
   speed: 5
   jumpForce: 5
 --- !u!114 &5964213700589380022
