@@ -6,28 +6,29 @@ using System.Collections;
 
 public class QuestTrigger : MonoBehaviour
 {
+    [Header("Player Input")]
     public InputActionReference interaction;
     public InputActionReference cameraMove;
-
     public LayerMask playerMask;
 
+    [Header("UI elements")]
     public GameObject characterUI;
     public GameObject completeObj;
-    public GameObject closeObj;
     public GameObject acceptObj;
-    public GameObject player;
-    public GameObject questManager;
-    public Button completeButton;
-    public Button acceptButton;
-    public Button closeButton;
+    public GameObject closeObj;
 
+    private GameObject questManager;
+
+    private Button completeButton;
+    private Button acceptButton;
+    private Button closeButton;
+
+    [Header("Interection Radius")]
     public float checkRadius = 1.0f;
-
-    public int currentValue = 0;
 
     private bool isCompleted = false;
     private bool isAccepted = false;
-    public bool delayed = true;
+    private bool delayed = true;
 
     [Header("Quest details")]
     public string questName = "Sphere quest";
@@ -35,16 +36,26 @@ public class QuestTrigger : MonoBehaviour
     public int itemAmount;
     public GameObject[] Objects;
 
+    [HideInInspector]
+    public GameObject player;
+    [HideInInspector]
     public string questText;
-
+    [HideInInspector]
     public Quest questPreset;
-
+    [HideInInspector]
+    public int currentValue = 0;
+    [HideInInspector]
     public bool questAssigned = false;
 
     void Start()
     {
         player = GameObject.Find("Player");
         questManager = GameObject.Find("QuestManager");
+
+        completeButton = completeObj.GetComponent<Button>();
+        acceptButton = acceptObj.GetComponent<Button>();
+        closeButton = closeObj.GetComponent<Button>();
+
         characterUI.SetActive(false);
         completeObj.SetActive(false);
     }
@@ -110,6 +121,7 @@ public class QuestTrigger : MonoBehaviour
         questPreset = new Quest(questName, questDescription, itemAmount);
         questManager.GetComponent<QuestManager>().AddQuest(questPreset);
         questManager.GetComponent<QuestManager>().Init(questPreset);
+
         if (Objects.Length > 0)
         {
             for(int i  = 0; i < Objects.Length; i++)

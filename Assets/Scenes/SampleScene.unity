@@ -288,6 +288,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2140944362}
   - {fileID: 81056183}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -569,9 +570,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1273862948}
-  - {fileID: 1550403022}
-  - {fileID: 1979854205}
+  - {fileID: 1183191604}
+  - {fileID: 884028570}
+  - {fileID: 1662747716}
   m_Father: {fileID: 26300020}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -647,24 +648,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   characterUI: {fileID: 81056182}
-  completeObj: {fileID: 1550403021}
+  completeObj: {fileID: 884028569}
+  acceptObj: {fileID: 1662747715}
   closeObj: {fileID: 1183191603}
-  acceptObj: {fileID: 1979854204}
-  player: {fileID: 0}
-  questManager: {fileID: 0}
-  completeButton: {fileID: 884028571}
-  acceptButton: {fileID: 1662747717}
-  closeButton: {fileID: 1183191605}
   checkRadius: 3
-  currentValue: 0
-  delayed: 1
   questName: Tree quest
   questDescription: 'Grow trees:'
   itemAmount: 2
   Objects:
   - {fileID: 1374213801}
   - {fileID: 2087782576}
+  player: {fileID: 0}
   questText: 
+  currentValue: 0
   questAssigned: 0
 --- !u!4 &179463229
 Transform:
@@ -2682,11 +2678,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 826381069}
-  m_Father: {fileID: 1550403022}
+  m_Father: {fileID: 81056183}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 30}
+  m_AnchoredPosition: {x: 0, y: -300}
   m_SizeDelta: {x: 320, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &884028571
@@ -2745,7 +2741,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1550403021}
+      - m_Target: {fileID: 884028569}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -3268,11 +3264,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1791981378}
-  m_Father: {fileID: 1273862948}
+  m_Father: {fileID: 81056183}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 30}
+  m_AnchoredPosition: {x: 0, y: -380}
   m_SizeDelta: {x: 320, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1183191605
@@ -3515,42 +3511,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1243351199}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1273862947
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1273862948}
-  m_Layer: 5
-  m_Name: Close
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1273862948
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1273862947}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1183191604}
-  m_Father: {fileID: 81056183}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -405}
-  m_SizeDelta: {x: 320, y: 60}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1374213801 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4618652597262229748, guid: d2a917a7ba163df448b38d46ab216488, type: 3}
@@ -3775,42 +3735,6 @@ RectTransform:
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1550403021
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1550403022}
-  m_Layer: 5
-  m_Name: Complete
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1550403022
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1550403021}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 884028570}
-  m_Father: {fileID: 81056183}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -325}
-  m_SizeDelta: {x: 320, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1615004596
 GameObject:
@@ -4109,11 +4033,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 31693857}
-  m_Father: {fileID: 1979854205}
+  m_Father: {fileID: 81056183}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 30}
+  m_AnchoredPosition: {x: 0, y: -300}
   m_SizeDelta: {x: 320, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1662747717
@@ -4160,7 +4084,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1979854204}
+      - m_Target: {fileID: 1662747715}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -5251,42 +5175,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938856295}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1979854204
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1979854205}
-  m_Layer: 5
-  m_Name: Accept
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1979854205
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1979854204}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1662747716}
-  m_Father: {fileID: 81056183}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -325}
-  m_SizeDelta: {x: 320, y: 60}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1999870346
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5878,6 +5766,41 @@ Transform:
   - {fileID: 328690046}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2140944361
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2140944362}
+  m_Layer: 5
+  m_Name: QuestSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2140944362
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140944361}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 26300020}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150, y: -50}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &101383769036885774
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5944,29 +5867,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1848232455715120795, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-      propertyPath: jumpForce
-      value: 6.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1848232455715120795, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: characterUI
       value: 
       objectReference: {fileID: 81056182}
-    - target: {fileID: 3351738902849938483, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-      propertyPath: m_DefaultControlScheme
-      value: Gamepad
-      objectReference: {fileID: 0}
+    - target: {fileID: 5524560352777693293, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
+      propertyPath: _questSpawnPoint
+      value: 
+      objectReference: {fileID: 2140944361}
     - target: {fileID: 5524560352777693293, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: _questDisplayParent
       value: 
       objectReference: {fileID: 26300020}
-    - target: {fileID: 5964213700589380022, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-      propertyPath: shoot
-      value: 
-      objectReference: {fileID: 1120369429361536294, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-    - target: {fileID: 5964213700589380022, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-      propertyPath: fruitPrefab
-      value: 
-      objectReference: {fileID: 7333762849442458398, guid: 2db1350150294194da29fcab192aff64, type: 3}
     - target: {fileID: 6429592448841891115, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.07
@@ -6012,17 +5923,9 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8864909863390012724, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-      propertyPath: aim
-      value: 
-      objectReference: {fileID: 377673603695483797, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-    - target: {fileID: 8864909863390012724, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: characterUI
       value: 
       objectReference: {fileID: 81056182}
-    - target: {fileID: 8864909863390012724, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-      propertyPath: mouseSensitivity
-      value: 100.2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6338,17 +6241,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   characterUI: {fileID: 81056182}
-  completeObj: {fileID: 1550403021}
+  completeObj: {fileID: 884028569}
+  acceptObj: {fileID: 1662747715}
   closeObj: {fileID: 1183191603}
-  acceptObj: {fileID: 1979854204}
-  player: {fileID: 0}
-  questManager: {fileID: 0}
-  completeButton: {fileID: 884028571}
-  acceptButton: {fileID: 1662747717}
-  closeButton: {fileID: 1183191605}
   checkRadius: 3
-  currentValue: 0
-  delayed: 1
   questName: Balloon quest
   questDescription: 'Find ballons for the party:'
   itemAmount: 5
@@ -6358,7 +6254,9 @@ MonoBehaviour:
   - {fileID: 1658989304}
   - {fileID: 676749183}
   - {fileID: 248127352}
+  player: {fileID: 0}
   questText: 
+  currentValue: 0
   questAssigned: 0
 --- !u!23 &4730245308714889935
 MeshRenderer:

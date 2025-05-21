@@ -214,8 +214,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   look: {fileID: -5630151704836100654, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  aim: {fileID: 0}
-  mouseSensitivity: 5
+  aim: {fileID: 377673603695483797, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  mouseSensitivity: 100.2
   playerBody: {fileID: 6429592448841891115}
   characterUI: {fileID: 0}
   activeControls: 1
@@ -384,7 +384,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   characterUI: {fileID: 0}
   speed: 5
-  jumpForce: 5
+  jumpForce: 6.2
 --- !u!114 &5964213700589380022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -398,7 +398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shoot: {fileID: 1120369429361536294, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  fruitPrefab: {fileID: 6377545831533735798, guid: 768964a93f7dd61428ad9c997eb6c0e3, type: 3}
+  fruitPrefab: {fileID: 7333762849442458398, guid: 2db1350150294194da29fcab192aff64, type: 3}
   fruitSpawn: {fileID: 1045762858738171366}
   fruitsLimit: 5
   fruitPower: 3
@@ -429,7 +429,7 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keyboard&Mouse
+  m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 2988737958768643804}
@@ -473,4 +473,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _questDisplayPrefab: {fileID: 1035820273147581202, guid: 736e9f4fdf4508045a4dee6aba86ed60, type: 3}
+  _questPrefab: {fileID: 190299156425184860, guid: 736e9f4fdf4508045a4dee6aba86ed60, type: 3}
+  _questSpawnPoint: {fileID: 0}
   _questDisplayParent: {fileID: 0}

@@ -429,6 +429,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 261105837}
   - {fileID: 81056183}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -863,7 +864,7 @@ Transform:
   m_GameObject: {fileID: 172559341}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.93349, y: 0.63744, z: -9.12952}
+  m_LocalPosition: {x: 7.93349, y: 4.2474403, z: -9.12952}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -955,7 +956,7 @@ Transform:
   m_GameObject: {fileID: 190618778}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.87835, y: 0.72976, z: 3.34034}
+  m_LocalPosition: {x: 7.87835, y: 4.3397603, z: 3.34034}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1020,6 +1021,41 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 858a16213e0250c4287893812168fd05, type: 3}
+--- !u!1 &261105836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 261105837}
+  m_Layer: 5
+  m_Name: QuestSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &261105837
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261105836}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 26300020}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150, y: -50}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &286930626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1762,7 +1798,7 @@ Transform:
   m_GameObject: {fileID: 612537534}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.03951, y: -0, z: 0.7549}
+  m_LocalPosition: {x: 2.03951, y: 3.6100001, z: 0.7549}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3561,7 +3597,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 25875675428693091, guid: 2dc4ccec7973c1b449123bb9ecdbd6e0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0000009536743
+      value: 3.6099992
       objectReference: {fileID: 0}
     - target: {fileID: 25875675428693091, guid: 2dc4ccec7973c1b449123bb9ecdbd6e0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3908,7 +3944,7 @@ Transform:
   m_GameObject: {fileID: 1400423313}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.1805, y: 0, z: 2.24408}
+  m_LocalPosition: {x: -8.1805, y: 3.6100001, z: 2.24408}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4952,7 +4988,7 @@ Transform:
   m_GameObject: {fileID: 1871250621}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.96474, y: -0.00001, z: 3.80447}
+  m_LocalPosition: {x: 0.96474, y: 3.6099901, z: 3.80447}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5480,6 +5516,10 @@ PrefabInstance:
       value: Gamepad
       objectReference: {fileID: 0}
     - target: {fileID: 5524560352777693293, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
+      propertyPath: _questSpawnPoint
+      value: 
+      objectReference: {fileID: 261105836}
+    - target: {fileID: 5524560352777693293, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: _questDisplayParent
       value: 
       objectReference: {fileID: 26300020}
@@ -5497,7 +5537,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6429592448841891115, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 4.61
       objectReference: {fileID: 0}
     - target: {fileID: 6429592448841891115, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5730,7 +5770,7 @@ Transform:
   m_GameObject: {fileID: 2192861649231892786}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.8838965, z: -0, w: -0.4676825}
-  m_LocalPosition: {x: -6.36, y: 0.02, z: 5.53}
+  m_LocalPosition: {x: -6.36, y: 3.63, z: 5.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6619,15 +6659,9 @@ MonoBehaviour:
     m_Bits: 8
   characterUI: {fileID: 81056182}
   completeObj: {fileID: 1550403021}
-  closeObj: {fileID: 1183191603}
   acceptObj: {fileID: 1979854204}
-  player: {fileID: 0}
-  questManager: {fileID: 0}
-  completeButton: {fileID: 884028571}
-  acceptButton: {fileID: 1662747717}
-  closeButton: {fileID: 1183191605}
+  closeObj: {fileID: 1183191603}
   checkRadius: 3
-  currentValue: 0
   questName: Sphere quest
   questDescription: Can you bring me 5 balloons?
   itemAmount: 5
@@ -6637,7 +6671,9 @@ MonoBehaviour:
   - {fileID: 1136542773}
   - {fileID: 1931979270}
   - {fileID: 1282372212}
+  player: {fileID: 0}
   questText: 
+  currentValue: 0
   questAssigned: 0
 --- !u!1 &4377728484542706065
 GameObject:
@@ -6825,7 +6861,7 @@ Transform:
   m_GameObject: {fileID: 5248886592828640464}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.82274956, z: -0, w: 0.568404}
-  m_LocalPosition: {x: 5.87, y: 0.04470539, z: 9.7}
+  m_LocalPosition: {x: 5.87, y: 3.6547055, z: 9.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7098,22 +7134,18 @@ MonoBehaviour:
     m_Bits: 8
   characterUI: {fileID: 81056182}
   completeObj: {fileID: 1550403021}
-  closeObj: {fileID: 1183191603}
   acceptObj: {fileID: 1979854204}
-  player: {fileID: 0}
-  questManager: {fileID: 0}
-  completeButton: {fileID: 884028571}
-  acceptButton: {fileID: 1662747717}
-  closeButton: {fileID: 1183191605}
+  closeObj: {fileID: 1183191603}
   checkRadius: 3
-  currentValue: 0
   questName: Sphere quest
   questDescription: Can you grow me 2 trees?
   itemAmount: 2
   Objects:
   - {fileID: 1374213801}
   - {fileID: 2087782576}
+  player: {fileID: 0}
   questText: 
+  currentValue: 0
   questAssigned: 0
 --- !u!1 &5344354224343217809
 GameObject:
