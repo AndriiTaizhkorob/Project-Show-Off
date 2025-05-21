@@ -64,7 +64,6 @@ public class QuestTrigger : MonoBehaviour
     {
         if (interaction.action.triggered && !characterUI.activeInHierarchy && delayed)
         {
-
             NPCInteraction();
         }
         if (!Physics.CheckSphere(transform.position, checkRadius, playerMask))
