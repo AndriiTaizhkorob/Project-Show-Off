@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System.Collections;
 
 public class QuestTrigger : MonoBehaviour
 {
@@ -22,10 +23,11 @@ public class QuestTrigger : MonoBehaviour
 
     public float checkRadius = 1.0f;
 
-    public int currentValue = 1;
+    public int currentValue = 0;
 
-    public bool isCompleted = false;
-    public bool isAccepted = false;
+    private bool isCompleted = false;
+    private bool isAccepted = false;
+    public bool delayed = true;
 
     [Header("Quest details")]
     public string questName = "Sphere quest";
@@ -49,8 +51,9 @@ public class QuestTrigger : MonoBehaviour
 
     void Update()
     {
-        if (interaction.action.triggered)
+        if (interaction.action.triggered && !characterUI.activeInHierarchy && delayed)
         {
+
             NPCInteraction();
         }
         if (!Physics.CheckSphere(transform.position, checkRadius, playerMask))
@@ -72,8 +75,9 @@ public class QuestTrigger : MonoBehaviour
             questAssigned = true;
         }
 
-        if (Physics.CheckSphere(transform.position, checkRadius, playerMask) && !characterUI.activeInHierarchy)
+        if (Physics.CheckSphere(transform.position, checkRadius, playerMask))
         {
+            delayed = false;
             characterUI.SetActive(true);
             EventSystem.current.SetSelectedGameObject(null);
             EventSystem.current.SetSelectedGameObject(closeObj);
@@ -124,12 +128,21 @@ public class QuestTrigger : MonoBehaviour
 
     public void CloseQuest()
     {
+        closeButton.onClick.RemoveListener(CloseQuest);
         acceptButton.onClick.RemoveListener(QuestStart);
         completeButton.onClick.RemoveListener(QuestHandedIn);
+
         questAssigned = false;
         EventSystem.current.SetSelectedGameObject(null);
-        closeButton.onClick.RemoveListener(CloseQuest);
         characterUI.SetActive(false);
+
+        StartCoroutine(DelayActivaton());
+    }
+
+    IEnumerator DelayActivaton()
+    {
+        yield return new WaitForSeconds(1f);
+        delayed = true;
     }
 
     public void QuestUpdate()

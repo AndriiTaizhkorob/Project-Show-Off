@@ -235,7 +235,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2559684}
+  - component: {fileID: 7555263}
   - component: {fileID: 2559687}
   - component: {fileID: 2559686}
   - component: {fileID: 2559685}
@@ -246,36 +246,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &7555262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7555261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90dd47016e8a9694081973ac9f665587, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerInput: {fileID: 1169020981}
-  gameplayMap: Player
-  uiMap: UI
---- !u!4 &7555263
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2559683}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.896, z: 0}
-  m_LocalScale: {x: 2.8875961, y: 1.9468895, z: 3.7887769}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 639142186}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2559685
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -350,6 +320,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2559683}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &7555263
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2559683}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.896, z: 0}
+  m_LocalScale: {x: 2.8875961, y: 1.9468895, z: 3.7887769}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 639142186}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &26300016
 GameObject:
   m_ObjectHideFlags: 0
@@ -1819,8 +1804,8 @@ Transform:
   m_LocalScale: {x: 1.3695562, y: 2.2934601, z: 1.0151868}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2559684}
   - {fileID: 1371649007}
+  - {fileID: 7555263}
   m_Father: {fileID: 1400423314}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &751608900
@@ -3155,17 +3140,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c3f70b7fbd371c54486b18c29f78a279, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1169020981 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3351738902849938483, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-  m_PrefabInstance: {fileID: 153152216915900295}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169020978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1170506300 stripped
@@ -6654,8 +6628,6 @@ MonoBehaviour:
   closeButton: {fileID: 1183191605}
   checkRadius: 3
   currentValue: 0
-  isCompleted: 0
-  isAccepted: 0
   questName: Sphere quest
   questDescription: Can you bring me 5 balloons?
   itemAmount: 5
@@ -7135,8 +7107,6 @@ MonoBehaviour:
   closeButton: {fileID: 1183191605}
   checkRadius: 3
   currentValue: 0
-  isCompleted: 0
-  isAccepted: 0
   questName: Sphere quest
   questDescription: Can you grow me 2 trees?
   itemAmount: 2
