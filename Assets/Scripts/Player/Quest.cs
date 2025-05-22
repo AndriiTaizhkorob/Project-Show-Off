@@ -64,4 +64,5 @@ public class Quest
     {
         return string.Format(_statusText, CurrentValue, MaxValue);
     }
+
 }
