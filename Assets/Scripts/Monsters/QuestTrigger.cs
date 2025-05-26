@@ -44,7 +44,7 @@ public class QuestTrigger : MonoBehaviour
     [HideInInspector] public bool questAssigned = false;
 
     [Header("Dialogue")]
-    public string dialogueNode = "Kitty";
+    public string dialogueNode;
     private DialogueRunner dialogueRunner;
 
     void Start()
@@ -63,9 +63,13 @@ public class QuestTrigger : MonoBehaviour
 
     void Update()
     {
-        if (interaction.action.triggered && delayed && IsPlayerNearby())
+        if (interaction.action.triggered && delayed && IsPlayerNearby() && dialogueNode.Length > 0)
         {
             StartDialogue();
+        }
+        else if (interaction.action.triggered && delayed && IsPlayerNearby() && dialogueNode.Length == 0)
+        {
+            NPCInteraction();
         }
 
         if (!IsPlayerNearby())
@@ -113,6 +117,34 @@ public class QuestTrigger : MonoBehaviour
             closeButton.onClick.AddListener(CloseQuest);
 
             questAssigned = true;
+        }
+
+        //For testing
+        if (IsPlayerNearby())
+        {
+            delayed = false;
+            characterUI.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(closeObj);
+
+            if (isAccepted)
+            {
+                acceptObj.SetActive(false);
+            }
+            else
+            {
+                acceptObj.SetActive(true);
+            }
+
+            if (isCompleted)
+            {
+                completeObj.SetActive(true);
+            }
+            else
+            {
+                completeObj.SetActive(false);
+                EventSystem.current.SetSelectedGameObject(closeObj);
+            }
         }
 
         characterUI.SetActive(true);

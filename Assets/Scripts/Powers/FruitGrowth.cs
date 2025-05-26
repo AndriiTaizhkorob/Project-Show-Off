@@ -16,9 +16,9 @@ public class FruitGrowth : MonoBehaviour
     [SerializeField]
     private GameObject[] fruits;
 
-
     private int x = 0;
     private GameObject currentFruit;
+
     void Start()
     {
         fruits = new GameObject[fruitsLimit];
@@ -28,7 +28,6 @@ public class FruitGrowth : MonoBehaviour
     {
         if (shoot.action.triggered && fruitPrefab != null)
         {
-            
             if (fruits.Length == 5)
                 Destroy(fruits[x]);
 
