@@ -3,18 +3,22 @@ using UnityEngine.InputSystem;
 
 public class FirePower : MonoBehaviour
 {
-    public InputActionReference shoot;
+    [Header("Fire power button")]
+    [SerializeField]
+    private InputActionReference shoot;
 
+    [Header("Flame parameters")]
+    [SerializeField]
+    private ParticleSystem flame;
     [SerializeField]
     private float flameStregth = 1f;
+
+    [Header("Tag of objects")]
     [SerializeField]
     private string searchedTag = "Flameable";
-    [SerializeField]
+
     private GameObject[] flameableObjects;
-
     private Camera cam;
-
-    [SerializeField]
     private GameObject currentObject;
 
     void Start()
@@ -33,6 +37,15 @@ public class FirePower : MonoBehaviour
         if (shoot.action.inProgress && currentObject != null)
         {
             FireUP();
+        }
+
+        if (shoot.action.inProgress)
+        {
+            flame.Play();
+        }
+        else
+        {
+            flame.Stop();
         }
     }
 
