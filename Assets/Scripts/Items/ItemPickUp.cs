@@ -10,11 +10,6 @@ public class ItemPickUp : MonoBehaviour
 
     public LayerMask playerMask;
 
-    void Start()
-    {
-
-    }
-
     void Update()
     {
         if (interaction.action.triggered && Physics.CheckSphere(transform.position, checkRadius, playerMask) && gameObject.GetComponent<ProgressManager>().enabled)

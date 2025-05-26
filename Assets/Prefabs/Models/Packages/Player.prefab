@@ -339,7 +339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6429592448841891115}
   - component: {fileID: 1848232455715120795}
-  - component: {fileID: 5964213700589380022}
+  - component: {fileID: 5850532830428332871}
   - component: {fileID: 3351738902849938483}
   - component: {fileID: 1124176813416652725}
   - component: {fileID: 5524560352777693293}
@@ -385,7 +385,7 @@ MonoBehaviour:
   characterUI: {fileID: 0}
   speed: 5
   jumpForce: 6.2
---- !u!114 &5964213700589380022
+--- !u!114 &5850532830428332871
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -401,7 +401,7 @@ MonoBehaviour:
   fruitPrefab: {fileID: 7333762849442458398, guid: 2db1350150294194da29fcab192aff64, type: 3}
   fruitSpawn: {fileID: 1045762858738171366}
   fruitsLimit: 5
-  fruitPower: 3
+  fruitPower: 8
   fruits: []
 --- !u!114 &3351738902849938483
 MonoBehaviour:

@@ -385,6 +385,7 @@ MonoBehaviour:
   acceptObj: {fileID: 1662747715}
   closeObj: {fileID: 1183191603}
   checkRadius: 3
+  isCompleted: 0
   questName: Tree quest
   questDescription: 'Grow trees:'
   itemAmount: 2
@@ -2678,17 +2679,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7824938724847874318, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
   m_PrefabInstance: {fileID: 153152216915900295}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1169020979 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5524560352777693293, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-  m_PrefabInstance: {fileID: 153152216915900295}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169020978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3f70b7fbd371c54486b18c29f78a279, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1183191603 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6939482798570514058, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
@@ -5280,6 +5270,7 @@ MonoBehaviour:
   acceptObj: {fileID: 1662747715}
   closeObj: {fileID: 1183191603}
   checkRadius: 3
+  isCompleted: 0
   questName: Balloon quest
   questDescription: 'Find ballons for the party:'
   itemAmount: 5
@@ -5696,9 +5687,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4524582601563176720, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4524582601563176720, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4524582601563176720, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1169020979}
+      objectReference: {fileID: 884028569}
+    - target: {fileID: 4524582601563176720, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4524582601563176720, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7858826753204715441, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
       propertyPath: m_Name
       value: Canvas

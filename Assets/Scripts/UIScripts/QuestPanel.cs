@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class QuestPanel : MonoBehaviour
 {
@@ -35,13 +37,20 @@ public class QuestPanel : MonoBehaviour
         _questPosition = new Vector3(_questPosition.x, _questPosition.y - _questPrefab.rect.height * 2, _questPosition.z);
     }
 
-    public void Reset()
+    public void ResetCurrent(string questDescription)
     {
+        Debug.Log(_listDisplay);
+
         for (var i = _listDisplay.Count - 1; i >= 0; i--)
         {
-            Destroy(_listDisplay[i].gameObject);
+            if (_listDisplay[i].gameObject.GetComponent<TMP_Text>().text == questDescription)
+            {
+                Debug.Log("Correct");
+                Destroy(_listDisplay[i].gameObject);
+                _listDisplay.Remove(_listDisplay[i]);
+            }
         }
-        _listDisplay.Clear();
+
         _questPosition = _questDisplayParent.position;
     }
 }

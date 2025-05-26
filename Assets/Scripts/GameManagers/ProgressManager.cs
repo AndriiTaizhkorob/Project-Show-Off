@@ -14,6 +14,7 @@ public class ProgressManager : MonoBehaviour
 
     public void UpdateScore(int pickUpValue)
     {
+        questManager.GetComponent<QuestManager>().NPC = npc;
         npc.GetComponent<QuestTrigger>().currentValue += pickUpValue;
         questManager.GetComponent<QuestManager>().AddProgress(npc.GetComponent<QuestTrigger>().questName, pickUpValue);
         npc.GetComponent<QuestTrigger>().QuestUpdate();

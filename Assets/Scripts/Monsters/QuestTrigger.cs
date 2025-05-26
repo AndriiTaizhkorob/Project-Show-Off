@@ -26,7 +26,7 @@ public class QuestTrigger : MonoBehaviour
     [Header("Interection Radius")]
     public float checkRadius = 1.0f;
 
-    private bool isCompleted = false;
+    public bool isCompleted = false;
     private bool isAccepted = false;
     private bool delayed = true;
 
@@ -115,8 +115,6 @@ public class QuestTrigger : MonoBehaviour
 
     public void QuestStart()
     {
-        questManager.GetComponent<QuestManager>().NPC = gameObject;
-
         questPreset = new Quest(questName, questDescription, itemAmount);
         questManager.GetComponent<QuestManager>().AddQuest(questPreset);
         questManager.GetComponent<QuestManager>().Init(questPreset);
@@ -173,5 +171,6 @@ public class QuestTrigger : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(closeObj);
         isCompleted = false;
+        player.GetComponent<QuestPanel>().ResetCurrent("<s>" + questDescription + "</s>");
     }
 }

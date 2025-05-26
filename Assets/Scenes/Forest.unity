@@ -2835,6 +2835,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4524582601563176720, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4524582601563176720, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4524582601563176720, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 902915238}
+    - target: {fileID: 4524582601563176720, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4524582601563176720, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7858826753204715441, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -3497,7 +3517,7 @@ Transform:
   m_GameObject: {fileID: 1287423180}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.36, z: 0}
   m_LocalScale: {x: 1.36956, y: 2.29346, z: 1.01519}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5200,7 +5220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5253723690825451696, guid: d2a917a7ba163df448b38d46ab216488, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.287058
+      value: 5.647058
       objectReference: {fileID: 0}
     - target: {fileID: 5253723690825451696, guid: d2a917a7ba163df448b38d46ab216488, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5768,10 +5788,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1848232455715120795, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-      propertyPath: jumpForce
-      value: 6.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1848232455715120795, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: characterUI
       value: 
       objectReference: {fileID: 902915239}
@@ -5779,10 +5795,6 @@ PrefabInstance:
       propertyPath: m_UIInputModule
       value: 
       objectReference: {fileID: 1667952516}
-    - target: {fileID: 3351738902849938483, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-      propertyPath: m_DefaultControlScheme
-      value: Gamepad
-      objectReference: {fileID: 0}
     - target: {fileID: 4944180487109666748, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: m_UIInputModule
       value: 
@@ -5795,14 +5807,6 @@ PrefabInstance:
       propertyPath: _questDisplayParent
       value: 
       objectReference: {fileID: 2107068023}
-    - target: {fileID: 5964213700589380022, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-      propertyPath: shoot
-      value: 
-      objectReference: {fileID: 1120369429361536294, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-    - target: {fileID: 5964213700589380022, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-      propertyPath: fruitPrefab
-      value: 
-      objectReference: {fileID: 7333762849442458398, guid: 2db1350150294194da29fcab192aff64, type: 3}
     - target: {fileID: 6429592448841891115, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 53.58
@@ -5848,17 +5852,9 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8864909863390012724, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-      propertyPath: aim
-      value: 
-      objectReference: {fileID: 377673603695483797, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-    - target: {fileID: 8864909863390012724, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: characterUI
       value: 
       objectReference: {fileID: 902915239}
-    - target: {fileID: 8864909863390012724, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-      propertyPath: mouseSensitivity
-      value: 100.2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
