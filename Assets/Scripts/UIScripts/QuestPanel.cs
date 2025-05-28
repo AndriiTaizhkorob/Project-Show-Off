@@ -21,6 +21,12 @@ public class QuestPanel : MonoBehaviour
 
     void Start()
     {
+        for (var i = _listDisplay.Count - 1; i >= 0; i--)
+        {
+            Destroy(_listDisplay[i].gameObject);
+            _listDisplay.Remove(_listDisplay[i]);
+        }
+
         _questPosition = _questSpawnPoint.transform.position;
         foreach (var quest in GameManager.Instance.QuestManager.Quests)
         {

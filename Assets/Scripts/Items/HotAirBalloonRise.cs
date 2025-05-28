@@ -40,10 +40,4 @@ public class HotAirBalloonRise : MonoBehaviour
         if (gameObject.GetComponent<ProgressManager>().enabled)
             progressScale += flameStrength * Time.deltaTime;
     }
-
-    public void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawSphere(targetPosition, 3f);
-    }
 }

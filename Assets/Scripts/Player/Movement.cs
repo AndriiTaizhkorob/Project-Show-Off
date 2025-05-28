@@ -15,9 +15,10 @@ public class Movement : MonoBehaviour
     public float speed = 1.0f;
     public float jumpForce = 1.0f;
   
-    void Start()
+    void Awake()
     {
         rb = gameObject.GetComponent<Rigidbody>();
+        characterUI = GameObject.Find("characterUI");
     }
 
     

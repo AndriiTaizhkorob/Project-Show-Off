@@ -30,23 +30,16 @@ public class FirePower : MonoBehaviour
     void Update()
     {
         if (shoot.action.triggered)
-        {
             FindCurrentObject();
-        }
 
         if (shoot.action.inProgress && currentObject != null)
-        {
             FireUP();
-        }
 
         if (shoot.action.inProgress)
-        {
             flame.Play();
-        }
+
         else
-        {
             flame.Stop();
-        }
     }
 
     public void FindCurrentObject()
@@ -68,7 +61,7 @@ public class FirePower : MonoBehaviour
     public void FireUP()
     {
         RaycastHit hit;
-        if (Physics.Raycast(cam.transform.position, transform.forward, out hit))
+        if (Physics.Raycast(cam.transform.position, transform.forward, out hit, flame.main.duration))
         {
             if (hit.transform == currentObject.transform)
             {

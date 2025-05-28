@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using System.Collections;
 using Yarn.Unity;
 
-public class QuestTrigger : MonoBehaviour
+public class QuestTrigger : MonoBehaviour, IDataPersistence
 {
     [Header("Player Input")]
     public InputActionReference interaction;
@@ -47,7 +47,7 @@ public class QuestTrigger : MonoBehaviour
     public string dialogueNode;
     private DialogueRunner dialogueRunner;
 
-    void Start()
+    void Awake()
     {
         player = GameObject.Find("Player");
         questManager = GameObject.Find("QuestManager");
@@ -220,5 +220,29 @@ public class QuestTrigger : MonoBehaviour
         isCompleted = false;
         player.GetComponent<QuestPanel>().ResetCurrent("<s>" + questDescription + "</s>");
     }
-}
 
+    public void LoadData(GameData data)
+    {
+        for(int i = 0; i < data.Monsters.Count; i++)
+        {
+            if (data.Monsters[i] == gameObject)
+            {
+                isAccepted = data.activeQuests[i];
+
+                if (isAccepted)
+                    QuestStart();
+
+                break;
+            }
+        }
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        if (!data.Monsters.Contains(gameObject))
+        {
+            data.Monsters.Add(gameObject);
+            data.activeQuests.Add(isAccepted);
+        }
+    }
+}

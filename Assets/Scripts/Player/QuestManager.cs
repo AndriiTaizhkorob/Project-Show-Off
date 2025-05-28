@@ -12,7 +12,7 @@ public class QuestManager : MonoBehaviour
 
     private Quest _quest;
 
-    public List<Quest> Quests { get; } = new();
+    public List<Quest> Quests { get; set; } = new();
     private readonly Dictionary<string, List<Quest>> _questMap = new();
 
     public GameObject NPC;
@@ -20,7 +20,7 @@ public class QuestManager : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
-    }
+    }  
 
     public void AddQuest(Quest quest)
     {

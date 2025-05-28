@@ -19,9 +19,10 @@ public class CameraControls : MonoBehaviour
     float xRotation = 0f;
 
 
-    void Start()
+    void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        characterUI = GameObject.Find("characterUI");
     }
 
 
