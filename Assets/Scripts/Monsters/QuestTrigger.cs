@@ -85,27 +85,33 @@ public class QuestTrigger : MonoBehaviour
         return Physics.CheckSphere(transform.position, checkRadius, playerMask);
     }
 
+    [Header("Dialogue")]
+    public string dialogueStartNode;
+    public string dialogueInProgressNode;
+    public string dialogueCompleteNode;
+
     private void StartDialogue()
     {
         if (dialogueRunner != null && !dialogueRunner.IsDialogueRunning)
         {
-            string nodeToRun = dialogueNode;
+            string nodeToRun = dialogueStartNode;
 
             if (questPreset != null)
             {
-                if (questPreset.IsComplete)
+                if (questPreset.IsComplete && !string.IsNullOrEmpty(dialogueCompleteNode))
                 {
-                    nodeToRun = "Kitty_Complete";
+                    nodeToRun = dialogueCompleteNode;
                 }
-                else if (isAccepted)
+                else if (isAccepted && !string.IsNullOrEmpty(dialogueInProgressNode))
                 {
-                    nodeToRun = "Kitty_InProgress";
+                    nodeToRun = dialogueInProgressNode;
                 }
             }
 
             dialogueRunner.StartDialogue(nodeToRun);
         }
     }
+
 
 
     public void NPCInteraction()
