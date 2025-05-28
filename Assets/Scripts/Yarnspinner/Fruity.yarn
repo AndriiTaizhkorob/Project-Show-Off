@@ -1,0 +1,16 @@
+﻿title: Fruity
+---
+Fruity: Can you grow me 9 apple trees?
+<<start_quest "Tree quest">> 
+===
+
+title: Fruity_InProgress
+---
+Fruity: Did you grow all trees?
+===
+
+title: Fruity_Complete
+---
+Fruity: Thank you for growing new trees
+<<complete_quest "Tree quest">>
+===
