@@ -1901,6 +1901,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8560028460748904671, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1925,6 +1929,11 @@ GameObject:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7824938724847874318, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
   m_PrefabInstance: {fileID: 153152216915900295}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1210335324 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6578179903902387377, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
+  m_PrefabInstance: {fileID: 1142895026}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1243971648
 GameObject:
@@ -3158,7 +3167,7 @@ PrefabInstance:
     - target: {fileID: 5524560352777693293, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: _questSpawnPoint
       value: 
-      objectReference: {fileID: 1794094694}
+      objectReference: {fileID: 1210335324}
     - target: {fileID: 5524560352777693293, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: _questDisplayParent
       value: 

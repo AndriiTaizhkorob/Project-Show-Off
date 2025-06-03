@@ -286,6 +286,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2062042829}
     m_Modifications:
+    - target: {fileID: 1879794599440477902, guid: afb9fd246dfa9bd488237eef06e187c5, type: 3}
+      propertyPath: progressLimit
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2210648665164398662, guid: afb9fd246dfa9bd488237eef06e187c5, type: 3}
       propertyPath: m_Name
       value: hotairballoon
@@ -1916,7 +1920,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextSceneName: Main Area
   reloadtime: 0
-  characterUI: {fileID: 0}
 --- !u!65 &938718571
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3640,6 +3643,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2062042829}
     m_Modifications:
+    - target: {fileID: 1879794599440477902, guid: afb9fd246dfa9bd488237eef06e187c5, type: 3}
+      propertyPath: progressLimit
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2210648665164398662, guid: afb9fd246dfa9bd488237eef06e187c5, type: 3}
       propertyPath: m_Name
       value: hotairballoon (1)
@@ -3865,6 +3872,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2062042829}
     m_Modifications:
+    - target: {fileID: 1879794599440477902, guid: afb9fd246dfa9bd488237eef06e187c5, type: 3}
+      propertyPath: progressLimit
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2210648665164398662, guid: afb9fd246dfa9bd488237eef06e187c5, type: 3}
       propertyPath: m_Name
       value: hotairballoon (2)
@@ -4256,6 +4267,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2062042829}
     m_Modifications:
+    - target: {fileID: 1879794599440477902, guid: afb9fd246dfa9bd488237eef06e187c5, type: 3}
+      propertyPath: progressLimit
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2210648665164398662, guid: afb9fd246dfa9bd488237eef06e187c5, type: 3}
       propertyPath: m_Name
       value: hotairballoon (3)
@@ -4933,7 +4948,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 623908867331114212, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1848232455715120795, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: jumpForce
