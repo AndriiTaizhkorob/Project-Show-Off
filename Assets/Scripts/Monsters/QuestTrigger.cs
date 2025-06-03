@@ -29,6 +29,7 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
 
     public bool isCompleted = false;
     private bool isAccepted = false;
+    private bool isHandedIn = false;
     private bool delayed = true;
 
     [Header("Quest details")]
@@ -56,7 +57,10 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
         completeButton = completeObj.GetComponent<Button>();
         acceptButton = acceptObj.GetComponent<Button>();
         closeButton = closeObj.GetComponent<Button>();
+    }
 
+    void Start()
+    {
         characterUI.SetActive(false);
         completeObj.SetActive(false);
     }
@@ -146,7 +150,9 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
             {
                 completeObj.SetActive(true);
             }
-            else
+
+
+            if(!isCompleted)
             {
                 completeObj.SetActive(false);
                 EventSystem.current.SetSelectedGameObject(closeObj);
@@ -209,6 +215,9 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
 
     public void QuestUpdate()
     {
+        if (currentValue > itemAmount)
+            currentValue = itemAmount;
+
         questText = currentValue + "/" + itemAmount;
         questPreset.Description = questText;
     }
@@ -229,14 +238,20 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData data)
     {
-        for(int i = 0; i < data.Monsters.Count; i++)
+        for(int i = 0; i < data.monsterNames.Count; i++)
         {
-            if (data.Monsters[i] == gameObject)
+            if (data.monsterNames[i] == this.gameObject.name)
             {
                 isAccepted = data.activeQuests[i];
+                currentValue = data.questProgresses[i];
+                isHandedIn = data.finishedQuests[i];
 
-                if (isAccepted)
+                if (isAccepted && !isHandedIn)
+                {
                     QuestStart();
+                    questManager.GetComponent<QuestManager>().NPC = this.gameObject;
+                    questManager.GetComponent<QuestManager>().AddProgress(questName, currentValue);
+                }
 
                 break;
             }
@@ -245,10 +260,26 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
 
     public void SaveData(ref GameData data)
     {
-        if (!data.Monsters.Contains(gameObject))
+        if (!data.monsterNames.Contains(this.gameObject.name))
         {
-            data.Monsters.Add(gameObject);
+            data.monsterNames.Add(this.gameObject.name);
             data.activeQuests.Add(isAccepted);
+            data.questProgresses.Add(currentValue);
+            data.finishedQuests.Add(isHandedIn);
+        }
+        else
+        {
+            for (int i = 0; i < data.monsterNames.Count; i++)
+            {
+                if (data.monsterNames[i] == gameObject.name)
+                {
+                    data.activeQuests[i] = isAccepted;
+                    data.questProgresses[i] = currentValue;
+                    data.finishedQuests[i] = isHandedIn;
+
+                    break;
+                }
+            }
         }
     }
 }

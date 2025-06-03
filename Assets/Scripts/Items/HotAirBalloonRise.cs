@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class HotAirBalloonRise : MonoBehaviour
+public class HotAirBalloonRise : MonoBehaviour, IDataPersistence
 {
     [SerializeField]
     private int pickUpValue;
@@ -15,6 +15,14 @@ public class HotAirBalloonRise : MonoBehaviour
 
     private bool complete = false;
     private Vector3 endPoint;
+
+    [SerializeField] public string id;
+
+    [ContextMenu("Generate guid for id")]
+    private void GenerateGuid()
+    {
+        id = System.Guid.NewGuid().ToString();
+    }
 
     private void Start()
     {
@@ -32,6 +40,9 @@ public class HotAirBalloonRise : MonoBehaviour
             complete = true;
         }
 
+        if(complete)
+            endPoint = new Vector3(transform.position.x, targetPosition.y, transform.position.z);
+
         gameObject.transform.position = Vector3.MoveTowards(transform.position, endPoint, moveSpeed);
     }
 
@@ -39,5 +50,19 @@ public class HotAirBalloonRise : MonoBehaviour
     {
         if (gameObject.GetComponent<ProgressManager>().enabled)
             progressScale += flameStrength * Time.deltaTime;
+    }
+
+    public void LoadData(GameData data)
+    {
+        data.balloonProgress.TryGetValue(id, out complete);
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        if (data.balloonProgress.ContainsKey(id))
+        {
+            data.balloonProgress.Remove(id);
+        }
+        data.balloonProgress.Add(id, complete);
     }
 }

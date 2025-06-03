@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class TreeGrowth : MonoBehaviour
+public class TreeGrowth : MonoBehaviour, IDataPersistence
 {
     public InputActionReference interaction;
 
@@ -23,6 +23,15 @@ public class TreeGrowth : MonoBehaviour
     private GameObject treeObj;
     private bool isSpawned = false;
     private bool isPlayed = false;
+    private float localSize = 0f;
+
+    [SerializeField] public string id;
+
+    [ContextMenu("Generate guid for id")]
+    private void GenerateGuid()
+    {
+        id = System.Guid.NewGuid().ToString();
+    }
 
     void Update()
     {
@@ -34,6 +43,9 @@ public class TreeGrowth : MonoBehaviour
 
         if (isSpawned && treeObj.transform.localScale.x >= scaleLimit && !isPlayed)
             Play();
+
+        if(isSpawned)
+            localSize = treeObj.transform.localScale.x;
     }
 
     private void Spawn()
@@ -47,5 +59,29 @@ public class TreeGrowth : MonoBehaviour
         firework.Play();
         isPlayed = true;
         gameObject.GetComponent<ProgressManager>().UpdateScore(pickUpValue);
+    }
+
+    public void LoadData(GameData data)
+    {
+        data.growthProgress.TryGetValue(id, out localSize);
+        if(localSize > 0)
+        {
+            if (localSize >= scaleLimit)
+            {
+                isPlayed = true;
+            }
+
+            Spawn();
+            treeObj.transform.localScale = new Vector3(localSize, localSize, localSize);
+        }
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        if (data.growthProgress.ContainsKey(id))
+        {
+            data.growthProgress.Remove(id);
+        }
+        data.growthProgress.Add(id, localSize);
     }
 }

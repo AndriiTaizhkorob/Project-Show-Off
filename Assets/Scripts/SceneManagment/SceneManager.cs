@@ -8,11 +8,13 @@ public class SceneLoader : MonoBehaviour
 {
     public string nextSceneName; 
     public float reloadtime = 5f;
-    public GameObject characterUI;
+    private GameObject characterUI;
+    private GameObject saveManager;
 
     private void Awake()
     {
         characterUI = GameObject.Find("characterUI");
+        saveManager = GameObject.Find("DataPersistenceManager");
     }
 
     void OnTriggerEnter(Collider other)
@@ -27,6 +29,7 @@ public class SceneLoader : MonoBehaviour
     {
         //SceneManager.LoadScene(nextSceneName);
         characterUI.SetActive(true);
+        DataPersistenceManager.Instance.SaveGame();
         LoadingScreenManager.Instance.SwitchToScene(nextSceneName);
     }
 }
