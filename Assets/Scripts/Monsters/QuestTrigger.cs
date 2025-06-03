@@ -28,7 +28,7 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
     public float checkRadius = 1.0f;
 
     public bool isCompleted = false;
-    private bool isAccepted = false;
+    [HideInInspector] public bool isAccepted = false;
     private bool isHandedIn = false;
     private bool delayed = true;
 

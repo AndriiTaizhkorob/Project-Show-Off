@@ -385,6 +385,7 @@ MonoBehaviour:
   closeObj: {fileID: 1183191603}
   checkRadius: 3
   isCompleted: 0
+  isAccepted: 0
   questName: Tree quest
   questDescription: 'Grow trees:'
   itemAmount: 2
@@ -657,6 +658,68 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6667319848787178939, guid: 53f19559935310a48b08ce294fddc467, type: 3}
   m_PrefabInstance: {fileID: 328690045}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &390880000
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4537061620124572882, guid: 79d8a4b04e76e644fa910f5228ff3249, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4537061620124572882, guid: 79d8a4b04e76e644fa910f5228ff3249, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4537061620124572882, guid: 79d8a4b04e76e644fa910f5228ff3249, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 13.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 4537061620124572882, guid: 79d8a4b04e76e644fa910f5228ff3249, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4537061620124572882, guid: 79d8a4b04e76e644fa910f5228ff3249, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4537061620124572882, guid: 79d8a4b04e76e644fa910f5228ff3249, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4537061620124572882, guid: 79d8a4b04e76e644fa910f5228ff3249, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4537061620124572882, guid: 79d8a4b04e76e644fa910f5228ff3249, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4537061620124572882, guid: 79d8a4b04e76e644fa910f5228ff3249, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4537061620124572882, guid: 79d8a4b04e76e644fa910f5228ff3249, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9020020127806252746, guid: 79d8a4b04e76e644fa910f5228ff3249, type: 3}
+      propertyPath: m_Name
+      value: HidingSpot (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 79d8a4b04e76e644fa910f5228ff3249, type: 3}
+--- !u!1 &390880001 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9020020127806252746, guid: 79d8a4b04e76e644fa910f5228ff3249, type: 3}
+  m_PrefabInstance: {fileID: 390880000}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &401145260
 GameObject:
@@ -2147,6 +2210,124 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3070939984497606988, guid: 3690cb469c3a4ae44895ba0b75f47807, type: 3}
   m_PrefabInstance: {fileID: 1018578046}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1049717427
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 266501935825514904, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+      propertyPath: m_Name
+      value: M_PotatoCharacter_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 646581787906353954, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.3331658
+      objectReference: {fileID: 0}
+    - target: {fileID: 646581787906353954, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 646581787906353954, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.7907605
+      objectReference: {fileID: 0}
+    - target: {fileID: 646581787906353954, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.84272265
+      objectReference: {fileID: 0}
+    - target: {fileID: 646581787906353954, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 646581787906353954, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5383481
+      objectReference: {fileID: 0}
+    - target: {fileID: 646581787906353954, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 646581787906353954, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 646581787906353954, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 65.143
+      objectReference: {fileID: 0}
+    - target: {fileID: 646581787906353954, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 266501935825514904, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1049717429}
+    - targetCorrespondingSourceObject: {fileID: 266501935825514904, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1049717432}
+  m_SourcePrefab: {fileID: 100100000, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+--- !u!1 &1049717428 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 266501935825514904, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+  m_PrefabInstance: {fileID: 1049717427}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1049717429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049717428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037908cc35adebc4788f348a169d88a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interaction: {fileID: 7040659881675835329, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  cameraMove: {fileID: 377673603695483797, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  characterUI: {fileID: 81056182}
+  completeObj: {fileID: 884028569}
+  acceptObj: {fileID: 1662747715}
+  closeObj: {fileID: 1183191603}
+  checkRadius: 3
+  isCompleted: 0
+  isAccepted: 0
+  questName: Hide'n'Seek
+  questDescription: 'Find Potato:'
+  itemAmount: 2
+  Objects:
+  - {fileID: 1654514582}
+  - {fileID: 390880001}
+  player: {fileID: 0}
+  questText: 
+  currentValue: 0
+  questAssigned: 0
+  dialogueNode: 
+  dialogueStartNode: 
+  dialogueInProgressNode: 
+  dialogueCompleteNode: 
+--- !u!114 &1049717432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049717428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8110813b03d17e041906ccfc2d910f2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1080173284
 GameObject:
   m_ObjectHideFlags: 0
@@ -2813,6 +2994,72 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1654514581
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4537061620124572882, guid: 79d8a4b04e76e644fa910f5228ff3249, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -12.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 4537061620124572882, guid: 79d8a4b04e76e644fa910f5228ff3249, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4537061620124572882, guid: 79d8a4b04e76e644fa910f5228ff3249, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 4537061620124572882, guid: 79d8a4b04e76e644fa910f5228ff3249, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4537061620124572882, guid: 79d8a4b04e76e644fa910f5228ff3249, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4537061620124572882, guid: 79d8a4b04e76e644fa910f5228ff3249, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4537061620124572882, guid: 79d8a4b04e76e644fa910f5228ff3249, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4537061620124572882, guid: 79d8a4b04e76e644fa910f5228ff3249, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4537061620124572882, guid: 79d8a4b04e76e644fa910f5228ff3249, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4537061620124572882, guid: 79d8a4b04e76e644fa910f5228ff3249, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6795280964961953981, guid: 79d8a4b04e76e644fa910f5228ff3249, type: 3}
+      propertyPath: checkRadius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9020020127806252746, guid: 79d8a4b04e76e644fa910f5228ff3249, type: 3}
+      propertyPath: m_Name
+      value: HidingSpot
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 79d8a4b04e76e644fa910f5228ff3249, type: 3}
+--- !u!1 &1654514582 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9020020127806252746, guid: 79d8a4b04e76e644fa910f5228ff3249, type: 3}
+  m_PrefabInstance: {fileID: 1654514581}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1658989303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3451,6 +3698,7 @@ MonoBehaviour:
   closeObj: {fileID: 1183191603}
   checkRadius: 3
   isCompleted: 0
+  isAccepted: 0
   questName: Hot air balloon quest
   questDescription: 'Fire the balloon up:'
   itemAmount: 2
@@ -4027,6 +4275,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6507934078886277480, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
+      propertyPath: m_Antialiasing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507934078886277480, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
+      propertyPath: m_TaaSettings.m_Quality
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7824938724847874318, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: m_Name
       value: Player
@@ -4287,6 +4543,7 @@ MonoBehaviour:
   closeObj: {fileID: 1183191603}
   checkRadius: 3
   isCompleted: 0
+  isAccepted: 0
   questName: Balloon quest
   questDescription: 'Find ballons for the party:'
   itemAmount: 5
@@ -4811,3 +5068,6 @@ SceneRoots:
   - {fileID: 1105984816}
   - {fileID: 833508765}
   - {fileID: 6468493589381384399}
+  - {fileID: 1049717427}
+  - {fileID: 1654514581}
+  - {fileID: 390880000}
