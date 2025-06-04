@@ -57,6 +57,6 @@ public class QuestPanel : MonoBehaviour
             }
         }
 
-        _questPosition = _questDisplayParent.position;
+        _questPosition = _questSpawnPoint.transform.position;
     }
 }
