@@ -80,7 +80,7 @@ public class DataPersistenceManager : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-        SaveGame();
+        dataHandler.Delete();
     }
 
     private List<IDataPersistence> FindAllDataPersistanceObjects()

@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.IO;
+using Unity.VisualScripting.Antlr3.Runtime;
 
 public class FileDataHandler
 {
@@ -60,6 +61,28 @@ public class FileDataHandler
         catch (Exception e) 
         {
             Debug.LogError("Error occured while saving " + fullPath + "\n" + e);
+        }
+    }
+
+    public void Delete()
+    {
+        string fullPath = Path.Combine(dataDirPath, dataFileName);
+        try
+        {
+            if (File.Exists(fullPath))
+            {
+                //Directory.Delete(Path.GetDirectoryName(fullPath), true);
+                File.Delete(fullPath);
+            }
+            else
+            {
+                Debug.Log("No file to delete.");
+                return;
+            }
+        }
+        catch(Exception e)
+        {
+            Debug.LogError("Failed to delete the save file at path: " + fullPath + "\n" + e);
         }
     }
 }
