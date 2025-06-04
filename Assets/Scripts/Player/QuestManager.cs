@@ -19,7 +19,7 @@ public class QuestManager : MonoBehaviour
 
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+
     }  
 
     public void AddQuest(Quest quest)

@@ -132,6 +132,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1105984816}
     m_Modifications:
+    - target: {fileID: 1879794599440477902, guid: afb9fd246dfa9bd488237eef06e187c5, type: 3}
+      propertyPath: id
+      value: dcd27d68-67f5-4d90-9193-01e24546608e
+      objectReference: {fileID: 0}
     - target: {fileID: 2210648665164398662, guid: afb9fd246dfa9bd488237eef06e187c5, type: 3}
       propertyPath: m_Name
       value: hotairballoon (1)
@@ -465,7 +469,7 @@ GameObject:
   - component: {fileID: 179463229}
   - component: {fileID: 179463228}
   m_Layer: 0
-  m_Name: fruity
+  m_Name: fruitee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2473,7 +2477,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 266501935825514904, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
       propertyPath: m_Name
-      value: M_PotatoCharacter_1
+      value: M_PotatoCharacter_12
       objectReference: {fileID: 0}
     - target: {fileID: 646581787906353954, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2542,7 +2546,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 266501935825514904, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1049717429}
+    - targetCorrespondingSourceObject: {fileID: 266501935825514904, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1049717432}
   m_SourcePrefab: {fileID: 100100000, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
 --- !u!1 &1049717428 stripped
 GameObject:
@@ -2601,6 +2611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentValue: 0
   spotNumber: 0
+  teleportEffectPrefab: {fileID: 0}
 --- !u!1 &1054734936
 GameObject:
   m_ObjectHideFlags: 0
@@ -4266,7 +4277,7 @@ GameObject:
   - component: {fileID: 1998199225}
   - component: {fileID: 1998199224}
   m_Layer: 0
-  m_Name: charli
+  m_Name: charlee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4763,6 +4774,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1105984816}
     m_Modifications:
+    - target: {fileID: 372330504653147982, guid: d2a917a7ba163df448b38d46ab216488, type: 3}
+      propertyPath: id
+      value: 5854f69a-628e-49f7-8ecd-89a0eaa8fcee
+      objectReference: {fileID: 0}
     - target: {fileID: 4618652597262229748, guid: d2a917a7ba163df448b38d46ab216488, type: 3}
       propertyPath: m_Name
       value: TreeBase
@@ -5050,6 +5065,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1105984816}
     m_Modifications:
+    - target: {fileID: 1879794599440477902, guid: afb9fd246dfa9bd488237eef06e187c5, type: 3}
+      propertyPath: id
+      value: 5b9a1a2e-0d9b-42d7-9bec-66b9c0fd87f3
+      objectReference: {fileID: 0}
     - target: {fileID: 2210648665164398662, guid: afb9fd246dfa9bd488237eef06e187c5, type: 3}
       propertyPath: m_Name
       value: hotairballoon
@@ -5111,7 +5130,7 @@ GameObject:
   - component: {fileID: 4319364940523071572}
   - component: {fileID: 4319364940523071573}
   m_Layer: 0
-  m_Name: kitty
+  m_Name: kittee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

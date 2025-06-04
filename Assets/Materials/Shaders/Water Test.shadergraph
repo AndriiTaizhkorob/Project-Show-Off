@@ -8,6 +8,15 @@
         },
         {
             "m_Id": "b5c7badec7c045ee8ab62d1b53ac44d1"
+        },
+        {
+            "m_Id": "afe107e8e72444afb58cb5f9bb859674"
+        },
+        {
+            "m_Id": "7b03a2e2b8884d7397a6832f25872876"
+        },
+        {
+            "m_Id": "d36c9ce5eb754d9c8fef7dcf5af4f6ee"
         }
     ],
     "m_Keywords": [],
@@ -1024,6 +1033,15 @@
         },
         {
             "m_Id": "b5c7badec7c045ee8ab62d1b53ac44d1"
+        },
+        {
+            "m_Id": "afe107e8e72444afb58cb5f9bb859674"
+        },
+        {
+            "m_Id": "7b03a2e2b8884d7397a6832f25872876"
+        },
+        {
+            "m_Id": "d36c9ce5eb754d9c8fef7dcf5af4f6ee"
         }
     ]
 }
@@ -1152,18 +1170,12 @@
             "x": 1.0,
             "y": 1.0,
             "z": 1.0,
-            "w": 0.3029373586177826
+            "w": 0.0
         },
         {
-            "x": 0.15094339847564698,
-            "y": 0.15094339847564698,
-            "z": 0.15094339847564698,
-            "w": 0.6441138386726379
-        },
-        {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0,
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
             "w": 1.0
         }
     ],
@@ -1177,7 +1189,7 @@
             "y": 1.0
         }
     ],
-    "m_SerializableMode": 1
+    "m_SerializableMode": 0
 }
 
 {
@@ -1263,6 +1275,34 @@
     "m_NormalMapSpace": 0,
     "m_EnableGlobalMipBias": true,
     "m_MipSamplingMode": 0
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
+    "m_ObjectId": "7b03a2e2b8884d7397a6832f25872876",
+    "m_Guid": {
+        "m_GuidSerialized": "0e29ce42-29a5-4fdb-a382-20c5fd4736dc"
+    },
+    "m_Name": "_FreezeBlend",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "_FreezeBlend",
+    "m_DefaultReferenceName": "_FreezeBlend",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": 0.0,
+    "m_FloatType": 0,
+    "m_RangeValues": {
+        "x": 0.0,
+        "y": 1.0
+    }
 }
 
 {
@@ -1605,6 +1645,34 @@
 }
 
 {
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
+    "m_ObjectId": "afe107e8e72444afb58cb5f9bb859674",
+    "m_Guid": {
+        "m_GuidSerialized": "f5671b3c-971c-420b-ad6c-4e5bb3d11d1e"
+    },
+    "m_Name": "_FreezeRadius",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "_FreezeRadius",
+    "m_DefaultReferenceName": "_FreezeRadius",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": 0.0,
+    "m_FloatType": 0,
+    "m_RangeValues": {
+        "x": 0.0,
+        "y": 1.0
+    }
+}
+
+{
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.BlockNode",
     "m_ObjectId": "b13eee624d89485ea8aeee22ca157820",
@@ -1872,6 +1940,34 @@
     },
     "m_Labels": [],
     "m_Space": 2
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector3ShaderProperty",
+    "m_ObjectId": "d36c9ce5eb754d9c8fef7dcf5af4f6ee",
+    "m_Guid": {
+        "m_GuidSerialized": "5569aa58-f56a-4c0f-a3db-df1b5703ecd7"
+    },
+    "m_Name": "FreezeCenter",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "FreezeCenter",
+    "m_DefaultReferenceName": "_FreezeCenter",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    }
 }
 
 {
