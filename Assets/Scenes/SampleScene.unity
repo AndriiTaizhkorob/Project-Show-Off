@@ -2262,72 +2262,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8793496530467647974, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+      propertyPath: closeObj
+      value: 
+      objectReference: {fileID: 1183191603}
+    - target: {fileID: 8793496530467647974, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+      propertyPath: acceptObj
+      value: 
+      objectReference: {fileID: 1662747715}
+    - target: {fileID: 8793496530467647974, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+      propertyPath: characterUI
+      value: 
+      objectReference: {fileID: 81056182}
+    - target: {fileID: 8793496530467647974, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+      propertyPath: completeObj
+      value: 
+      objectReference: {fileID: 884028569}
+    - target: {fileID: 8793496530467647974, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+      propertyPath: 'Objects.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1654514582}
+    - target: {fileID: 8793496530467647974, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+      propertyPath: 'Objects.Array.data[1]'
+      value: 
+      objectReference: {fileID: 390880001}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 266501935825514904, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1049717429}
-    - targetCorrespondingSourceObject: {fileID: 266501935825514904, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1049717432}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
---- !u!1 &1049717428 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 266501935825514904, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
-  m_PrefabInstance: {fileID: 1049717427}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1049717429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1049717428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 037908cc35adebc4788f348a169d88a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interaction: {fileID: 7040659881675835329, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  cameraMove: {fileID: 377673603695483797, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  playerMask:
-    serializedVersion: 2
-    m_Bits: 8
-  characterUI: {fileID: 81056182}
-  completeObj: {fileID: 884028569}
-  acceptObj: {fileID: 1662747715}
-  closeObj: {fileID: 1183191603}
-  checkRadius: 3
-  isCompleted: 0
-  isAccepted: 0
-  questName: Hide'n'Seek
-  questDescription: 'Find Potato:'
-  itemAmount: 2
-  Objects:
-  - {fileID: 1654514582}
-  - {fileID: 390880001}
-  player: {fileID: 0}
-  questText: 
-  currentValue: 0
-  questAssigned: 0
-  dialogueNode: 
-  dialogueStartNode: 
-  dialogueInProgressNode: 
-  dialogueCompleteNode: 
---- !u!114 &1049717432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1049717428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8110813b03d17e041906ccfc2d910f2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1080173284
 GameObject:
   m_ObjectHideFlags: 0

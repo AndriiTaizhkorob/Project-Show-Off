@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 4362e141be1f9024f8071d173a2587ab, type: 2}
     - target: {fileID: -8679921383154817045, guid: 0d24963ce059d9c4d817e9f40626e34b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.3331658
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0d24963ce059d9c4d817e9f40626e34b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -30,23 +30,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0d24963ce059d9c4d817e9f40626e34b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -6.7907605
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0d24963ce059d9c4d817e9f40626e34b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.84272265
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0d24963ce059d9c4d817e9f40626e34b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0d24963ce059d9c4d817e9f40626e34b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.5383481
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0d24963ce059d9c4d817e9f40626e34b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0d24963ce059d9c4d817e9f40626e34b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0d24963ce059d9c4d817e9f40626e34b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 65.143
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0d24963ce059d9c4d817e9f40626e34b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -143,6 +143,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0d24963ce059d9c4d817e9f40626e34b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4195414977136392066}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0d24963ce059d9c4d817e9f40626e34b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8793496530467647974}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0d24963ce059d9c4d817e9f40626e34b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1822744104485474361}
   m_SourcePrefab: {fileID: 100100000, guid: 0d24963ce059d9c4d817e9f40626e34b, type: 3}
 --- !u!1 &266501935825514904 stripped
 GameObject:
@@ -172,3 +178,55 @@ CapsuleCollider:
   m_Height: 2.6108334
   m_Direction: 1
   m_Center: {x: 0, y: 0.8054167, z: 0}
+--- !u!114 &8793496530467647974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266501935825514904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037908cc35adebc4788f348a169d88a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interaction: {fileID: 7040659881675835329, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  cameraMove: {fileID: 377673603695483797, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  characterUI: {fileID: 0}
+  completeObj: {fileID: 0}
+  acceptObj: {fileID: 0}
+  closeObj: {fileID: 0}
+  checkRadius: 3
+  isCompleted: 0
+  isAccepted: 0
+  questName: Hide'n'Seek
+  questDescription: 'Find Potato:'
+  itemAmount: 2
+  Objects:
+  - {fileID: 0}
+  - {fileID: 0}
+  player: {fileID: 0}
+  questText: 
+  currentValue: 0
+  questAssigned: 0
+  dialogueNode: 
+  dialogueStartNode: 
+  dialogueInProgressNode: 
+  dialogueCompleteNode: 
+--- !u!114 &1822744104485474361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266501935825514904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8110813b03d17e041906ccfc2d910f2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentValue: 0
+  spotNumber: 0

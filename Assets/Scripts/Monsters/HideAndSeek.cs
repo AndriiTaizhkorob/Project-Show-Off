@@ -8,41 +8,51 @@ public class HideAndSeek : MonoBehaviour, IDataPersistence
     public int spotNumber;
     private int spotLimit;
     private bool inProgress;
+    public GameObject teleportEffectPrefab;
 
 
     void Start()
     {
-        tpSpots = gameObject.GetComponent<QuestTrigger>().Objects;
-        questUI = gameObject.GetComponent<QuestTrigger>().characterUI;
-        spotLimit = gameObject.GetComponent<QuestTrigger>().itemAmount;
+        tpSpots = GetComponent<QuestTrigger>().Objects;
+        questUI = GetComponent<QuestTrigger>().characterUI;
+        spotLimit = GetComponent<QuestTrigger>().itemAmount;
     }
 
     void Update()
     {
-        inProgress = gameObject.GetComponent<QuestTrigger>().isAccepted;
-        currentValue = gameObject.GetComponent<QuestTrigger>().currentValue;
+        inProgress = GetComponent<QuestTrigger>().isAccepted;
+        currentValue = GetComponent<QuestTrigger>().currentValue;
+        var runner = FindAnyObjectByType<Yarn.Unity.DialogueRunner>();
+        if (runner != null)
+        {
+            runner.VariableStorage.SetValue("$potato_progress", spotNumber);
+        }
 
-        Teleport();
     }
-
-    public void Teleport()
+    public void ForceTeleport()
     {
-        if (inProgress)
-        {        
-            if (currentValue == spotNumber && !questUI.activeInHierarchy && currentValue != spotLimit)
+        if (inProgress && currentValue == spotNumber && currentValue != spotLimit)
+        {
+            if (teleportEffectPrefab != null)
             {
-                gameObject.transform.position = tpSpots[currentValue].transform.position;
-                spotNumber++;
-            } 
+                Instantiate(teleportEffectPrefab, transform.position, Quaternion.identity);
+            }
+
+            transform.position = tpSpots[currentValue].transform.position;
+
+            if (teleportEffectPrefab != null)
+            {
+                Instantiate(teleportEffectPrefab, transform.position, Quaternion.identity);
+            }
+
+            spotNumber++;
         }
     }
 
+
     public void LoadData(GameData data)
     {
-        if(data.currentSpot > 0)
-            spotNumber = data.currentSpot - 1;
-        else
-            spotNumber = data.currentSpot;
+        spotNumber = (data.currentSpot > 0) ? data.currentSpot - 1 : data.currentSpot;
     }
 
     public void SaveData(ref GameData data)

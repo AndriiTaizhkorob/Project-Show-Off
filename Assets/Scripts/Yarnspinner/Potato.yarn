@@ -1,4 +1,31 @@
 ﻿title: Potato
 ---
-This is an example of a Yarn Spinner script. Write your dialogue here!
+Potato: Do you want to play hide and seek with me?
+
+-> Yes of course!
+    <<start_quest "Hide'n'Seek">>
+    Let's play! I'm going to hide now.
+    <<teleport_potato>>
+-> No thank you
+    Potato: Maybe next time!
+===
+
+title: Potato_InProgress
+---
+<<if $potato_progress == 1>>
+Potato: Try near something shiny!
+<<elseif $potato_progress == 2>>
+Potato: I'm going near the waffles!
+<<elseif $potato_progress == 3>>
+Potato: Think tall!
+<<else>>
+Potato: You're getting good at this!
+<<endif>>
+<<teleport_potato>>
+===
+
+
+title: Potato_Complete
+---
+You've beat me!
 ===

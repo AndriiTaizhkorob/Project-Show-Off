@@ -12,7 +12,7 @@ public class QuestYarnBridge : MonoBehaviour
         {
             runner.AddCommandHandler<string>("start_quest", StartQuestFromDialogue);
             runner.AddCommandHandler<string>("complete_quest", CompleteQuestFromDialogue);
-
+            runner.AddCommandHandler("teleport_potato", TeleportHideAndSeek);
         }
     }
 
@@ -48,6 +48,17 @@ public class QuestYarnBridge : MonoBehaviour
             Debug.LogWarning($"[Yarn] Quest '{questName}' not found or already complete.");
         }
     }
-
+    public void TeleportHideAndSeek()
+    {
+        var potato = FindAnyObjectByType<HideAndSeek>();
+        if (potato != null)
+        {
+            potato.ForceTeleport();
+        }
+        else
+        {
+            Debug.LogWarning("[Yarn] HideAndSeek component not found.");
+        }
+    }
 }
 
