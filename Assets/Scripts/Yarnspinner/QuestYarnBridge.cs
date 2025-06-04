@@ -34,20 +34,23 @@ public class QuestYarnBridge : MonoBehaviour
     }
     public void CompleteQuestFromDialogue(string questName)
     {
-        Debug.Log($"[Yarn] Attempting to complete quest: {questName}");
+        Debug.Log($"[Yarn] Handing in quest: {questName}");
 
-        var quest = questManager.Quests.Find(q => q.EventTrigger == questName);
-        if (quest != null && !quest.IsComplete)
+        var allTriggers = Object.FindObjectsByType<QuestTrigger>(FindObjectsSortMode.None);
+        foreach (var trigger in allTriggers)
         {
-            // Force complete by adding remaining progress
-            int remaining = quest.MaxValue - quest.CurrentValue;
-            quest.AddProgress(remaining);
+            if (trigger.questName == questName)
+            {
+                trigger.QuestHandedIn();
+                Debug.Log($"[Yarn] Called QuestHandedIn on: {questName}");
+                return;
+            }
         }
-        else
-        {
-            Debug.LogWarning($"[Yarn] Quest '{questName}' not found or already complete.");
-        }
+
+        Debug.LogWarning($"[Yarn] No QuestTrigger found for: {questName}");
     }
+
+
     public void TeleportHideAndSeek()
     {
         var potato = FindAnyObjectByType<HideAndSeek>();
