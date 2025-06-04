@@ -2515,16 +2515,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8793496530467647974, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+      propertyPath: closeObj
+      value: 
+      objectReference: {fileID: 1183191603}
+    - target: {fileID: 8793496530467647974, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+      propertyPath: acceptObj
+      value: 
+      objectReference: {fileID: 1662747715}
+    - target: {fileID: 8793496530467647974, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+      propertyPath: characterUI
+      value: 
+      objectReference: {fileID: 81056182}
+    - target: {fileID: 8793496530467647974, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+      propertyPath: completeObj
+      value: 
+      objectReference: {fileID: 884028569}
+    - target: {fileID: 8793496530467647974, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+      propertyPath: 'Objects.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1654514582}
+    - target: {fileID: 8793496530467647974, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+      propertyPath: 'Objects.Array.data[1]'
+      value: 
+      objectReference: {fileID: 390880001}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 266501935825514904, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1049717429}
-    - targetCorrespondingSourceObject: {fileID: 266501935825514904, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1049717432}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
 --- !u!1 &1049717428 stripped
 GameObject:
