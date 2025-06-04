@@ -4,6 +4,7 @@ using UnityEngine;
 [System.Serializable]
 public class GameData
 {
+    public int currentSpot;
     public List<string> monsterNames;
     public List<bool> activeQuests;
     public List<bool> finishedQuests;
@@ -18,6 +19,7 @@ public class GameData
         this.activeQuests = new();
         this.finishedQuests = new();
         this.questProgresses = new();
+        this.currentSpot = new();
         this.growthProgress = new SerializableDictionary<string, float>();
         this.balloonProgress = new SerializableDictionary<string, bool>();
         collectedItems = new SerializableDictionary<string, bool>();

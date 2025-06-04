@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class HideAndSeek : MonoBehaviour
+public class HideAndSeek : MonoBehaviour, IDataPersistence
 {
-    public GameObject[] tpSpots;
+    private GameObject[] tpSpots;
     private GameObject questUI;
     public int currentValue;
     public int spotNumber;
@@ -31,9 +31,22 @@ public class HideAndSeek : MonoBehaviour
         {        
             if (currentValue == spotNumber && !questUI.activeInHierarchy && currentValue != spotLimit)
             {
-                gameObject.transform.position = tpSpots[spotNumber].transform.position;
+                gameObject.transform.position = tpSpots[currentValue].transform.position;
                 spotNumber++;
             } 
         }
+    }
+
+    public void LoadData(GameData data)
+    {
+        if(data.currentSpot > 0)
+            spotNumber = data.currentSpot - 1;
+        else
+            spotNumber = data.currentSpot;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.currentSpot = spotNumber;
     }
 }
