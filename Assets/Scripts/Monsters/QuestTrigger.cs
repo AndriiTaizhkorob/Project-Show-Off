@@ -209,7 +209,7 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
 
     IEnumerator DelayActivation()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
         delayed = true;
     }
 
