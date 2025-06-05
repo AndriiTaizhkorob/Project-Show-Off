@@ -10,7 +10,6 @@ public class HideAndSeek : MonoBehaviour, IDataPersistence
     private bool inProgress;
     public GameObject teleportEffectPrefab;
 
-
     void Start()
     {
         tpSpots = GetComponent<QuestTrigger>().Objects;
@@ -28,6 +27,7 @@ public class HideAndSeek : MonoBehaviour, IDataPersistence
             runner.VariableStorage.SetValue("$potato_progress", spotNumber);
         }
 
+        ForceTeleport();
     }
     public void ForceTeleport()
     {
@@ -52,7 +52,7 @@ public class HideAndSeek : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData data)
     {
-        spotNumber = (data.currentSpot > 0) ? data.currentSpot - 1 : data.currentSpot;
+        spotNumber = (data.currentSpot > currentValue) ? data.currentSpot - 1 : data.currentSpot;
     }
 
     public void SaveData(ref GameData data)
