@@ -45,7 +45,7 @@ public class FirePower : MonoBehaviour
     public void FindCurrentObject()
     {
         RaycastHit hit;
-        if (Physics.Raycast(cam.transform.position, transform.forward, out hit))
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit))
         {
             foreach (GameObject i in flameableObjects)
             {
@@ -61,7 +61,7 @@ public class FirePower : MonoBehaviour
     public void FireUP()
     {
         RaycastHit hit;
-        if (Physics.Raycast(cam.transform.position, transform.forward, out hit, flame.main.duration))
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, flame.main.duration))
         {
             if (hit.transform == currentObject.transform)
             {
