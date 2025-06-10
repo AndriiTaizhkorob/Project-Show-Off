@@ -76,6 +76,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 4362e141be1f9024f8071d173a2587ab, type: 2}
+    - target: {fileID: -804731622281664130, guid: 7fffb2e24fda5754fa8dec03dea0ac47, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d07194d0b6d339549bf6ed6057576e5a, type: 2}
     - target: {fileID: -678588488315902003, guid: 7fffb2e24fda5754fa8dec03dea0ac47, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -132,6 +136,12 @@ MonoBehaviour:
   progressScale: 0
   targetPosition: {x: 0, y: 15, z: 0}
   id: 
+  flameRenderer: {fileID: 8639435896345446319}
+  startColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  endColor: {r: 1, g: 0, b: 0, a: 1}
+  flameObject: {fileID: 7900233714449503537}
+  minFlameScale: {x: 0.06675814, y: 0.08466651, z: 0.06376385}
+  maxFlameScale: {x: 0.1, y: 0.1, z: 0.1}
 --- !u!114 &7721668938495888905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,3 +201,13 @@ CapsuleCollider:
   m_Height: 5.125123
   m_Direction: 1
   m_Center: {x: 0, y: 2.0625606, z: 0}
+--- !u!4 &7900233714449503537 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1255605710908113952, guid: 7fffb2e24fda5754fa8dec03dea0ac47, type: 3}
+  m_PrefabInstance: {fileID: 229813284294717137}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &8639435896345446319 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -804731622281664130, guid: 7fffb2e24fda5754fa8dec03dea0ac47, type: 3}
+  m_PrefabInstance: {fileID: 229813284294717137}
+  m_PrefabAsset: {fileID: 0}

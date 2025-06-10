@@ -1,14 +1,35 @@
 ﻿title: Charli
 ---
-Charli: Hot air vallon pls
-<<start_quest "Hot air balloon quest">> 
+Charli: WHOA! Someone bounced into my castle! What brings you here?
+-> I’ve got an invitation for you!
+    Charli: An invitation? 
+    -> It’s a party! All the monsters are invited.
+    Charli: Whoooooa YES!! But wait... my sky is so empty. My hot air balloons are all grounded!
+    -> I'll help you!
+    Charli: I’ve got fire, you’ve got legs, let's make this work.
+    Charli: I hereby lend you my fire power!
+    <<start_quest "Hot air balloon quest">>
+-> I just wanted to ask about your castle!
+    Charli: BOUNCY, right? I slime up the walls so it gets extra squish!
+    Charli: But without balloons floating around, it’s like... only *half* bouncy.
+    -> What happened to the balloons?
+    Charli: They got sleepy. Cold. They need some fire... maybe from my favorite firefriend?
+    -> I'll help you!
+    Charli: I’ve got fire, you’ve got legs, let's make this work.
+    Charli: I hereby lend you my fire power!
+    -> I brought you an invitation too!
+    Charli: Fire up those balloons and I’m *so* there.
+    <<start_quest "Hot air balloon quest">>
+-> Sorry, I think I’m lost.
+    Charli: That makes two of us! I always get lost when I don't leave any slime behind.
 ===
 title: Charli_InProgress
 ---
-Charli: Did you light up all hot air balloons?
+Charli: Fire up those balloons and I'll join your party!
 ===
 title: Charli_Complete
 ---
-Charli: Wow, look at the sky now!
+Charli: You did it! The sky looks so colorful again!
+Charli: I’ll slime straight to your party.
 <<complete_quest "Hot air balloon quest">>
 ===

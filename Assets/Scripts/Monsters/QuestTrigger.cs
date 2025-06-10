@@ -96,6 +96,7 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
     public string dialogueInProgressNode;
     public string dialogueCompleteNode;
 
+    [SerializeField] private Movement playerMovement;
     private void StartDialogue()
     {
         if (dialogueRunner != null && !dialogueRunner.IsDialogueRunning)
@@ -114,9 +115,22 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
                 }
             }
 
+            // Disable movement
+            if (playerMovement != null)
+                playerMovement.enabled = false;
+
+            // Start dialogue
             dialogueRunner.StartDialogue(nodeToRun);
+
+            // Re-enable movement when dialogue ends
+            dialogueRunner.onDialogueComplete.AddListener(() =>
+            {
+                if (playerMovement != null)
+                    playerMovement.enabled = true;
+            });
         }
     }
+
 
 
 
