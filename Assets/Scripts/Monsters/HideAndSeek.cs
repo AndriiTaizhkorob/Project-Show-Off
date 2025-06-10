@@ -26,8 +26,6 @@ public class HideAndSeek : MonoBehaviour, IDataPersistence
         {
             runner.VariableStorage.SetValue("$potato_progress", spotNumber);
         }
-
-        ForceTeleport();
     }
     public void ForceTeleport()
     {

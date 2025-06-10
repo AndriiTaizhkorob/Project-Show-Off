@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 542855600840041386}
   - component: {fileID: 5733624330198676456}
-  - component: {fileID: 369452571334947928}
+  - component: {fileID: 4510791837481523091}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -41,7 +41,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4296466515840668387}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!136 &369452571334947928
+--- !u!136 &4510791837481523091
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -60,10 +60,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 5.198952
+  m_Radius: 0.5
+  m_Height: 7.748355
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 1.5994761, z: -0.00000011920929}
+  m_Center: {x: 0, y: 3.3741775, z: 0}
 --- !u!1001 &2802158941757872581
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -133,6 +133,10 @@ PrefabInstance:
       value: M_OakTree_1
       objectReference: {fileID: 0}
     - target: {fileID: 6903405450160834364, guid: cc3f8da5628b2fe439add8d19a97e510, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903405450160834364, guid: cc3f8da5628b2fe439add8d19a97e510, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 63d41d594a3497943baeea7575595fcb, type: 2}
@@ -146,6 +150,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc3f8da5628b2fe439add8d19a97e510, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3520167670039464904}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc3f8da5628b2fe439add8d19a97e510, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5403263601915016705}
   m_SourcePrefab: {fileID: 100100000, guid: cc3f8da5628b2fe439add8d19a97e510, type: 3}
 --- !u!4 &2407734526157848110 stripped
 Transform:
@@ -183,6 +190,51 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!23 &5403263601915016705
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3036039023025235092}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!23 &3825959788233304726 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7783400352690556077, guid: cc3f8da5628b2fe439add8d19a97e510, type: 3}
