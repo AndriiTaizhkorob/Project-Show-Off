@@ -10,6 +10,8 @@ public class GameData
     public List<bool> finishedQuests;
     public List<int> questProgresses;
     public SerializableDictionary<string, float> growthProgress;
+    public SerializableDictionary<string, Vector3> penguinPosition;
+    public SerializableDictionary<string, bool> penguinScored;
     public SerializableDictionary<string, bool> balloonProgress;
     public SerializableDictionary<string, bool> collectedItems;
     public string lastUsedDoorID;
@@ -23,6 +25,8 @@ public class GameData
         this.questProgresses = new();
         this.currentSpot = new();
         this.growthProgress = new SerializableDictionary<string, float>();
+        this.penguinPosition = new SerializableDictionary<string, Vector3>();
+        this.penguinScored = new SerializableDictionary<string, bool>();
         this.balloonProgress = new SerializableDictionary<string, bool>();
         collectedItems = new SerializableDictionary<string, bool>();
         this.lastUsedDoorID = "";

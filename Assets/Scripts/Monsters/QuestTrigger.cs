@@ -177,7 +177,7 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
 
         foreach (var obj in Objects)
         {
-            if (obj != null)
+            if (obj != null && obj.GetComponent<ProgressManager>() != null)
             {
                 var progress = obj.GetComponent<ProgressManager>();
                 if (progress != null)
@@ -194,9 +194,6 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(closeObj);
         isAccepted = true;
-
-        dataPersistenceManager.GetComponent<DataPersistenceManager>().SaveGame();
-
     }
 
     public void CloseQuest()

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PenguinFollower : MonoBehaviour
+public class PenguinFollower : MonoBehaviour, IDataPersistence
 {
     [Header("Follow Settings")]
     public float followRange = 5f;
@@ -21,6 +21,19 @@ public class PenguinFollower : MonoBehaviour
 
     private NavMeshAgent agent;
     private Vector3 startPos;
+    private Vector3 localPosition;
+    private bool hasScored;
+
+    [HideInInspector]
+    public bool scored = false;
+
+    [SerializeField] public string id;
+
+    [ContextMenu("Generate guid for id")]
+    private void GenerateGuid()
+    {
+        id = System.Guid.NewGuid().ToString();
+    }
 
     void Awake()
     {
@@ -31,11 +44,12 @@ public class PenguinFollower : MonoBehaviour
 
     void Start()
     {
-        WanderNow(); // Begin wandering immediately
+            WanderNow(); // Begin wandering immediately
     }
 
     void Update()
     {
+
         if (followTarget == null) return;
 
         float distance = Vector3.Distance(transform.position, followTarget.position);
@@ -92,6 +106,7 @@ public class PenguinFollower : MonoBehaviour
     {
         isFollowing = false;
         hasReachedGoal = true;
+        scored = true;
         agent.ResetPath();
     }
 
@@ -113,6 +128,36 @@ public class PenguinFollower : MonoBehaviour
         }
 
         return origin;
+    }
+
+    public void LoadData(GameData data)
+    {
+        data.penguinPosition.TryGetValue(id, out localPosition);
+        data.penguinScored.TryGetValue(id, out hasScored);
+
+        if(localPosition != new Vector3(0, 0, 0))
+            gameObject.transform.position = localPosition;
+
+        scored = hasScored;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        if (data.penguinPosition.ContainsKey(id))
+        {
+            data.penguinPosition.Remove(id);
+        }
+        localPosition = gameObject.transform.position;
+
+        data.penguinPosition.Add(id, localPosition);
+
+        if (data.penguinScored.ContainsKey(id))
+        {
+            data.penguinScored.Remove(id);
+        }
+        hasScored = scored;
+
+        data.penguinScored.Add(id, hasScored);
     }
 }
 

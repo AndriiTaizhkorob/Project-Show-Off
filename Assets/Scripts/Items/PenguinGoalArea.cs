@@ -16,6 +16,9 @@ public class PenguinGoalArea : MonoBehaviour
 
         if (penguin != null && agent != null && currentSpotIndex < penguinSpots.Count)
         {
+            if (!penguin.scored)
+                gameObject.GetComponent<ProgressManager>().UpdateScore(1);
+
             penguin.SetReachedGoal();
             agent.SetDestination(penguinSpots[currentSpotIndex].position);
 
