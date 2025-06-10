@@ -19,6 +19,7 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
     public GameObject closeObj;
 
     private GameObject questManager;
+    private GameObject dataPersistenceManager;
 
     private Button completeButton;
     private Button acceptButton;
@@ -52,6 +53,7 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
     {
         player = GameObject.Find("Player");
         questManager = GameObject.Find("QuestManager");
+        dataPersistenceManager = GameObject.Find("DataPersistenceManager");
         dialogueRunner = Object.FindFirstObjectByType<DialogueRunner>();
 
         completeButton = completeObj.GetComponent<Button>();
@@ -192,6 +194,9 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(closeObj);
         isAccepted = true;
+
+        dataPersistenceManager.GetComponent<DataPersistenceManager>().SaveGame();
+
     }
 
     public void CloseQuest()
@@ -209,6 +214,7 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
 
     IEnumerator DelayActivation()
     {
+
         yield return new WaitForSeconds(3f);
         delayed = true;
     }

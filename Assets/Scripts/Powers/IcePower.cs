@@ -8,6 +8,10 @@ public class IcePower : MonoBehaviour
 
     [SerializeField]
     private ParticleSystem cold;
+    [SerializeField]
+    private GameObject powerOwner;
+
+    private bool isActive;
 
     //[SerializeField]
     //private string searchedTag = "Water";
@@ -28,16 +32,22 @@ public class IcePower : MonoBehaviour
     void Update()
     {
         //if (shoot.action.triggered)
-            //FindCurrentObject();
+        //FindCurrentObject();
 
         //if (shoot.action.inProgress && currentObject != null)
-            //Freeze();
+        //Freeze();
 
-        if (shoot.action.inProgress)
-            cold.Play();
+        if (shoot.action.triggered && powerOwner != null)
+            PowerOn();
 
-        else
-            cold.Stop();
+        if (isActive)
+        {
+            if (shoot.action.inProgress)
+                cold.Play();
+
+            else
+                cold.Stop();
+        }
     }
 
     //Legacy code.
@@ -70,4 +80,10 @@ public class IcePower : MonoBehaviour
             //}
         //}
     //}
+
+    
+    public void PowerOn()
+    {
+        isActive = powerOwner.GetComponent<QuestTrigger>().isAccepted;
+    }
 }

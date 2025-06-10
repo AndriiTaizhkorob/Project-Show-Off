@@ -12,6 +12,8 @@ public class FirePower : MonoBehaviour
     private ParticleSystem flame;
     [SerializeField]
     private float flameStregth = 1f;
+    [SerializeField]
+    private GameObject powerOwner;
 
     [Header("Tag of objects")]
     [SerializeField]
@@ -20,26 +22,34 @@ public class FirePower : MonoBehaviour
     private GameObject[] flameableObjects;
     private Camera cam;
     private GameObject currentObject;
+    private bool isActive;
 
     void Start()
     {
         cam = Camera.main;
         flameableObjects = GameObject.FindGameObjectsWithTag(searchedTag);
+        
     }
 
     void Update()
     {
-        if (shoot.action.triggered)
-            FindCurrentObject();
+        if (shoot.action.triggered && powerOwner != null)
+            PowerOn();
 
-        if (shoot.action.inProgress && currentObject != null)
-            FireUP();
+        if (isActive)
+        {
+            if (shoot.action.triggered)
+                FindCurrentObject();
 
-        if (shoot.action.inProgress)
-            flame.Play();
+            if (shoot.action.inProgress && currentObject != null)
+                FireUP();
 
-        else
-            flame.Stop();
+            if (shoot.action.inProgress)
+                flame.Play();
+
+            else
+                flame.Stop();
+        }
     }
 
     public void FindCurrentObject()
@@ -68,5 +78,10 @@ public class FirePower : MonoBehaviour
                 currentObject.GetComponent<HotAirBalloonRise>().Rise(flameStregth);
             }
         }
+    }
+
+    public void PowerOn()
+    {
+        isActive = powerOwner.GetComponent<QuestTrigger>().isAccepted;
     }
 }

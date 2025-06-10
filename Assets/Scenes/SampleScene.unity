@@ -2883,9 +2883,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 75612848}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 8
 --- !u!1 &1243351199
 GameObject:
   m_ObjectHideFlags: 0
@@ -4432,10 +4429,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 623908867331114212, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 623908867331114212, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
+      propertyPath: powerOwner
+      value: 
+      objectReference: {fileID: 1998199223}
     - target: {fileID: 1848232455715120795, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: characterUI
       value: 
       objectReference: {fileID: 81056182}
+    - target: {fileID: 3410370906927363794, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3410370906927363794, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
+      propertyPath: powerOwner
+      value: 
+      objectReference: {fileID: 4319364940523071571}
     - target: {fileID: 5524560352777693293, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: _questSpawnPoint
       value: 
@@ -5283,8 +5296,8 @@ SceneRoots:
   - {fileID: 4542940551101189035}
   - {fileID: 4814204544606493547}
   - {fileID: 1105984816}
-  - {fileID: 833508765}
   - {fileID: 6468493589381384399}
+  - {fileID: 833508765}
   - {fileID: 1049717427}
   - {fileID: 96280383}
   - {fileID: 1230582230}
