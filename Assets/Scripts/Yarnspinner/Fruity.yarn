@@ -1,16 +1,28 @@
 ﻿title: Fruity
 ---
-Fruity: Can you grow me 9 apple trees?
-<<start_quest "Tree quest">> 
+Fruity: STAY AWAY FROM MY APPLES!
+-> Don't worry I won't take them!
+    Fruity: Really? Then what are you doing here?
+    -> I'm here to invite you to a party with all the other monsters
+    Fruity: The other monsters? No way.
+    -> What happened?
+    Fruity: They stole my fruit!
+    -> That's awful. How about I grow you some new fruit trees?
+    Fruity: Would you do that for me? That would be amazing
+    -> Yes! But only if you'll come to the party.
+    Fruity: Fine, I'll go to the party if you grow me new fruit trees.
+    <<start_quest "Tree quest">>
+-> Sorry, I'll come back later
 ===
 
 title: Fruity_InProgress
 ---
-Fruity: Did you grow all trees?
+Fruity: Did you finish growing new fruit trees?
 ===
 
 title: Fruity_Complete
 ---
-Fruity: Thank you for growing new trees
+Fruity: You made me very happy! Thank you so much!
+Fruity: I'll go to the party and bring some fruit with me.
 <<complete_quest "Tree quest">>
 ===

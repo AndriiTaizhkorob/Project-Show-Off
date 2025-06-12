@@ -1,4 +1,30 @@
 ﻿title: Cloudy
 ---
-ddd
+Cloudy: Oh... hello. I didn’t expect visitors. Not after what happened with my penguins...
+
+-> What happened to your penguins?
+    Cloudy: I was playing with my teleportation magic... and I got too excited.
+    Cloudy: Now they’re scattered across Penguin Land. Alone. Confused.
+    -> That’s awful! I came here to invite you to a party, but—
+    Cloudy: Oh... I couldn’t possibly celebrate while they’re missing.
+    Cloudy: But if you help me bring them home, I promise I’ll come. I’ll even bring my color-loving friends.
+    Cloudy: Here, I’ll give you a bit of my power. Just enough to earn their trust.
+    <<start_quest "Penguin Search">>
+-> I brought you an invitation!
+    Cloudy: A party...? Oh, I couldn’t possibly celebrate while my penguin friends are missing.
+    Cloudy: But... if you help me bring them back, I promise I’ll come.
+    Cloudy: Take this, it’ll help you lead them safely.
+    <<start_quest "Penguin Search">>
+-> I have something else do do but I'll be right back
+
+===
+title: Cloudy_InProgress
+---
+Cloudy: Are they safe? Are they warm? Please keep looking, I know they’re out there.
+===
+title: Cloudy_Complete
+---
+Cloudy: They’re home! Oh, thank you! I can’t believe they’re really back...
+Cloudy: I’ll come to the party, and I’ll bring my best bowtie. The penguins love color.
+<<complete_quest "Penguin Search">>
 ===
