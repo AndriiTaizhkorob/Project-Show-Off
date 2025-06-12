@@ -946,7 +946,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8970239659717014955, guid: aa2da6aaf16aa054686df40e94bb8690, type: 3}
       propertyPath: id
-      value: c8a16fcf-1978-4ca9-bcb6-21d0e16d3ba4
+      value: 4495754e-8e4d-49b1-a408-ace7053f5d4e
       objectReference: {fileID: 0}
     - target: {fileID: 8970239659717014955, guid: aa2da6aaf16aa054686df40e94bb8690, type: 3}
       propertyPath: followTarget
@@ -1241,7 +1241,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8970239659717014955, guid: aa2da6aaf16aa054686df40e94bb8690, type: 3}
       propertyPath: id
-      value: a8f067a6-bafd-4d4a-85ef-579c8703115e
+      value: 15ae3c77-b156-4f4a-81b8-fa56ce723230
       objectReference: {fileID: 0}
     - target: {fileID: 8970239659717014955, guid: aa2da6aaf16aa054686df40e94bb8690, type: 3}
       propertyPath: followTarget
@@ -1611,10 +1611,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9108216521157232338, guid: aa2da6aaf16aa054686df40e94bb8690, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 758525413}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa2da6aaf16aa054686df40e94bb8690, type: 3}
 --- !u!4 &1106702195 stripped
 Transform:
@@ -2220,19 +2217,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9108216521157232338, guid: aa2da6aaf16aa054686df40e94bb8690, type: 3}
   m_PrefabInstance: {fileID: 1888223631}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1436468971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1436468965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba8137cbd62214845a7ac43cadd150bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  npc: {fileID: 0}
 --- !u!1 &1452519972
 GameObject:
   m_ObjectHideFlags: 0
@@ -2600,14 +2584,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8443459885028056168, guid: aa2da6aaf16aa054686df40e94bb8690, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.45000005
-      objectReference: {fileID: 0}
-    - target: {fileID: 8443459885028056168, guid: aa2da6aaf16aa054686df40e94bb8690, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.45000005
-      objectReference: {fileID: 0}
-    - target: {fileID: 8443459885028056168, guid: aa2da6aaf16aa054686df40e94bb8690, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.795846
       objectReference: {fileID: 0}
@@ -2649,7 +2625,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8970239659717014955, guid: aa2da6aaf16aa054686df40e94bb8690, type: 3}
       propertyPath: id
-      value: e7b9f18c-bc29-4bd3-96d6-ce8af2ab5a59
+      value: 58b10154-56b9-49f6-94ed-31a01468243e
       objectReference: {fileID: 0}
     - target: {fileID: 8970239659717014955, guid: aa2da6aaf16aa054686df40e94bb8690, type: 3}
       propertyPath: followTarget
@@ -2662,10 +2638,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9108216521157232338, guid: aa2da6aaf16aa054686df40e94bb8690, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1436468971}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa2da6aaf16aa054686df40e94bb8690, type: 3}
 --- !u!1 &1969608422
 GameObject:
@@ -2771,6 +2744,10 @@ PrefabInstance:
       propertyPath: characterUI
       value: 
       objectReference: {fileID: 869818257}
+    - target: {fileID: 4435791995219087028, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
+      propertyPath: attenuationObject
+      value: 
+      objectReference: {fileID: 1169020978}
     - target: {fileID: 5524560352777693293, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: _questSpawnPoint
       value: 
