@@ -23,6 +23,7 @@ public class PenguinFollower : MonoBehaviour, IDataPersistence
     private Vector3 startPos;
     private Vector3 localPosition;
     private bool hasScored;
+    private GameObject npc;
 
     [HideInInspector]
     public bool scored = false;
@@ -40,11 +41,13 @@ public class PenguinFollower : MonoBehaviour, IDataPersistence
         agent = GetComponent<NavMeshAgent>();
         startPos = transform.position;
         wanderTimer = wanderInterval;
+
     }
 
     void Start()
     {
-            WanderNow(); // Begin wandering immediately
+        WanderNow(); // Begin wandering immediately
+        npc = GetComponent<ProgressManager>().npc;
     }
 
     void Update()
@@ -70,7 +73,10 @@ public class PenguinFollower : MonoBehaviour, IDataPersistence
             return;
         }
 
-        if (distance < followRange)
+        if(distance < followRange)
+            npc = GetComponent<ProgressManager>().npc;
+
+        if (distance < followRange && npc != null)
         {
             isFollowing = true;
             agent.SetDestination(followTarget.position);
