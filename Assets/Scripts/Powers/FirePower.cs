@@ -11,7 +11,7 @@ public class FirePower : MonoBehaviour
     [SerializeField]
     private ParticleSystem flame;
     [SerializeField]
-    private float flameStregth = 1f;
+    private float flameStrength = 1f;
     [SerializeField]
     private GameObject powerOwner;
 
@@ -75,7 +75,7 @@ public class FirePower : MonoBehaviour
         {
             if (hit.transform == currentObject.transform)
             {
-                currentObject.GetComponent<HotAirBalloonRise>().Rise(flameStregth);
+                currentObject.GetComponent<HotAirBalloonRise>().Rise(flameStrength);
             }
         }
     }

@@ -19,7 +19,7 @@ public class SceneLoader : MonoBehaviour, IDataPersistence
         {
             pendingDoorID = destinationDoorID;
             DataPersistenceManager.Instance.SaveGame();
-            LoadingScreenManager.Instance.SwitchToScene(nextSceneName);
+            LoadingScreenManager.Instance.SwitchToScene(nextSceneName, reloadtime);
         }
     }
 
