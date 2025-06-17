@@ -49,6 +49,12 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
     public string dialogueNode;
     private DialogueRunner dialogueRunner;
 
+    [SerializeField] private Transform characterToRotate;
+    [SerializeField] private Transform playerTransform;
+
+    private Quaternion originalRotation;
+
+
     void Awake()
     {
         player = GameObject.Find("Player");
@@ -97,6 +103,7 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
     public string dialogueCompleteNode;
 
     [SerializeField] private Movement playerMovement;
+    private bool originalRotationStored = false;
     private void StartDialogue()
     {
         if (dialogueRunner != null && !dialogueRunner.IsDialogueRunning)
@@ -115,23 +122,72 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
                 }
             }
 
-            // Disable movement
             if (playerMovement != null)
                 playerMovement.enabled = false;
 
-            // Start dialogue
+            if (characterToRotate != null && playerTransform != null)
+            {
+                if (!originalRotationStored)
+                {
+                    originalRotation = characterToRotate.rotation;
+                    originalRotationStored = true;
+                }
+
+                StartCoroutine(RotateTowardPlayerWhileTalking());
+            }
+
             dialogueRunner.StartDialogue(nodeToRun);
 
-            // Re-enable movement when dialogue ends
             dialogueRunner.onDialogueComplete.AddListener(() =>
             {
                 if (playerMovement != null)
                     playerMovement.enabled = true;
+
+                if (characterToRotate != null)
+                    StartCoroutine(RestoreOriginalRotation());
             });
         }
     }
 
+    private IEnumerator RotateTowardPlayerWhileTalking()
+    {
+        float duration = 0.5f;
+        float elapsed = 0f;
 
+        Vector3 direction = playerTransform.position - characterToRotate.position;
+        direction.y = 0f;
+
+        if (direction == Vector3.zero)
+            direction = characterToRotate.forward;
+
+        Quaternion startRotation = characterToRotate.rotation;
+        Quaternion targetRotation = Quaternion.LookRotation(direction);
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            characterToRotate.rotation = Quaternion.Slerp(startRotation, targetRotation, elapsed / duration);
+            yield return null;
+        }
+
+        characterToRotate.rotation = targetRotation;
+    }
+
+    private IEnumerator RestoreOriginalRotation()
+    {
+        float duration = 0.5f;
+        float elapsed = 0f;
+        Quaternion startRotation = characterToRotate.rotation;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            characterToRotate.rotation = Quaternion.Slerp(startRotation, originalRotation, elapsed / duration);
+            yield return null;
+        }
+
+        characterToRotate.rotation = originalRotation;
+    }
 
 
     public void NPCInteraction()
