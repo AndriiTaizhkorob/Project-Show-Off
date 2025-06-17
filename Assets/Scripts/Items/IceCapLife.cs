@@ -4,10 +4,6 @@ public class IceCapLife : MonoBehaviour
 {
     [SerializeField]
     private float lifeTime = 1f;
-    void Start()
-    {
-        
-    }
 
     void Update()
     {
