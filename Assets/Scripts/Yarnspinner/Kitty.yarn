@@ -3,7 +3,7 @@
 Kitty: Hi, can you help me?
 -> Yes of course!
     Can you bring me 5 balloons?
-    <<start_quest "Balloon quest">>  
+    <<start_quest "Frozen Balloons">>  
 -> Who are you?
     I'm Kitty, nice to meet you!
 ===
@@ -15,5 +15,5 @@ How's the balloon hunt going?
 title: Kitty_Complete
 ---
 You brought them all back? Amazing!
-<<complete_quest "Balloon quest">>
+<<complete_quest "Frozen Balloons">>
 ===
