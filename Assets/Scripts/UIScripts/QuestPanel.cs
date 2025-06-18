@@ -43,7 +43,7 @@ public class QuestPanel : MonoBehaviour
             var curObject = _listDisplay[i].transform.position;
 
             curObject.y -= _questPrefab.rect.height * 2;
-            _listDisplay[i].gameObject.transform.position -= curObject;
+            _listDisplay[i].gameObject.transform.position = curObject;
         }
 
         var display = Instantiate(_questDisplayPrefab, _questPosition, Quaternion.identity, _questDisplayParent);
@@ -63,19 +63,20 @@ public class QuestPanel : MonoBehaviour
 
             if (_listDisplay[i].gameObject.GetComponent<TMP_Text>().text == questDescription)
             {
+                _questCount = i;
+
                 Debug.Log("Correct");
-                Debug.Log(_listDisplay[i]);
                 Destroy(_listDisplay[i].gameObject);
                 _listDisplay.Remove(_listDisplay[i]);
             }
 
-            if (i > _questCount)
+            if (i < _questCount)
             {
                 curObject.y += _questPrefab.rect.height * 2;
 
                 Debug.Log("<Moved up>");
                 Debug.Log(_listDisplay[i].transform.position);
-                _listDisplay[i].gameObject.transform.position -= curObject;
+                _listDisplay[i].gameObject.transform.position = curObject;
             }
         }
     }

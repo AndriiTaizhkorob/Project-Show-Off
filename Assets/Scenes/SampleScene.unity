@@ -433,7 +433,9 @@ MonoBehaviour:
   questText: 
   currentValue: 0
   questAssigned: 0
-  dialogueNode: Fruity
+  dialogueNode: 
+  characterToRotate: {fileID: 0}
+  playerTransform: {fileID: 0}
   dialogueStartNode: Fruity
   dialogueInProgressNode: Fruity_InProgress
   dialogueCompleteNode: Fruity_Complete
@@ -2386,6 +2388,8 @@ MonoBehaviour:
   currentValue: 0
   questAssigned: 0
   dialogueNode: Potato
+  characterToRotate: {fileID: 0}
+  playerTransform: {fileID: 0}
   dialogueStartNode: Potato
   dialogueInProgressNode: Potato_InProgress
   dialogueCompleteNode: Potato_Complete
@@ -4025,7 +4029,9 @@ MonoBehaviour:
   questText: 
   currentValue: 0
   questAssigned: 0
-  dialogueNode: Charli
+  dialogueNode: 
+  characterToRotate: {fileID: 0}
+  playerTransform: {fileID: 0}
   dialogueStartNode: Charli
   dialogueInProgressNode: Charli_InProgress
   dialogueCompleteNode: Charli_Complete
@@ -4891,7 +4897,9 @@ MonoBehaviour:
   questText: 
   currentValue: 0
   questAssigned: 0
-  dialogueNode: Kitty
+  dialogueNode: 
+  characterToRotate: {fileID: 0}
+  playerTransform: {fileID: 0}
   dialogueStartNode: Kitty
   dialogueInProgressNode: Kitty_InProgress
   dialogueCompleteNode: Kitty_Complete
