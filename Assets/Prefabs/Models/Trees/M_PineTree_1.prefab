@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e516289fdaa0bff49b9f54a0eead88d7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00000667572
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e516289fdaa0bff49b9f54a0eead88d7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 73264203533337642915ed59c2829f1c, type: 2}
+    - target: {fileID: -1751725828892168443, guid: e516289fdaa0bff49b9f54a0eead88d7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.54
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e516289fdaa0bff49b9f54a0eead88d7, type: 3}
       propertyPath: m_Name
       value: M_PineTree_1
@@ -69,7 +73,7 @@ PrefabInstance:
       addedObject: {fileID: 7258505272707801527}
     - targetCorrespondingSourceObject: {fileID: 7694601054610350338, guid: e516289fdaa0bff49b9f54a0eead88d7, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 203166665490286778}
+      addedObject: {fileID: 9132523739450173914}
     - targetCorrespondingSourceObject: {fileID: 4601153418826187080, guid: e516289fdaa0bff49b9f54a0eead88d7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1946875194636573361}
@@ -79,8 +83,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7694601054610350338, guid: e516289fdaa0bff49b9f54a0eead88d7, type: 3}
   m_PrefabInstance: {fileID: 8337662307741000165}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &203166665490286778
-BoxCollider:
+--- !u!136 &9132523739450173914
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -97,9 +101,11 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 4.964225, y: 6.794027, z: 4.9110465}
-  m_Center: {x: 0.124881625, y: 4.5885324, z: 0.06706619}
+  serializedVersion: 2
+  m_Radius: 2.61
+  m_Height: 8.731317
+  m_Direction: 1
+  m_Center: {x: -0.1, y: 3.6198878, z: -0.04}
 --- !u!23 &4434372759003045138 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -3585044291852206857, guid: e516289fdaa0bff49b9f54a0eead88d7, type: 3}
