@@ -2,7 +2,6 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.TextCore.Text;
-using static UnityEditor.SceneView;
 
 public class CameraControls : MonoBehaviour
 {
