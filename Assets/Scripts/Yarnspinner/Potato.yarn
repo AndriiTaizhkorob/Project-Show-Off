@@ -1,47 +1,47 @@
 ﻿title: Potato
 ---
-Potato: Hello!! Have you come to eat hamburgers with me? Or maybe... to play THE GAME??
--> I brought you an invitation!
-    Potato: A party? With *music* and *snacks* and *burgers*?!
-    Potato: YES. But wait! I can only party with CHAMPIONS. You must first beat me... in HIDE AND SEEK!
-    Potato: But be warned, when we start, I go POOF! You won't see me until you FIND ME!
-    -> I'm ready!
+Potato: Hello!! Have you come to eat hamburgers with me? Or maybe... to play THE GAME?? #line:Potato-2
+-> I brought you an invitation!  #line:0991de5 
+    Potato: A party? With *music* and *snacks* and *burgers*?!  #line:0768ad9 
+    Potato: YES. But wait! I can only party with CHAMPIONS. You must first beat me... in HIDE AND SEEK!  #line:0d5bf93 
+    Potato: But be warned, when we start, I go POOF! You won't see me until you FIND ME!  #line:059c5e3 
+    -> I'm ready!  #line:056a598 
         <<start_quest "Hide'n'Seek">>
-        Let's play! I'm hiding near something crispy and DELICIOUS.
+        Let's play! I'm hiding near something crispy and DELICIOUS.  #line:0a022cd 
         <<teleport_potato>>
--> What's “THE GAME”?
-    Potato: THE GAME is everything! THE GAME is the best! THE GAME is... HIDE AND SEEK!!
-    Potato: I'm the undisputed champion. But if you want me at your party, you'll have to BEAT ME!
-    Potato: But be warned, when we start, I go POOF! You won't see me until you FIND ME!
-    -> I'm in!
+-> What's “THE GAME”? #line:0652d2a 
+    Potato: THE GAME is everything! THE GAME is the best! THE GAME is... HIDE AND SEEK!!  #line:097c384 
+    Potato: I'm the undisputed champion. But if you want me at your party, you'll have to BEAT ME!  #line:0d52b8a 
+    Potato: But be warned, when we start, I go POOF! You won't see me until you FIND ME!  #line:06691c9 
+    -> I'm in! #line:0301740 
         <<start_quest "Hide'n'Seek">>
-        First round: I'm hiding near something crispy and DELICIOUS.
+        First round: I'm hiding near something crispy and DELICIOUS.  #line:0649717 
         <<teleport_potato>>
--> I was just looking around.
-    Potato: That's how all great adventures start! And they end... with potatoes.
+-> I was just looking around. #line:033b880 
+    Potato: That's how all great adventures start! And they end... with potatoes.  #line:0086743 
 ===
 title: Potato_InProgress
 ---
 <<if $potato_progress == 1>>
-Potato: Next, I'll go to a place with clowns and laughter!
--> I've seen a tent that looks like the right place
+Potato: Next, I'll go to a place with clowns and laughter!  #line:09d14c6 
+-> I've seen a tent that looks like the right place  #line:035f3a5 
 
 <<elseif $potato_progress == 2>>
-Potato: I'm getting hungry, maybe I'll hide near something big and breakfasty!
--> Breakfast huh? Something made from flour and eggs
+Potato: I'm getting hungry, maybe I'll hide near something big and breakfasty!  #line:0384f32 
+-> Breakfast huh? Something made from flour and eggs  #line:0147bbe 
 
 <<elseif $potato_progress == 3>>
-Potato: Now It's time for something fun! Let's take a ride
--> Something to take a ride on. Let's look for attractions!
+Potato: Now It's time for something fun! Let's take a ride  #line:0aed78e 
+-> Something to take a ride on. Let's look for attractions!  #line:0ab1ba2 
 <<else>>
-Potato: You're... too good. I may have to hide inside a sandwich next.
--> One more time!
+Potato: You're... too good. I may have to hide inside a sandwich next.  #line:077e3e3 
+-> One more time!  #line:01914b9 
 <<endif>>
 <<teleport_potato>>
 ===
 title: Potato_Complete
 ---
-Potato: YOU FOUND ME EVERY TIME! I'm officially impressed, and hungry.
-Potato: I'll bring mac & cheese and garlands to your party.
+Potato: YOU FOUND ME EVERY TIME! I'm officially impressed, and hungry.  #line:00efa07 
+Potato: I'll bring mac & cheese and garlands to your party.  #line:02f685f 
 <<complete_quest "Hide'n'Seek">>
 ===
