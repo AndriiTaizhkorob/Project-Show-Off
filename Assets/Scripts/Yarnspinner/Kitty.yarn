@@ -1,19 +1,19 @@
 ﻿title: Kitty
 ---
-Kitty: Hi, can you help me? #line:037b69a 
--> Yes of course! #line:09bb581 
-    Can you bring me 5 balloons? #line:05b894f 
+Kitty: Hi, can you help me?
+-> Yes of course!
+    Can you bring me 5 balloons?
     <<start_quest "Frozen Balloons">>  
--> Who are you? #line:0d75cea 
-    I'm Kitty, nice to meet you! #line:01dcd34 
+-> Who are you?
+    I'm Kitty, nice to meet you!
 ===
 title: Kitty_InProgress
 ---
-How's the balloon hunt going? #line:0ac7e3f 
+How's the balloon hunt going?
 ===
 
 title: Kitty_Complete
 ---
-You brought them all back? Amazing! #line:00ca805 
+You brought them all back? Amazing!
 <<complete_quest "Frozen Balloons">>
 ===
