@@ -1,4 +1,8 @@
+
 using UnityEngine;
+using UnityEngine.VFX;
+using UnityEngine.EventSystems;
+using System.Collections;
 
 public class HideAndSeek : MonoBehaviour, IDataPersistence
 {
@@ -8,7 +12,12 @@ public class HideAndSeek : MonoBehaviour, IDataPersistence
     public int spotNumber;
     private int spotLimit;
     private bool inProgress;
-    public GameObject teleportEffectPrefab;
+    public VisualEffect teleportEffect;
+
+    void Awake()
+    {
+        teleportEffect.Stop();
+    }
 
     void Start()
     {
@@ -22,6 +31,7 @@ public class HideAndSeek : MonoBehaviour, IDataPersistence
         inProgress = GetComponent<QuestTrigger>().isAccepted;
         currentValue = GetComponent<QuestTrigger>().currentValue;
         var runner = FindAnyObjectByType<Yarn.Unity.DialogueRunner>();
+
         if (runner != null)
         {
             runner.VariableStorage.SetValue("$potato_progress", spotNumber);
@@ -31,22 +41,19 @@ public class HideAndSeek : MonoBehaviour, IDataPersistence
     {
         if (inProgress && currentValue == spotNumber && currentValue != spotLimit)
         {
-            if (teleportEffectPrefab != null)
-            {
-                Instantiate(teleportEffectPrefab, transform.position, Quaternion.identity);
-            }
+            teleportEffect.Play();
 
-            transform.position = tpSpots[currentValue].transform.position;
-
-            if (teleportEffectPrefab != null)
-            {
-                Instantiate(teleportEffectPrefab, transform.position, Quaternion.identity);
-            }
-
-            spotNumber++;
+            StartCoroutine(DelayActivation());
         }
     }
 
+    IEnumerator DelayActivation()
+    {
+        yield return new WaitForSeconds(1f);
+        transform.position = tpSpots[currentValue].transform.position;
+        spotNumber++;
+        teleportEffect.Stop();
+    }
 
     public void LoadData(GameData data)
     {

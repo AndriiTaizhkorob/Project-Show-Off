@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.VFX;
 
 public class TreeGrowth : MonoBehaviour, IDataPersistence
 {
@@ -7,6 +8,8 @@ public class TreeGrowth : MonoBehaviour, IDataPersistence
 
     [SerializeField] 
     private ParticleSystem firework;
+    [SerializeField] 
+    private VisualEffect growth;
     [SerializeField]
     private float growthSpeed;
     [SerializeField]
@@ -23,6 +26,7 @@ public class TreeGrowth : MonoBehaviour, IDataPersistence
     private GameObject treeObj;
     private bool isSpawned = false;
     private bool isPlayed = false;
+    private bool isPlaying = false;
     private float localSize = 0f;
 
     [SerializeField] public string id;
@@ -33,16 +37,38 @@ public class TreeGrowth : MonoBehaviour, IDataPersistence
         id = System.Guid.NewGuid().ToString();
     }
 
+    void Awake()
+    {
+        growth.Stop();
+    }
+
     void Update()
     {
         if (gameObject.GetComponent<ProgressManager>().enabled && interaction.action.triggered && !isSpawned && Physics.CheckSphere(transform.position, checkRadius, playerMask))
             Spawn();
 
         if (gameObject.GetComponent<ProgressManager>().enabled && interaction.action.inProgress && Physics.CheckSphere(transform.position, checkRadius, playerMask) && treeObj.transform.localScale.x < scaleLimit)
+        {
             treeObj.transform.localScale += new Vector3(growthSpeed, growthSpeed, growthSpeed) * Time.deltaTime;
+            if (!isPlaying)
+            {
+                growth.Play();
+                isPlaying = true;
+            }
+
+        }
+        else
+        {
+            if (isPlaying)
+            {
+                growth.Stop();
+                isPlaying = false;
+            }
+        }
+
 
         if (isSpawned && treeObj.transform.localScale.x >= scaleLimit && !isPlayed)
-            Play();
+            Play(); 
 
         if(isSpawned)
             localSize = treeObj.transform.localScale.x;
