@@ -28,11 +28,11 @@ public class FirePower : MonoBehaviour
     {
         cam = Camera.main;
         flameableObjects = GameObject.FindGameObjectsWithTag(searchedTag);
-        
     }
 
     void Update()
     {
+
         if (shoot.action.triggered && powerOwner != null)
             PowerOn();
 
@@ -45,10 +45,19 @@ public class FirePower : MonoBehaviour
                 FireUP();
 
             if (shoot.action.inProgress)
-                flame.Play();
-
+            {
+                if (!flame.isPlaying)
+                {
+                    flame.Play();
+                }
+            }
             else
-                flame.Stop();
+            {
+                if (flame.isPlaying)
+                {
+                    flame.Stop();
+                }
+            }
         }
     }
 

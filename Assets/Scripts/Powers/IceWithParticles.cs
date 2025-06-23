@@ -3,7 +3,8 @@ using System.Collections.Generic;
 
 public class IceParticleCollision : MonoBehaviour
 {
-    public GameObject icePrefab;
+    [SerializeField]
+    private GameObject icePrefab;
 
     private ParticleSystem ps;
     private List<ParticleCollisionEvent> collisionEvents;
