@@ -33,6 +33,7 @@ public class InteractionPromptUI : MonoBehaviour
 
         if (inRange && !isDialogueRunning && !promptUI.activeSelf)
         {
+            Debug.Log("bullshit");
             promptUI.SetActive(true);
         }
         else if ((!inRange || isDialogueRunning) && promptUI.activeSelf)
