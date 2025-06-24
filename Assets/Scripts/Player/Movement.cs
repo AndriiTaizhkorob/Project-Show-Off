@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using FMOD.Studio;
 
 public class Movement : MonoBehaviour
 {
@@ -14,6 +15,10 @@ public class Movement : MonoBehaviour
 
     public float speed = 1.0f;
     public float jumpForce = 1.0f;
+
+    private EventInstance playerFootsteps;
+
+    private bool isGrounded;
   
     void Awake()
     {
@@ -21,12 +26,26 @@ public class Movement : MonoBehaviour
         characterUI = GameObject.Find("characterUI");
     }
 
-    
+    private void Start()
+    {
+        playerFootsteps = AudioManager.instance.CreateInstance(FMODEvents.instance.footSteps);
+    }
+
     void Update()
     {
         if (!characterUI.activeInHierarchy)
         {
             Moving();
+            UpdateSound();
+        }
+
+        if(Physics.Raycast(transform.position, Vector3.down, 1.1f))
+        {
+            isGrounded = true;
+        }
+        else
+        {
+            isGrounded= false;
         }
     }
 
@@ -42,6 +61,29 @@ public class Movement : MonoBehaviour
             moveDirection = move.action.ReadValue<Vector2>();
             velocity = (transform.forward * moveDirection.y * speed + transform.right * moveDirection.x * speed + transform.up * rb.linearVelocity.y);
             rb.linearVelocity = velocity;
+        }
+    }
+
+    private void UpdateSound()
+    {
+        var surfaceIndex = TerrainSurface.GetMainTexture(transform.position);
+
+        if (move.action.inProgress && isGrounded)
+        {
+            playerFootsteps.setParameterByName("isLooping", 1);
+
+            PLAYBACK_STATE playbackState;
+            playerFootsteps.getPlaybackState(out playbackState);
+            if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
+            {
+                playerFootsteps.setParameterByName("SurfaceType", surfaceIndex);
+                playerFootsteps.start();
+            }
+        }
+        else
+        {
+            //playerFootsteps.stop(STOP_MODE.ALLOWFADEOUT);
+            playerFootsteps.setParameterByName("isLooping", 0);
         }
     }
 }

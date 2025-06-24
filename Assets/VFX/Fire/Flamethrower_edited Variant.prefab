@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 108236709336795000, guid: ef51c2d241959ee4ba7b46958f959456, type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 637713264316834537, guid: ef51c2d241959ee4ba7b46958f959456, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -72,6 +76,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flamethrower_edited Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3468175697028093486, guid: ef51c2d241959ee4ba7b46958f959456, type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116095728480244919, guid: ef51c2d241959ee4ba7b46958f959456, type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5932724762501446801, guid: ef51c2d241959ee4ba7b46958f959456, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.5
@@ -90,6 +102,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8211760293858401907, guid: ef51c2d241959ee4ba7b46958f959456, type: 3}
       propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211760293858401907, guid: ef51c2d241959ee4ba7b46958f959456, type: 3}
+      propertyPath: moveWithTransform
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8211760293858401907, guid: ef51c2d241959ee4ba7b46958f959456, type: 3}
