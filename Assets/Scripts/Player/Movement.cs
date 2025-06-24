@@ -67,6 +67,7 @@ public class Movement : MonoBehaviour
     private void UpdateSound()
     {
         var surfaceIndex = TerrainSurface.GetMainTexture(transform.position);
+        playerFootsteps.setParameterByName("SurfaceType", surfaceIndex);
 
         if (move.action.inProgress && isGrounded)
         {
@@ -76,14 +77,17 @@ public class Movement : MonoBehaviour
             playerFootsteps.getPlaybackState(out playbackState);
             if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
             {
-                playerFootsteps.setParameterByName("SurfaceType", surfaceIndex);
                 playerFootsteps.start();
             }
         }
         else
         {
-            //playerFootsteps.stop(STOP_MODE.ALLOWFADEOUT);
             playerFootsteps.setParameterByName("isLooping", 0);
         }
+    }
+
+    public void StopSound()
+    {
+        playerFootsteps.stop(STOP_MODE.ALLOWFADEOUT);
     }
 }
