@@ -3170,6 +3170,80 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8132380249188053836, guid: 40c807602bf67eb428e49fed1bf092c9, type: 3}
   m_PrefabInstance: {fileID: 340746431}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &347284197
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 556273877}
+    m_Modifications:
+    - target: {fileID: 5873672725703510071, guid: 5842b1d32e34daf40ac29c291a33cf93, type: 3}
+      propertyPath: m_Name
+      value: ski lift (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541666019117961869, guid: 5842b1d32e34daf40ac29c291a33cf93, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2209301
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541666019117961869, guid: 5842b1d32e34daf40ac29c291a33cf93, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.22093
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541666019117961869, guid: 5842b1d32e34daf40ac29c291a33cf93, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.22093
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541666019117961869, guid: 5842b1d32e34daf40ac29c291a33cf93, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 66.97048
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541666019117961869, guid: 5842b1d32e34daf40ac29c291a33cf93, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -28.905771
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541666019117961869, guid: 5842b1d32e34daf40ac29c291a33cf93, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -70.4638
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541666019117961869, guid: 5842b1d32e34daf40ac29c291a33cf93, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9023545
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541666019117961869, guid: 5842b1d32e34daf40ac29c291a33cf93, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.09780735
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541666019117961869, guid: 5842b1d32e34daf40ac29c291a33cf93, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.41730598
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541666019117961869, guid: 5842b1d32e34daf40ac29c291a33cf93, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.045232326
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541666019117961869, guid: 5842b1d32e34daf40ac29c291a33cf93, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -12.372
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541666019117961869, guid: 5842b1d32e34daf40ac29c291a33cf93, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 310.362
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541666019117961869, guid: 5842b1d32e34daf40ac29c291a33cf93, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5842b1d32e34daf40ac29c291a33cf93, type: 3}
+--- !u!4 &347284198 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6541666019117961869, guid: 5842b1d32e34daf40ac29c291a33cf93, type: 3}
+  m_PrefabInstance: {fileID: 347284197}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &347400907
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4992,6 +5066,7 @@ Transform:
   - {fileID: 803057852}
   - {fileID: 1363938573}
   - {fileID: 1824207489}
+  - {fileID: 347284198}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &571597074
@@ -16296,3 +16371,4 @@ SceneRoots:
   - {fileID: 556273877}
   - {fileID: 242392748}
   - {fileID: 269366089}
+  - {fileID: 5408412417224105077}
