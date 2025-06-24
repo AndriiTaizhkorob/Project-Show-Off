@@ -8,6 +8,8 @@ public class SceneLoader : MonoBehaviour, IDataPersistence
 
     private string pendingDoorID;
 
+    private GameObject player;
+
     private void Awake()
     {
         GameObject.Find("characterUI")?.SetActive(true);
@@ -15,8 +17,12 @@ public class SceneLoader : MonoBehaviour, IDataPersistence
 
     void OnTriggerEnter(Collider other)
     {
+        player = GameObject.Find("Player");
+
         if (other.CompareTag("Player"))
         {
+            player.GetComponent<Movement>().StopSound();
+            player.GetComponent<Movement>().enabled = false;
             pendingDoorID = destinationDoorID;
             DataPersistenceManager.Instance.SaveGame();
             LoadingScreenManager.Instance.SwitchToScene(nextSceneName, reloadtime);
