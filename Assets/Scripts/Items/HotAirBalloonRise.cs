@@ -1,3 +1,5 @@
+using FMOD.Studio;
+using FMODUnity;
 using UnityEngine;
 
 public class HotAirBalloonRise : MonoBehaviour, IDataPersistence
@@ -14,7 +16,10 @@ public class HotAirBalloonRise : MonoBehaviour, IDataPersistence
     private Vector3 targetPosition;
 
     private bool complete = false;
+    private bool inProgress = false;
     private Vector3 endPoint;
+
+    private StudioEventEmitter hotAirBalloonSound;
 
     [SerializeField] public string id;
 
@@ -34,6 +39,7 @@ public class HotAirBalloonRise : MonoBehaviour, IDataPersistence
 
     private void Start()
     {
+        hotAirBalloonSound = GetComponent<StudioEventEmitter>();
         endPoint = transform.position;
     }
 
@@ -79,7 +85,22 @@ public class HotAirBalloonRise : MonoBehaviour, IDataPersistence
     public void Rise(float flameStrength)
     {
         if (gameObject.GetComponent<ProgressManager>().enabled)
+        {
             progressScale += flameStrength * Time.deltaTime;
+            if (!inProgress)
+            {
+                hotAirBalloonSound.Play();
+                inProgress = true;
+            }
+        }
+    }
+
+    public void StopSound()
+    {
+        if (!complete && inProgress)
+        {
+            hotAirBalloonSound.Stop();
+        }
     }
 
     public void LoadData(GameData data)

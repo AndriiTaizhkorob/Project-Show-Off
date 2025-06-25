@@ -112,6 +112,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7fffb2e24fda5754fa8dec03dea0ac47, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5151526663628842730}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7fffb2e24fda5754fa8dec03dea0ac47, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2446617831524608670}
   m_SourcePrefab: {fileID: 100100000, guid: 7fffb2e24fda5754fa8dec03dea0ac47, type: 3}
 --- !u!1 &1148730333835842432 stripped
 GameObject:
@@ -201,6 +204,37 @@ CapsuleCollider:
   m_Height: 5.125123
   m_Direction: 1
   m_Center: {x: 0, y: 2.0625606, z: 0}
+--- !u!114 &2446617831524608670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148730333835842432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1965016812
+      Data2: 1074612780
+      Data3: -1291716170
+      Data4: 741299652
+    Path: event:/Hot air balloon
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 15
 --- !u!4 &7900233714449503537 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -1255605710908113952, guid: 7fffb2e24fda5754fa8dec03dea0ac47, type: 3}

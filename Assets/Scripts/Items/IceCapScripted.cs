@@ -1,3 +1,4 @@
+using FMODUnity;
 using UnityEngine;
 
 public class IceCapScripted : MonoBehaviour
@@ -7,9 +8,12 @@ public class IceCapScripted : MonoBehaviour
     private bool isTouched = false;
     private float timer = 0f;
 
+    private StudioEventEmitter emitter;
+
     private void Awake()
     {
         timer = lifeTime;
+        emitter = GetComponent<StudioEventEmitter>();
     }
 
     void Update()
@@ -31,5 +35,10 @@ public class IceCapScripted : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         isTouched = true;
+    }
+
+    private void OnDisable()
+    {
+        emitter.Play();
     }
 }

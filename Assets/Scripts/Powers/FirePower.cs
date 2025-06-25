@@ -1,3 +1,4 @@
+using FMOD.Studio;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,15 +20,17 @@ public class FirePower : MonoBehaviour
     [SerializeField]
     private string searchedTag = "Flameable";
 
+    private EventInstance firePowerSound;
     private GameObject[] flameableObjects;
-    private Camera cam;
     private GameObject currentObject;
+    private Camera cam;
     private bool isActive;
 
     void Start()
     {
         cam = Camera.main;
         flameableObjects = GameObject.FindGameObjectsWithTag(searchedTag);
+        firePowerSound = AudioManager.instance.CreateInstance(FMODEvents.instance.firePower);
     }
 
     void Update()
@@ -46,13 +49,19 @@ public class FirePower : MonoBehaviour
 
             if (shoot.action.inProgress)
             {
+                firePowerSound.setParameterByName("isLooping", 1);
+
                 if (!flame.isPlaying)
                 {
                     flame.Play();
+                    firePowerSound.start();
+
                 }
             }
             else
             {
+                firePowerSound.setParameterByName("isLooping", 0);
+
                 if (flame.isPlaying)
                 {
                     flame.Stop();
@@ -85,6 +94,10 @@ public class FirePower : MonoBehaviour
             if (hit.transform == currentObject.transform)
             {
                 currentObject.GetComponent<HotAirBalloonRise>().Rise(flameStrength);
+            }
+            else
+            {
+                currentObject.GetComponent<HotAirBalloonRise>().StopSound();
             }
         }
     }

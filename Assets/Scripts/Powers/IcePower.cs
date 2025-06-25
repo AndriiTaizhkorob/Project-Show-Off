@@ -1,3 +1,4 @@
+using FMOD.Studio;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.VFX;
@@ -15,10 +16,16 @@ public class IcePower : MonoBehaviour
     private GameObject powerOwner;
 
     private bool isActive;
+    private EventInstance icePowerSound;
 
     void Awake()
     {
         iceBeam.Stop();
+    }
+
+    private void Start()
+    {
+        icePowerSound = AudioManager.instance.CreateInstance(FMODEvents.instance.icePower);
     }
 
     void Update()
@@ -30,15 +37,20 @@ public class IcePower : MonoBehaviour
         {
             if (shoot.action.inProgress)
             {
+                icePowerSound.setParameterByName("isLooping", 1);
+
                 if (!cold.isPlaying)
                 {
                     cold.Play();
                     iceBeam.Play();
+                    icePowerSound.start();
                 }
             }
 
             else
             {
+                icePowerSound.setParameterByName("isLooping", 0);
+
                 if (cold.isPlaying)
                 {
                     cold.Stop();

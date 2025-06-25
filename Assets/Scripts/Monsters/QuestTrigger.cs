@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections;
 using Yarn.Unity;
+using FMOD.Studio;
 
 public class QuestTrigger : MonoBehaviour, IDataPersistence
 {
@@ -20,6 +21,8 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
 
     private GameObject questManager;
     private GameObject dataPersistenceManager;
+    private EventInstance crossOut;
+    private EventInstance pointUp;
 
     private Button completeButton;
     private Button acceptButton;
@@ -65,6 +68,9 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
         completeButton = completeObj.GetComponent<Button>();
         acceptButton = acceptObj.GetComponent<Button>();
         closeButton = closeObj.GetComponent<Button>();
+
+        crossOut = AudioManager.instance.CreateInstance(FMODEvents.instance.crossOut);
+        pointUp = AudioManager.instance.CreateInstance(FMODEvents.instance.succeess);
     }
 
     void Start()
@@ -292,12 +298,20 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
 
         questText = currentValue + "/" + itemAmount;
         questPreset.Description = questText;
+        pointUp.start();
     }
 
     public void QuestComplete()
     {
         isCompleted = true;
         Debug.Log("You got them all!");
+        StartCoroutine(DelaySound());
+    }
+
+    IEnumerator DelaySound()
+    {
+        yield return new WaitForSeconds(1f);
+        crossOut.start();
     }
 
     public void QuestHandedIn()

@@ -266,11 +266,15 @@
 		</relationship>
 	</object>
 	<object class="MultiSound" id="{fa538a2d-eb20-4de2-a5d7-b6455272caed}">
+		<property name="triggerConditionMode">
+			<value>1</value>
+		</property>
 		<property name="length">
 			<value>0.80000000000000004</value>
 		</property>
 		<relationship name="triggerConditions">
 			<destination>{9cdf73d6-f36e-44c5-a07f-53e04ce4fa24}</destination>
+			<destination>{17b79d6e-ba32-43ad-ae10-09ffe45ced81}</destination>
 		</relationship>
 		<relationship name="fadeOutCurve">
 			<destination>{ddbac95b-8267-42e2-a814-b7cf4d310d87}</destination>
@@ -395,7 +399,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{01f67dfb-21e6-4d9b-a635-abbc0d64a048}">
 		<property name="volume">
-			<value>-2</value>
+			<value>-16</value>
 		</property>
 		<property name="name">
 			<value>Audio 6</value>
@@ -416,9 +420,6 @@
 		</property>
 		<property name="length">
 			<value>0.70000000000000007</value>
-		</property>
-		<property name="triggerConditionMode">
-			<value>1</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{e941bc6b-9d53-4fa8-8614-91fe747baab1}</destination>
@@ -453,10 +454,10 @@
 	</object>
 	<object class="ParameterCondition" id="{06d71599-9a59-4125-84bb-cd5e30451388}">
 		<property name="minimum">
-			<value>6</value>
+			<value>5</value>
 		</property>
 		<property name="maximum">
-			<value>6.9899997711181641</value>
+			<value>5.9899997711181641</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{9948a266-72aa-4cab-8869-47ec14c0be0e}</destination>
@@ -592,6 +593,17 @@
 			<destination>{9948a266-72aa-4cab-8869-47ec14c0be0e}</destination>
 		</relationship>
 	</object>
+	<object class="ParameterCondition" id="{17b79d6e-ba32-43ad-ae10-09ffe45ced81}">
+		<property name="minimum">
+			<value>13</value>
+		</property>
+		<property name="maximum">
+			<value>13.989999771118164</value>
+		</property>
+		<relationship name="parameter">
+			<destination>{9948a266-72aa-4cab-8869-47ec14c0be0e}</destination>
+		</relationship>
+	</object>
 	<object class="FadeCurve" id="{ddbac95b-8267-42e2-a814-b7cf4d310d87}">
 		<relationship name="startPoint">
 			<destination>{a61d7b9d-bafc-4197-b277-a9295c8b983f}</destination>
@@ -652,7 +664,7 @@
 	</object>
 	<object class="ParameterCondition" id="{737efb48-2217-4454-991f-7ed4ead7e712}">
 		<property name="minimum">
-			<value>15</value>
+			<value>14</value>
 		</property>
 		<property name="maximum">
 			<value>18</value>
@@ -987,16 +999,19 @@
 	<object class="MixerBusFader" id="{9f526291-35b5-483b-90a4-3956c29fe392}" />
 	<object class="ThreeEQEffect" id="{6344a1e7-98d2-4389-a661-ac3a70d90d65}">
 		<property name="midGain">
-			<value>-2.5</value>
+			<value>-7</value>
 		</property>
 		<property name="highGain">
-			<value>-9</value>
+			<value>-11</value>
 		</property>
 		<property name="lowCrossover">
 			<value>340</value>
 		</property>
+		<property name="highCrossover">
+			<value>2500</value>
+		</property>
 		<property name="crossoverSlope">
-			<value>0</value>
+			<value>2</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{47ee1e69-cf8b-4f0c-aca7-93e1c09b56d5}">

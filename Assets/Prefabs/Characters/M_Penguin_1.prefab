@@ -115,6 +115,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ab3910f5bbed5df46a1dc0d99d96b9c6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 158933422609575016}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ab3910f5bbed5df46a1dc0d99d96b9c6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3143031187122724543}
   m_SourcePrefab: {fileID: 100100000, guid: ab3910f5bbed5df46a1dc0d99d96b9c6, type: 3}
 --- !u!1 &9108216521157232338 stripped
 GameObject:
@@ -226,3 +229,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npc: {fileID: 0}
+--- !u!114 &3143031187122724543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9108216521157232338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1299264192
+      Data2: 1231677037
+      Data3: 1061350535
+      Data4: -317576911
+    Path: event:/Penguin sounds
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 8
