@@ -5549,6 +5549,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
+--- !u!1 &586605634 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6715939542481362777, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
+  m_PrefabInstance: {fileID: 586605633}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &589663951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6775,11 +6780,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723754133}
   m_Mesh: {fileID: -7994650926060863905, guid: 4724748c37bc6e741a1e3b93a7b76200, type: 3}
---- !u!1 &723870712 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5423457945756927841, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
-  m_PrefabInstance: {fileID: 586605633}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &753309961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12402,7 +12402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ed5a7776a7d52f4eb0654501d565a77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  promptUI: {fileID: 723870712}
+  promptUI: {fileID: 586605634}
   target: {fileID: 1536941197}
   showDistance: 3
   playerMask:
@@ -17151,3 +17151,4 @@ SceneRoots:
   - {fileID: 556273877}
   - {fileID: 242392748}
   - {fileID: 269366089}
+  - {fileID: 1581700197}

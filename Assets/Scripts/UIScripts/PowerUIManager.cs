@@ -47,7 +47,7 @@ public class PowerUIManager : MonoBehaviour
             }
             else if (!shouldBeVisible && isCurrentlyVisible)
             {
-                entry.Value.SetActive(false);
+                entry.Value.SetActive(false); // layout group will fill the gap
                 iconState[entry.Key] = false;
             }
         }
@@ -55,6 +55,7 @@ public class PowerUIManager : MonoBehaviour
 
     private IEnumerator AnimateIconIn(GameObject icon)
     {
+        icon.transform.SetAsFirstSibling(); // put new icon at the top
         icon.SetActive(true);
 
         CanvasGroup group = icon.GetComponent<CanvasGroup>();
@@ -82,4 +83,5 @@ public class PowerUIManager : MonoBehaviour
         icon.transform.localScale = Vector3.one;
     }
 }
+
 
