@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: dark red
+  m_Name: gray 1
   m_Shader: {fileID: -6465566751694194690, guid: c6061e547750be64aad65bb463ca27c3, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -42,14 +42,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _OVERLAY: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Color: {r: 0.5754717, g: 0, b: 0.031594593, a: 0}
-    - _Color_1: {r: 0.8301887, g: 0.035243843, b: 0.062962174, a: 0}
+    - _Color: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 0}
+    - _Color_1: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &5360272400062540061
+--- !u!114 &2001449689981553870
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
