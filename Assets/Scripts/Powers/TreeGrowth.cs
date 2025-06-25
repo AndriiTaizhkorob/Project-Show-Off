@@ -1,3 +1,4 @@
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.VFX;
@@ -24,6 +25,7 @@ public class TreeGrowth : MonoBehaviour, IDataPersistence
     private GameObject[] treePrefabs;
 
     private GameObject treeObj;
+    private StudioEventEmitter emitter;
     private bool isSpawned = false;
     private bool isPlayed = false;
     private bool isPlaying = false;
@@ -40,6 +42,7 @@ public class TreeGrowth : MonoBehaviour, IDataPersistence
     void Awake()
     {
         growth.Stop();
+        emitter = GetComponent<StudioEventEmitter>();
     }
 
     void Update()
@@ -54,8 +57,8 @@ public class TreeGrowth : MonoBehaviour, IDataPersistence
             {
                 growth.Play();
                 isPlaying = true;
+                emitter.Play();
             }
-
         }
         else
         {
@@ -63,6 +66,7 @@ public class TreeGrowth : MonoBehaviour, IDataPersistence
             {
                 growth.Stop();
                 isPlaying = false;
+                emitter.Stop();
             }
         }
 

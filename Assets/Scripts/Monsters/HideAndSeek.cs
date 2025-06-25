@@ -1,8 +1,9 @@
 
-using UnityEngine;
-using UnityEngine.VFX;
-using UnityEngine.EventSystems;
+using FMODUnity;
 using System.Collections;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.VFX;
 
 public class HideAndSeek : MonoBehaviour, IDataPersistence
 {
@@ -10,13 +11,17 @@ public class HideAndSeek : MonoBehaviour, IDataPersistence
     private GameObject questUI;
     public int currentValue;
     public int spotNumber;
+
     private int spotLimit;
     private bool inProgress;
+    private StudioEventEmitter emitter;
+
     public VisualEffect teleportEffect;
 
     void Awake()
     {
         teleportEffect.Stop();
+        emitter = GetComponent<StudioEventEmitter>();
     }
 
     void Start()
@@ -42,14 +47,14 @@ public class HideAndSeek : MonoBehaviour, IDataPersistence
         if (inProgress && currentValue == spotNumber && currentValue != spotLimit)
         {
             teleportEffect.Play();
-
+            emitter.Play();
             StartCoroutine(DelayActivation());
         }
     }
 
     IEnumerator DelayActivation()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
         transform.position = tpSpots[currentValue].transform.position;
         spotNumber++;
         teleportEffect.Stop();

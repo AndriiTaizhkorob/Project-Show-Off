@@ -5,7 +5,7 @@
 			<value>Iceland ambient</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{48c6a6c7-ed6f-4342-b98a-0792b412ac59}</destination>
@@ -100,6 +100,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{d3944075-c9bf-4670-a2fe-79b6a15c03c7}">
+		<property name="volume">
+			<value>-12</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -130,7 +133,6 @@
 	<object class="MixerBusEffectChain" id="{8dac54c1-45bd-4ddc-88e6-6fea8aecdc77}">
 		<relationship name="effects">
 			<destination>{92019c68-e4b6-4881-a2c1-ae6ff42d59c2}</destination>
-			<destination>{e4648d66-88a0-403f-93ea-41f66a799ee3}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{bb5e2033-d10c-4c09-a3c5-8680d716a29b}" />
@@ -142,10 +144,5 @@
 	</object>
 	<object class="MixerBusPanner" id="{ca7275ae-9a76-4d29-8166-836c660c1d32}" />
 	<object class="MixerBusFader" id="{92019c68-e4b6-4881-a2c1-ae6ff42d59c2}" />
-	<object class="SpatialiserEffect" id="{e4648d66-88a0-403f-93ea-41f66a799ee3}">
-		<property name="distanceRolloffType">
-			<value>1</value>
-		</property>
-	</object>
 	<object class="MixerBusFader" id="{bb53287b-11f6-4a7c-9a2a-b7fa19fbf047}" />
 </objects>

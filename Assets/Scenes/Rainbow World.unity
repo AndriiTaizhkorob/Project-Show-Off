@@ -578,6 +578,69 @@ Transform:
   - {fileID: 296182205}
   m_Father: {fileID: 1003402933}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &37232589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 37232590}
+  - component: {fileID: 37232591}
+  m_Layer: 0
+  m_Name: SoundEmitter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &37232590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37232589}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 27.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3026532942713297443}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &37232591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37232589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1753621466
+      Data2: 1121769730
+      Data3: -1180355436
+      Data4: 1601137291
+    Path: event:/Ferris wheel
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 30
 --- !u!64 &56034065
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3306,6 +3369,10 @@ PrefabInstance:
     - target: {fileID: 1148730333835842432, guid: 66f3cdcba9ad12542978b14564dbfaf1, type: 3}
       propertyPath: m_Name
       value: hotairballoon new
+      objectReference: {fileID: 0}
+    - target: {fileID: 7087761502272412365, guid: 66f3cdcba9ad12542978b14564dbfaf1, type: 3}
+      propertyPath: id
+      value: 77ca054a-f07d-420f-8c22-72d853d7d093
       objectReference: {fileID: 0}
     - target: {fileID: 7087761502272412365, guid: 66f3cdcba9ad12542978b14564dbfaf1, type: 3}
       propertyPath: progressLimit
@@ -7155,7 +7222,9 @@ GameObject:
   - component: {fileID: 561617197}
   - component: {fileID: 561617199}
   - component: {fileID: 561617198}
-  m_Layer: 0
+  - component: {fileID: 561617200}
+  - component: {fileID: 561617201}
+  m_Layer: 4
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7230,6 +7299,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 561617196}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &561617200
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561617196}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &561617201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561617196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 171d375c4e77c734697ad9a3b38b7a0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!64 &561950202
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10963,6 +11066,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hotairballoon new (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7087761502272412365, guid: 66f3cdcba9ad12542978b14564dbfaf1, type: 3}
+      propertyPath: id
+      value: e2bfcb89-6879-4056-a96c-5beea81fc7a7
+      objectReference: {fileID: 0}
     - target: {fileID: 7532291470989151424, guid: 66f3cdcba9ad12542978b14564dbfaf1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -14012,6 +14119,69 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4a0af5cd541eac4bb9de619766f0b18, type: 3}
+--- !u!1 &1070597136
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1070597138}
+  - component: {fileID: 1070597137}
+  m_Layer: 0
+  m_Name: BeachAmbientSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1070597137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070597136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1416524102
+      Data2: 1335401457
+      Data3: -1626428286
+      Data4: -1444282417
+    Path: event:/Ambients/Beach ambient
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 150
+--- !u!4 &1070597138
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070597136}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -160, y: 0, z: -72}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1071554084
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16887,6 +17057,37 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &1262173992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262173986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1863471688
+      Data2: 1217714675
+      Data3: -740445525
+      Data4: -1690931972
+    Path: event:/Powers/Teleportation power
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 15
 --- !u!1 &1266980827
 GameObject:
   m_ObjectHideFlags: 0
@@ -19421,6 +19622,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 266501935825514904, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1262173991}
+    - targetCorrespondingSourceObject: {fileID: 266501935825514904, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1262173992}
   m_SourcePrefab: {fileID: 100100000, guid: 8d2012a14a9f0764eb21af88066fef7c, type: 3}
 --- !u!1 &1415843700
 GameObject:
@@ -20111,6 +20315,69 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79d8a4b04e76e644fa910f5228ff3249, type: 3}
+--- !u!1 &1454940641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1454940643}
+  - component: {fileID: 1454940642}
+  m_Layer: 0
+  m_Name: RainbowWorldAmbientSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1454940642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454940641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 2026625341
+      Data2: 1325902299
+      Data3: 1285820093
+      Data4: -830181320
+    Path: event:/Ambients/Rainbowland ambient
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!4 &1454940643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454940641}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -74, y: 6.88971, z: -28}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1458030768
 GameObject:
   m_ObjectHideFlags: 0
@@ -22591,6 +22858,10 @@ PrefabInstance:
     - target: {fileID: 1148730333835842432, guid: 66f3cdcba9ad12542978b14564dbfaf1, type: 3}
       propertyPath: m_Name
       value: hotairballoon new (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7087761502272412365, guid: 66f3cdcba9ad12542978b14564dbfaf1, type: 3}
+      propertyPath: id
+      value: af0a0171-c1ca-426a-977c-85538ae64858
       objectReference: {fileID: 0}
     - target: {fileID: 7532291470989151424, guid: 66f3cdcba9ad12542978b14564dbfaf1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -27050,6 +27321,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hotairballoon new (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7087761502272412365, guid: 66f3cdcba9ad12542978b14564dbfaf1, type: 3}
+      propertyPath: id
+      value: c4043def-6a1f-49bb-a4cc-0bc4770ed356
+      objectReference: {fileID: 0}
     - target: {fileID: 7532291470989151424, guid: 66f3cdcba9ad12542978b14564dbfaf1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -30657,6 +30932,18 @@ PrefabInstance:
       propertyPath: powerOwner
       value: 
       objectReference: {fileID: 120418198}
+    - target: {fileID: 1124176813416652725, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1124176813416652725, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563459330023130979, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1848232455715120795, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: speed
       value: 7
@@ -31621,6 +31908,7 @@ Transform:
   - {fileID: 1145631697}
   - {fileID: 6391937102125410352}
   - {fileID: 6187494739737566739}
+  - {fileID: 37232590}
   m_Father: {fileID: 2085256655}
   m_LocalEulerAnglesHint: {x: 0, y: -79.329, z: 0}
 --- !u!1 &3124167069937561680
@@ -34158,6 +34446,7 @@ SceneRoots:
   - {fileID: 153152216915900295}
   - {fileID: 1747678629005389023}
   - {fileID: 4087489055665863239}
+  - {fileID: 757363555}
   - {fileID: 172559342}
   - {fileID: 2023666726}
   - {fileID: 120418197}
@@ -34168,4 +34457,5 @@ SceneRoots:
   - {fileID: 152621503}
   - {fileID: 2085256655}
   - {fileID: 1796224640}
-  - {fileID: 757363555}
+  - {fileID: 1070597138}
+  - {fileID: 1454940643}

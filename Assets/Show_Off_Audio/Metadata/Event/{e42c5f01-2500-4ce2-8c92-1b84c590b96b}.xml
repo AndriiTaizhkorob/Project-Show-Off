@@ -5,7 +5,7 @@
 			<value>Forest ambient</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{48c6a6c7-ed6f-4342-b98a-0792b412ac59}</destination>
@@ -100,6 +100,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{5c38d882-f4ae-4e80-89eb-f12fe0c9b9ee}">
+		<property name="volume">
+			<value>-8</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -130,7 +133,6 @@
 	<object class="MixerBusEffectChain" id="{495be987-9d62-4b49-8a04-15a572de0090}">
 		<relationship name="effects">
 			<destination>{401727ec-7335-4806-8bfc-5e79ee76cd5d}</destination>
-			<destination>{a8807a80-7d24-451f-a644-95a7ae0776b2}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{b3003fcd-1bf8-4edf-b969-f5394ab96ec5}" />
@@ -142,10 +144,5 @@
 	</object>
 	<object class="MixerBusPanner" id="{93fdb675-0121-4333-86b2-7d13af80ff22}" />
 	<object class="MixerBusFader" id="{401727ec-7335-4806-8bfc-5e79ee76cd5d}" />
-	<object class="SpatialiserEffect" id="{a8807a80-7d24-451f-a644-95a7ae0776b2}">
-		<property name="distanceRolloffType">
-			<value>1</value>
-		</property>
-	</object>
 	<object class="MixerBusFader" id="{65bcb52b-0eb6-4f6e-82fc-ff85904e7581}" />
 </objects>

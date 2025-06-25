@@ -1,3 +1,5 @@
+using FMOD.Studio;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -19,10 +21,13 @@ public class PenguinFollower : MonoBehaviour, IDataPersistence
     private bool hasReachedGoal = false;
     private float wanderTimer;
 
+    private StudioEventEmitter penguinSounds;
+
     private NavMeshAgent agent;
     private Vector3 startPos;
     private Vector3 localPosition;
     private bool hasScored;
+    private float randomTimer;
 
     [HideInInspector]
     public bool scored = false;
@@ -40,16 +45,24 @@ public class PenguinFollower : MonoBehaviour, IDataPersistence
         agent = GetComponent<NavMeshAgent>();
         startPos = transform.position;
         wanderTimer = wanderInterval;
-
+        penguinSounds = GetComponent<StudioEventEmitter>();
     }
 
     void Start()
     {
+        randomTimer = Random.Range(7f, 10f);
         WanderNow(); // Begin wandering immediately
     }
 
     void Update()
     {
+        randomTimer -= Time.deltaTime;
+
+        if (randomTimer <= 0f)
+        {
+            penguinSounds.Play();
+            randomTimer = Random.Range(7f, 10f);
+        }
 
         if (followTarget == null) return;
 

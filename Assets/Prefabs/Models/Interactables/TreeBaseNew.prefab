@@ -5042,6 +5042,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 48b70b6a531a11543b1d60fa96ece843, type: 3}
       insertIndex: -1
       addedObject: {fileID: 740441826106616202}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 48b70b6a531a11543b1d60fa96ece843, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5915458903027372929}
   m_SourcePrefab: {fileID: 100100000, guid: 48b70b6a531a11543b1d60fa96ece843, type: 3}
 --- !u!4 &389837400877060356 stripped
 Transform:
@@ -5068,7 +5071,7 @@ MonoBehaviour:
   interaction: {fileID: 7040659881675835329, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   firework: {fileID: 4205495493618581522}
   growth: {fileID: 1248691909706301670}
-  growthSpeed: 0.5
+  growthSpeed: 0.4
   checkRadius: 3
   pickUpValue: 1
   playerMask:
@@ -5108,6 +5111,37 @@ MonoBehaviour:
   floatAmplitude: 0.25
   floatSpeed: 2
   yRotationOffset: 90
+--- !u!114 &5915458903027372929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018705908751928254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1015778336
+      Data2: 1246862961
+      Data3: -1604541038
+      Data4: -2028502417
+    Path: event:/Powers/Tree growth power
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 5
 --- !u!1001 &2825914476116553495
 PrefabInstance:
   m_ObjectHideFlags: 0
