@@ -11492,15 +11492,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7425328846370234263, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2731754774564075833, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1031163072690248502, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1670125033}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2731754774564075833, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2022500116}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
 --- !u!1 &902915238 stripped
 GameObject:
@@ -19417,7 +19415,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 208bc2457521ae547ab9f39f32ec203b, type: 3}
+  m_Texture: {fileID: 2800000, guid: c5a81f4e369999e45ac7000c69917b71, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -22716,33 +22714,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7688896317823739346, guid: 46e3185b7304a3947a605f18b32f749b, type: 3}
   m_PrefabInstance: {fileID: 2003768516}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2022500112 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2731754774564075833, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
-  m_PrefabInstance: {fileID: 902915235}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2022500116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2022500112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef8b96895a0ec4ba685178a052544251, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 3286163911610860551, guid: 63838fa7b85383243aac6fba2c22b017, type: 3}
-  m_PreserveAspect: 0
 --- !u!1001 &2027087801
 PrefabInstance:
   m_ObjectHideFlags: 0
