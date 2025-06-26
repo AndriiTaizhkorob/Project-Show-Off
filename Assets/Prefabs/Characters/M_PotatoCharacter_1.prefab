@@ -266,6 +266,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0d24963ce059d9c4d817e9f40626e34b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1028148093662643602}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0d24963ce059d9c4d817e9f40626e34b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4596058137981063846}
   m_SourcePrefab: {fileID: 100100000, guid: 0d24963ce059d9c4d817e9f40626e34b, type: 3}
 --- !u!1 &266501935825514904 stripped
 GameObject:
@@ -351,6 +354,37 @@ MonoBehaviour:
   currentValue: 0
   spotNumber: 0
   teleportEffect: {fileID: 5124020420982215212}
+--- !u!114 &4596058137981063846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266501935825514904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1863471688
+      Data2: 1217714675
+      Data3: -740445525
+      Data4: -1690931972
+    Path: event:/Powers/Teleportation power
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 15
 --- !u!4 &646581787906353954 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0d24963ce059d9c4d817e9f40626e34b, type: 3}

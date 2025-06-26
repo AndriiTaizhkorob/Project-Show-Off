@@ -52,8 +52,8 @@ public class QuestPanel : MonoBehaviour
         _listQuests.Add(display.gameObject);
         display.Init(_quest);
         _listDisplay.Add(display);
-        //display.GetComponent<QuestImageSpawner>().questName = _quest.GetStatusText();
-        //_questPosition = new Vector3(_questPosition.x, _questPosition.y - _questPrefab.rect.height * 2, _questPosition.z);
+        Debug.Log(_quest.GetQuestName());
+        display.GetComponent<QuestImageSpawner>().questName = _quest.GetQuestName();
     }
 
     public void ResetCurrent(string questDescription)
