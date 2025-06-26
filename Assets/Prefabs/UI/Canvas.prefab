@@ -3104,14 +3104,19 @@ MonoBehaviour:
   powerIcons:
   - questName: Hide'n'Seek
     uiElement: {fileID: 714218450138135846}
+    stayVisibleAfterQuestComplete: 0
   - questName: Penguin search
     uiElement: {fileID: 2278807727634861469}
+    stayVisibleAfterQuestComplete: 0
   - questName: Tree quest
     uiElement: {fileID: 1811566253295941418}
+    stayVisibleAfterQuestComplete: 0
   - questName: Frozen Balloons
     uiElement: {fileID: 1212805109558042418}
+    stayVisibleAfterQuestComplete: 1
   - questName: Hot air balloon quest
     uiElement: {fileID: 3084102645328686730}
+    stayVisibleAfterQuestComplete: 1
   questManager: {fileID: 0}
 --- !u!114 &9193464015595948072
 MonoBehaviour:

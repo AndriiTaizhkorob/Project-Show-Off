@@ -5,7 +5,6 @@ public class BalloonPromptUI : MonoBehaviour
     [SerializeField] private GameObject promptUI;
     [SerializeField] private Transform balloonTarget;
     [SerializeField] private float showDistance = 2.5f;
-    [SerializeField] private LayerMask playerMask;
 
     private Transform player;
 
@@ -24,14 +23,6 @@ public class BalloonPromptUI : MonoBehaviour
         if (player == null || balloonTarget == null || promptUI == null)
             return;
 
-        // Hide if the balloon was picked up and deactivated
-        if (!balloonTarget.gameObject.activeSelf)
-        {
-            if (promptUI.activeSelf)
-                promptUI.SetActive(false);
-            return;
-        }
-
         float distance = Vector3.Distance(player.position, balloonTarget.position);
         bool inRange = distance <= showDistance;
 
@@ -44,4 +35,13 @@ public class BalloonPromptUI : MonoBehaviour
             promptUI.SetActive(false);
         }
     }
+
+    private void OnDisable()
+    {
+        if (promptUI != null)
+        {
+            promptUI.SetActive(false);
+        }
+    }
 }
+

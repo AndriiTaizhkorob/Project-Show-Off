@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 6492327381222237327}
   - component: {fileID: 62978837387595038}
   - component: {fileID: 5736882884013050431}
+  - component: {fileID: 1608358788482553479}
   m_Layer: 0
   m_Name: balloon (1)
   m_TagString: Untagged
@@ -167,11 +168,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptUI: {fileID: 0}
-  balloonTarget: {fileID: 0}
+  balloonTarget: {fileID: 6667319848787178939}
   showDistance: 2.5
-  playerMask:
-    serializedVersion: 2
-    m_Bits: 0
+--- !u!114 &1608358788482553479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5558407918819895350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66dbadc844df6794791e07b5f72c118e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bobAmplitude: 0.5
+  bobSpeed: 1.5
 --- !u!1 &6465598737597425093
 GameObject:
   m_ObjectHideFlags: 0

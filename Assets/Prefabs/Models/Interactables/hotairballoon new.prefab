@@ -92,6 +92,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Flameable
       objectReference: {fileID: 0}
+    - target: {fileID: 4083501151425157549, guid: 7fffb2e24fda5754fa8dec03dea0ac47, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8442510506162454399, guid: 7fffb2e24fda5754fa8dec03dea0ac47, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -143,8 +147,11 @@ MonoBehaviour:
   startColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   endColor: {r: 1, g: 0, b: 0, a: 1}
   flameObject: {fileID: 7900233714449503537}
-  minFlameScale: {x: 0.06675814, y: 0.08466651, z: 0.06376385}
-  maxFlameScale: {x: 0.1, y: 0.1, z: 0.1}
+  minFlameScale: {x: 0.01675814, y: 0.01466651, z: 0.01376385}
+  maxFlameScale: {x: 0.14, y: 0.14, z: 0.14}
+  balloonObject: {fileID: 4295298659531437948}
+  minBalloonYScale: 0.3
+  maxBalloonYScale: 0.45
 --- !u!114 &7721668938495888905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,6 +242,11 @@ MonoBehaviour:
   OverrideAttenuation: 1
   OverrideMinDistance: 0
   OverrideMaxDistance: 15
+--- !u!4 &4295298659531437948 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4083501151425157549, guid: 7fffb2e24fda5754fa8dec03dea0ac47, type: 3}
+  m_PrefabInstance: {fileID: 229813284294717137}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7900233714449503537 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -1255605710908113952, guid: 7fffb2e24fda5754fa8dec03dea0ac47, type: 3}

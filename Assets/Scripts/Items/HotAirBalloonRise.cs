@@ -31,6 +31,10 @@ public class HotAirBalloonRise : MonoBehaviour, IDataPersistence
     [SerializeField] private Vector3 minFlameScale = new Vector3(1f, 1f, 1f);
     [SerializeField] private Vector3 maxFlameScale = new Vector3(2f, 2f, 2f);
 
+    [SerializeField] private Transform balloonObject;
+    [SerializeField] private float minBalloonYScale = 0.5f;
+    [SerializeField] private float maxBalloonYScale = 1.0f;
+
     [ContextMenu("Generate guid for id")]
     private void GenerateGuid()
     {
@@ -79,6 +83,14 @@ public class HotAirBalloonRise : MonoBehaviour, IDataPersistence
             float t = progressScale / progressLimit;
             Vector3 currentScale = Vector3.Lerp(minFlameScale, maxFlameScale, t);
             flameObject.localScale = currentScale;
+        }
+
+        if (balloonObject != null)
+        {
+            float t = progressScale / progressLimit;
+            Vector3 scale = balloonObject.localScale;
+            scale.y = Mathf.Lerp(minBalloonYScale, maxBalloonYScale, t);
+            balloonObject.localScale = scale;
         }
     }
 
