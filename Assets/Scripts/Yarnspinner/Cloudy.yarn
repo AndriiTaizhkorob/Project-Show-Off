@@ -4,19 +4,18 @@ Cloudy: Oh... hello. I didn't expect visitors. Not after what happened with my p
 
 -> What happened to your penguins? #line:05b5fd8 
     Cloudy: I was playing with my teleportation magic... and I got too excited. #line:00270a9 
-    Cloudy: Now they're scattered across Penguin Land. Alone. Confused. #line:0526be3 
+    Cloudy: Now they're scattered across Iceland. Alone. Confused. #line:0526be3 
     -> That's awful! I came here to invite you to a party, but— #line:02b1f2d 
     Cloudy: Oh... I couldn't possibly celebrate while they're missing. #line:0a70c1b 
-    Cloudy: But if you help me bring them home, I promise I'll come. I'll even bring my color-loving friends. #line:0ab1204 
+    Cloudy: But if you help me bring them home, I promise I'll come. I'll even bring my penguin friends. #line:0ab1204 
     Cloudy: Here, I'll give you a bit of my power. Just enough to earn their trust. #line:0d8b0b6 
     <<start_quest "Penguin search">>
 -> I brought you an invitation! #line:01e1945 
     Cloudy: A party...? Oh, I couldn't possibly celebrate while my penguin friends are missing. #line:0b84a48 
-    Cloudy: But... if you help me bring them back, I promise I'll come. #line:0057255 
+    Cloudy: But if you help me bring them home, I promise I'll come. I'll even bring my penguin friends. #line:0057255 
     Cloudy: Take this, it'll help you lead them safely. #line:00ef20d 
     <<start_quest "Penguin search">>
 -> I have something else do do but I'll be right back #line:0095279 
-
 ===
 title: Cloudy_InProgress
 ---
@@ -25,6 +24,6 @@ Cloudy: Are they safe? Are they warm? Please keep looking, I know they're out th
 title: Cloudy_Complete
 ---
 Cloudy: They're home! Oh, thank you! I can't believe they're really back... #line:002cfa5 
-Cloudy: I'll come to the party, and I'll bring my best bowtie. The penguins love color. #line:018988a 
+Cloudy: I'll come to the party, and I'll bring my best friends. The penguins love parties. #line:018988a 
 <<complete_quest "Penguin search">>
 ===
