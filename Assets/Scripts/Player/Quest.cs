@@ -65,4 +65,8 @@ public class Quest
         return string.Format(_statusText, CurrentValue, MaxValue);
     }
 
+    public string GetQuestName()
+    {
+        return EventTrigger;
+    }
 }

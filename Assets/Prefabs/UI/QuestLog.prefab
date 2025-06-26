@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8926793328390936219}
   - component: {fileID: 5239677886728571258}
   - component: {fileID: 1035820273147581202}
+  - component: {fileID: 4004052173163694949}
   m_Layer: 5
   m_Name: QuestLog
   m_TagString: Untagged
@@ -153,6 +154,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _questText: {fileID: 5239677886728571258}
   _questDescription: {fileID: 9147949411416840441}
+--- !u!114 &4004052173163694949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377666948105864295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 154e702297a551c4ca0e55e263670ad8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questImages:
+  - {fileID: 891707605428775640, guid: 8da4cbbef20c1f9438a453a7408bcd50, type: 3}
+  - {fileID: 6252911596528673556, guid: 021c88757958e8243b0754799371aced, type: 3}
+  - {fileID: 2826548921440877937, guid: f148e00fdae150e46a0992798b963d35, type: 3}
+  - {fileID: 3462698570656496856, guid: ed492ebb689e1a041b52e44dba1b8e1f, type: 3}
+  - {fileID: 3758859437731039598, guid: d91387b485372ed49b526435a06d9f6b, type: 3}
+  spawnLocation: {fileID: 8223359481714153575}
+  questName: 
 --- !u!1 &2832278272873758050
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,7 +319,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7985127660832638273}
-  - component: {fileID: 2566333846317834304}
   m_Layer: 5
   m_Name: ImageSpawner
   m_TagString: Untagged
@@ -325,15 +345,3 @@ RectTransform:
   m_AnchoredPosition: {x: -164, y: -25}
   m_SizeDelta: {x: 128, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2566333846317834304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8223359481714153575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 154e702297a551c4ca0e55e263670ad8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

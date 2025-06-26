@@ -3,19 +3,22 @@ using UnityEngine.UI;
 
 public class QuestImageSpawner : MonoBehaviour
 {
-    private Image[] questImages;
-    private Vector3 spawnPoint;
+    [SerializeField]
+    private GameObject[] questImages;
+    [SerializeField]
+    private GameObject spawnLocation;
 
     [HideInInspector]
     public string questName;
 
     private void Start()
     {
-        
-    }
-
-    void Update()
-    {
-        
+        foreach (GameObject image in questImages)
+        {
+            if (image.name == questName)
+            {
+                Instantiate(image, spawnLocation.transform.position, Quaternion.identity, transform);
+            }
+        }
     }
 }
