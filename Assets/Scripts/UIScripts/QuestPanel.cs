@@ -22,6 +22,8 @@ public class QuestPanel : MonoBehaviour
 
     void Start()
     {
+       
+
         for (var i = _listDisplay.Count - 1; i >= 0; i--)
         {
             Destroy(_listDisplay[i].gameObject);
@@ -50,6 +52,7 @@ public class QuestPanel : MonoBehaviour
         _listQuests.Add(display.gameObject);
         display.Init(_quest);
         _listDisplay.Add(display);
+        //display.GetComponent<QuestImageSpawner>().questName = _quest.GetStatusText();
         //_questPosition = new Vector3(_questPosition.x, _questPosition.y - _questPrefab.rect.height * 2, _questPosition.z);
     }
 
