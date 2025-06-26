@@ -5554,6 +5554,16 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6715939542481362777, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
   m_PrefabInstance: {fileID: 586605633}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &586605635 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5905316369676113064, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
+  m_PrefabInstance: {fileID: 586605633}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &586605636 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5778503406886349288, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
+  m_PrefabInstance: {fileID: 586605633}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &589663951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13041,6 +13051,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: balloon (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5736882884013050431, guid: 53f19559935310a48b08ce294fddc467, type: 3}
+      propertyPath: promptUI
+      value: 
+      objectReference: {fileID: 586605635}
+    - target: {fileID: 5736882884013050431, guid: 53f19559935310a48b08ce294fddc467, type: 3}
+      propertyPath: balloonTarget
+      value: 
+      objectReference: {fileID: 1606478039}
+    - target: {fileID: 5736882884013050431, guid: 53f19559935310a48b08ce294fddc467, type: 3}
+      propertyPath: playerMask.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5794089017193730151, guid: 53f19559935310a48b08ce294fddc467, type: 3}
+      propertyPath: promptUI
+      value: 
+      objectReference: {fileID: 586605635}
     - target: {fileID: 6667319848787178939, guid: 53f19559935310a48b08ce294fddc467, type: 3}
       propertyPath: m_LocalPosition.x
       value: -24.07
@@ -13255,6 +13281,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8132380249188053836, guid: 40c807602bf67eb428e49fed1bf092c9, type: 3}
   m_PrefabInstance: {fileID: 1628619558}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1632852302 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7928337730765874222, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
+  m_PrefabInstance: {fileID: 586605633}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1664349309
 PrefabInstance:
@@ -13905,6 +13936,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: balloon (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5736882884013050431, guid: 53f19559935310a48b08ce294fddc467, type: 3}
+      propertyPath: promptUI
+      value: 
+      objectReference: {fileID: 586605636}
+    - target: {fileID: 5736882884013050431, guid: 53f19559935310a48b08ce294fddc467, type: 3}
+      propertyPath: balloonTarget
+      value: 
+      objectReference: {fileID: 1743085819}
+    - target: {fileID: 5736882884013050431, guid: 53f19559935310a48b08ce294fddc467, type: 3}
+      propertyPath: playerMask.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5794089017193730151, guid: 53f19559935310a48b08ce294fddc467, type: 3}
+      propertyPath: promptUI
+      value: 
+      objectReference: {fileID: 586605636}
     - target: {fileID: 6667319848787178939, guid: 53f19559935310a48b08ce294fddc467, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.91
@@ -16340,14 +16387,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 242392748}
     m_Modifications:
-    - target: {fileID: 62978837387595038, guid: 53f19559935310a48b08ce294fddc467, type: 3}
-      propertyPath: id
-      value: 0be99117-efe9-4e61-a904-1e894009d3cb
-      objectReference: {fileID: 0}
     - target: {fileID: 5558407918819895350, guid: 53f19559935310a48b08ce294fddc467, type: 3}
       propertyPath: m_Name
       value: balloon (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5736882884013050431, guid: 53f19559935310a48b08ce294fddc467, type: 3}
+      propertyPath: promptUI
+      value: 
+      objectReference: {fileID: 1632852302}
+    - target: {fileID: 5736882884013050431, guid: 53f19559935310a48b08ce294fddc467, type: 3}
+      propertyPath: balloonTarget
+      value: 
+      objectReference: {fileID: 2144415220}
+    - target: {fileID: 5736882884013050431, guid: 53f19559935310a48b08ce294fddc467, type: 3}
+      propertyPath: playerMask.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5794089017193730151, guid: 53f19559935310a48b08ce294fddc467, type: 3}
+      propertyPath: promptUI
+      value: 
+      objectReference: {fileID: 1632852302}
     - target: {fileID: 6667319848787178939, guid: 53f19559935310a48b08ce294fddc467, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.82
