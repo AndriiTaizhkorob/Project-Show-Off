@@ -1,14 +1,19 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class QuestImageSpawner : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private Image[] questImages;
+    private Vector3 spawnPoint;
+
+    [HideInInspector]
+    public string questName;
+
+    private void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
