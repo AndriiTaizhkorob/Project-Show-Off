@@ -21,7 +21,7 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
 
     private GameObject questManager;
     private GameObject dataPersistenceManager;
-    private EventInstance crossOut;
+    private EventInstance crossOutSound;
     private EventInstance pointUp;
 
     private Button completeButton;
@@ -68,15 +68,15 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
         completeButton = completeObj.GetComponent<Button>();
         acceptButton = acceptObj.GetComponent<Button>();
         closeButton = closeObj.GetComponent<Button>();
-
-        crossOut = AudioManager.instance.CreateInstance(FMODEvents.instance.crossOut);
-        pointUp = AudioManager.instance.CreateInstance(FMODEvents.instance.succeess);
     }
 
     void Start()
     {
         characterUI.SetActive(false);
         completeObj.SetActive(false);
+
+        crossOutSound = AudioManager.instance.CreateInstance(FMODEvents.instance.crossOut);
+        pointUp = AudioManager.instance.CreateInstance(FMODEvents.instance.succeess);
     }
 
     void Update()
@@ -311,7 +311,7 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
     IEnumerator DelaySound()
     {
         yield return new WaitForSeconds(1f);
-        crossOut.start();
+        crossOutSound.start();
     }
 
     public void QuestHandedIn()
