@@ -18,6 +18,8 @@ public class QuestDisplay : MonoBehaviour
         _quest.OnDescriptionChanged += OnDescriptionChanged;
 
         OnDescriptionChanged(_quest.Description);
+
+        GetComponent<QuestProgressBarUI>()?.Init(quest);
     }
 
     private void OnQuestComplete()
