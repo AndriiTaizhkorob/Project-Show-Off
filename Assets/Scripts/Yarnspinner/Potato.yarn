@@ -1,24 +1,37 @@
 ﻿title: Potato
 ---
+<<playvoice "PotatoLine01">>
 Potato: Hello!! Have you come to eat hamburgers with me? Or maybe... to play THE GAME?? #line:Potato-2
 -> I brought you an invitation!  #line:0991de5 
+    <<playvoice "PotatoLine02">>
     Potato: A party? With *music* and *snacks* and *burgers*?!  #line:0768ad9 
+    <<playvoice "PotatoLine03">>
     Potato: YES. But wait! I can only party with CHAMPIONS. You must first beat me... in HIDE AND SEEK!  #line:0d5bf93 
+    <<playvoice "PotatoLine04">>
     Potato: But be warned, when we start, I go POOF! You won't see me until you FIND ME!  #line:059c5e3 
-    -> I'm ready!  #line:056a598 
+    -> I'm ready!  #line:056a598
+	<<playvoice "PotatoLine05">> 
         <<start_quest "Hide'n'Seek">>
         Potato: Let's play! I'm hiding near something crispy and DELICIOUS.  #line:0a022cd 
         <<teleport_potato>>
--> What's “THE GAME”? #line:0652d2a 
-    Potato: THE GAME is everything! THE GAME is the best! THE GAME is... HIDE AND SEEK!!  #line:097c384 
-    Potato: I'm the undisputed champion. But if you want me at your party, you'll have to BEAT ME!  #line:0d52b8a 
+	<<stopvoice>>
+-> What's “THE GAME”? #line:0652d2a
+    <<playvoice "PotatoLine06">> 
+    Potato: THE GAME is everything! THE GAME is the best! THE GAME is... HIDE AND SEEK!!  #line:097c384
+    <<playvoice "PotatoLine07">> 
+    Potato: I'm the undisputed champion. But if you want me at your party, you'll have to BEAT ME!  #line:0d52b8a
+    <<playvoice "PotatoLine04">> 
     Potato: But be warned, when we start, I go POOF! You won't see me until you FIND ME!  #line:06691c9 
     -> I'm in! #line:0301740 
+	<<playvoice "PotatoLine05">>
         <<start_quest "Hide'n'Seek">>
         Potato: I'm hiding near something crispy and DELICIOUS.  #line:0649717 
         <<teleport_potato>>
--> I was just looking around. #line:033b880 
-    Potato: That's how all great adventures start! And they end... with potatoes.  #line:0086743 
+	<<stopvoice>>
+-> I was just looking around. #line:033b880
+    <<playvoice "PotatoLine10">> 
+    Potato: That's how all great adventures start! And they end... with potatoes.  #line:0086743
+    <<stopvoice>> 
 ===
 title: Potato_InProgress
 ---

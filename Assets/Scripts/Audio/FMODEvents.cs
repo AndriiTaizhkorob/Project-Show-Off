@@ -34,6 +34,10 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference interact { get; private set; }
     [field: SerializeField] public EventReference succeess { get; private set; }
 
+    [field: Header("Voice Lines")]
+    [field: SerializeField] public EventReference Potato1 { get; private set; }
+
+
     public static FMODEvents instance { get; private set; }
 
     private void Awake()

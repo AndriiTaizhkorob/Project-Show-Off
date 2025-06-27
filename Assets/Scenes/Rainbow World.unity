@@ -7716,6 +7716,10 @@ PrefabInstance:
       value: event:/Jump
       objectReference: {fileID: 0}
     - target: {fileID: 2559706046376515240, guid: b2bbac4bc5c0fed4e949aea0ec654b75, type: 3}
+      propertyPath: <Potato1>k__BackingField.Path
+      value: event:/VoiceLines/PotatoLine01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559706046376515240, guid: b2bbac4bc5c0fed4e949aea0ec654b75, type: 3}
       propertyPath: <landing>k__BackingField.Path
       value: event:/Landing
       objectReference: {fileID: 0}
@@ -7774,6 +7778,22 @@ PrefabInstance:
     - target: {fileID: 2559706046376515240, guid: b2bbac4bc5c0fed4e949aea0ec654b75, type: 3}
       propertyPath: <beachAmbient>k__BackingField.Path
       value: event:/Ambients/Beach ambient
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559706046376515240, guid: b2bbac4bc5c0fed4e949aea0ec654b75, type: 3}
+      propertyPath: <Potato1>k__BackingField.Guid.Data1
+      value: -85478386
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559706046376515240, guid: b2bbac4bc5c0fed4e949aea0ec654b75, type: 3}
+      propertyPath: <Potato1>k__BackingField.Guid.Data2
+      value: 1177476226
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559706046376515240, guid: b2bbac4bc5c0fed4e949aea0ec654b75, type: 3}
+      propertyPath: <Potato1>k__BackingField.Guid.Data3
+      value: -942227525
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559706046376515240, guid: b2bbac4bc5c0fed4e949aea0ec654b75, type: 3}
+      propertyPath: <Potato1>k__BackingField.Guid.Data4
+      value: 498161689
       objectReference: {fileID: 0}
     - target: {fileID: 2559706046376515240, guid: b2bbac4bc5c0fed4e949aea0ec654b75, type: 3}
       propertyPath: <forestAmbient>k__BackingField.Path
@@ -24632,6 +24652,30 @@ PrefabInstance:
       propertyPath: _questDisplayParent
       value: 
       objectReference: {fileID: 2023666727}
+    - target: {fileID: 5843362487387984255, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5843362487387984255, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5843362487387984255, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352867216740537318, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352867216740537318, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352867216740537318, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6429592448841891115, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -39.41
@@ -24671,6 +24715,18 @@ PrefabInstance:
     - target: {fileID: 6429592448841891115, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7604342051674948272, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7604342051674948272, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7604342051674948272, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 7824938724847874318, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: m_Name

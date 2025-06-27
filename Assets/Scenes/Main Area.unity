@@ -18772,38 +18772,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 623908867331114212, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1848232455715120795, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-      propertyPath: speed
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1848232455715120795, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-      propertyPath: jumpForce
-      value: 6.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1848232455715120795, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-      propertyPath: characterUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3351738902849938483, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-      propertyPath: m_DefaultControlScheme
-      value: Gamepad
-      objectReference: {fileID: 0}
-    - target: {fileID: 5263790208070595597, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5524560352777693293, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: _questSpawnPoint
       value: 
       objectReference: {fileID: 1210335324}
-    - target: {fileID: 5524560352777693293, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-      propertyPath: _questDisplayParent
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6429592448841891115, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.05
@@ -18844,40 +18816,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6507934078886277480, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-      propertyPath: m_Antialiasing
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6507934078886277480, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-      propertyPath: m_TaaSettings.m_Quality
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 7824938724847874318, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 7824938724847874318, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8864909863390012724, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-      propertyPath: aim
-      value: 
-      objectReference: {fileID: 377673603695483797, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-    - target: {fileID: 8864909863390012724, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-      propertyPath: characterUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8864909863390012724, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-      propertyPath: activeControls
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8864909863390012724, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
-      propertyPath: mouseSensitivity
-      value: 100.2
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6285043726700059995, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -20704,11 +20647,13 @@ SceneRoots:
   - {fileID: 1468860902}
   - {fileID: 1601528174}
   - {fileID: 1019166064}
+  - {fileID: 4087489055665863239}
+  - {fileID: 1747678629005389023}
   - {fileID: 1459954193}
   - {fileID: 1142895026}
   - {fileID: 1548039539}
   - {fileID: 1626941205}
   - {fileID: 1248512127}
   - {fileID: 2085906938}
-  - {fileID: 1747678629005389023}
-  - {fileID: 4087489055665863239}
+  - {fileID: 628828881}
+  - {fileID: 1295598131}

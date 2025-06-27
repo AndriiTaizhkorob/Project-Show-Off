@@ -177,6 +177,13 @@ MonoBehaviour:
       Data3: -1294437960
       Data4: -1473788740
     Path: event:/Success
+  <Potato1>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &3524129981581383779
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,6 +194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5842315332510706548}
   - component: {fileID: 4452695665870554503}
+  - component: {fileID: 3092226049234650858}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -220,5 +228,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f678c68a57cfd5a4aa156a094dccdd2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3092226049234650858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3524129981581383779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a252d38a9b32c6740be742dbe34310e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
