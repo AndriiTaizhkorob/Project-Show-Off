@@ -2,12 +2,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.Video;
 
 public class LoadingScreenManager : MonoBehaviour
 {
     public static LoadingScreenManager Instance;
+
     public GameObject LoadingScreen;
     public Slider ProgressBar;
+    public VideoPlayer loadingVideo;
+    public RawImage videoImage;
 
     private void Awake()
     {
@@ -18,39 +22,70 @@ public class LoadingScreenManager : MonoBehaviour
         else
         {
             Instance = this;
-            DontDestroyOnLoad(this.gameObject );
+            DontDestroyOnLoad(this.gameObject);
         }
     }
 
     public void SwitchToScene(string nextSceneName, float minLoadTime = 1.0f)
     {
-        LoadingScreen.SetActive(true);
-        ProgressBar.value = 0;
+        if (LoadingScreen != null)
+            LoadingScreen.SetActive(true);
+
+        if (ProgressBar != null)
+            ProgressBar.value = 0;
+
+        if (videoImage != null)
+            videoImage.enabled = false;
+
+        if (loadingVideo != null)
+        {
+            loadingVideo.Stop();
+            loadingVideo.time = 0;
+            loadingVideo.frame = 0;
+            loadingVideo.isLooping = true;
+
+            loadingVideo.prepareCompleted -= OnVideoPrepared; // Prevent multiple subscriptions
+            loadingVideo.prepareCompleted += OnVideoPrepared;
+            loadingVideo.Prepare();
+        }
+
         StartCoroutine(SwitchToSceneAsync(nextSceneName, minLoadTime));
     }
 
+    private void OnVideoPrepared(VideoPlayer source)
+    {
+        loadingVideo.Play();
+
+        if (videoImage != null)
+            videoImage.enabled = true;
+    }
 
     IEnumerator SwitchToSceneAsync(string nextSceneName, float minLoadTime)
     {
-        float timer = 0f;
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(nextSceneName);
         asyncLoad.allowSceneActivation = false;
 
-        while (!asyncLoad.isDone)
+        float timer = 0f;
+
+        while (timer < minLoadTime || asyncLoad.progress < 0.9f)
         {
             timer += Time.deltaTime;
-            ProgressBar.value = Mathf.Clamp01(asyncLoad.progress / 0.9f);
+            float loadProgress = Mathf.Clamp01(asyncLoad.progress / 0.9f);
+            float visualProgress = Mathf.Clamp01(timer / minLoadTime);
 
-            // Wait until both loading is done and the minimum time has passed
-            if (asyncLoad.progress >= 0.9f && timer >= minLoadTime)
-            {
-                asyncLoad.allowSceneActivation = true;
-            }
+            if (ProgressBar != null)
+                ProgressBar.value = Mathf.Min(loadProgress, visualProgress);
 
             yield return null;
         }
 
-        LoadingScreen.SetActive(false);
-    }
+        asyncLoad.allowSceneActivation = true;
 
+        // Wait one frame to allow scene activation to complete
+        yield return null;
+
+        if (LoadingScreen != null)
+            LoadingScreen.SetActive(false);
+    }
 }
+

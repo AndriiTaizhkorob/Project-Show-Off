@@ -13,7 +13,8 @@ public class QuestPanel : MonoBehaviour
     private GameObject _questSpawnPoint;
     [SerializeField]
     private Transform _questDisplayParent;
-
+    [SerializeField]
+    private float spacing;
     private Vector3 _questPosition;
     private int _questCount;
 
@@ -44,7 +45,7 @@ public class QuestPanel : MonoBehaviour
         {
             var curObject = _listDisplay[i].transform.position;
 
-            curObject.y -= _questPrefab.rect.height * 2;
+            curObject.y -= _questPrefab.rect.height * 2 + spacing;
             _listDisplay[i].gameObject.transform.position = curObject;
         }
 
@@ -64,7 +65,7 @@ public class QuestPanel : MonoBehaviour
         {
             var curObject = _listDisplay[i].transform.position;
 
-            if (_listDisplay[i].gameObject.GetComponent<TMP_Text>().text == questDescription)
+            if (TextCheck(_listDisplay[i].gameObject, questDescription))
             {
                 _questCount = i;
 
@@ -75,12 +76,17 @@ public class QuestPanel : MonoBehaviour
 
             if (i < _questCount)
             {
-                curObject.y += _questPrefab.rect.height * 2;
+                curObject.y += _questPrefab.rect.height * 2 + spacing;
 
                 Debug.Log("<Moved up>");
                 Debug.Log(_listDisplay[i].transform.position);
                 _listDisplay[i].gameObject.transform.position = curObject;
             }
         }
+    }
+
+    private bool TextCheck(GameObject textObject, string textDescription)
+    {
+       return textObject.GetComponent<QuestDisplay>()._questText.GetComponent<TMP_Text>().text == textDescription;
     }
 }

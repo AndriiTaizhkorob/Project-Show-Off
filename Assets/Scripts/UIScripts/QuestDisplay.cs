@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class QuestDisplay : MonoBehaviour
 {
-    [SerializeField]
-    private TextMeshProUGUI _questText;
+    public TextMeshProUGUI _questText;
     [SerializeField]
     private TextMeshProUGUI _questDescription;
 

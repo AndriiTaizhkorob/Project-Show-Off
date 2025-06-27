@@ -9,7 +9,9 @@ public class PowerUIManager : MonoBehaviour
     {
         public string questName;
         public GameObject uiElement;
+        public bool stayVisibleAfterQuestComplete = false;
     }
+
 
     [Header("Power Icons")]
     public List<PowerIcon> powerIcons;
@@ -32,25 +34,42 @@ public class PowerUIManager : MonoBehaviour
             }
         }
     }
+    private bool IsQuestComplete(string questName)
+    {
+        foreach (var quest in questManager.Quests)
+        {
+            if (quest.EventTrigger == questName && quest.IsComplete)
+                return true;
+        }
+        return false;
+    }
 
     private void Update()
     {
         foreach (var entry in iconMap)
         {
-            bool shouldBeVisible = questManager.HasActiveQuest(entry.Key);
-            bool isCurrentlyVisible = iconState[entry.Key];
+            string quest = entry.Key;
+            GameObject icon = entry.Value;
+            bool isCurrentlyVisible = iconState[quest];
+
+            bool isActive = questManager.HasActiveQuest(quest);
+            bool isComplete = IsQuestComplete(quest);
+
+            PowerIcon iconData = powerIcons.Find(p => p.questName == quest);
+            bool shouldBeVisible = isActive || (isComplete && iconData != null && iconData.stayVisibleAfterQuestComplete);
 
             if (shouldBeVisible && !isCurrentlyVisible)
             {
-                StartCoroutine(AnimateIconIn(entry.Value));
-                iconState[entry.Key] = true;
+                StartCoroutine(AnimateIconIn(icon));
+                iconState[quest] = true;
             }
             else if (!shouldBeVisible && isCurrentlyVisible)
             {
-                entry.Value.SetActive(false); // layout group will fill the gap
-                iconState[entry.Key] = false;
+                icon.SetActive(false);
+                iconState[quest] = false;
             }
         }
+
     }
 
     private IEnumerator AnimateIconIn(GameObject icon)
