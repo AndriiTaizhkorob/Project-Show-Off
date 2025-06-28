@@ -1,35 +1,65 @@
 ﻿title: Charli
 ---
-Charli: WHOA! Someone bounced into my castle! What brings you here? #line:0e7faf1 
--> I've got an invitation for you! #line:01d77ec 
-    Charli: An invitation?  #line:0bc1fed 
-    -> It's a party! All the monsters are invited. #line:0792d0d 
-        Charli: Whoooooa YES!! But wait... my sky is so empty. My hot air balloons are all grounded! #line:0aeeee9 
-        -> I'll help you! #line:05f13e8 
-            Charli: I've got fire, you've got legs, let's make this work. #line:00efc24 
-            Charli: I hereby lend you my fire power! #line:022d218 
+<<playvoice "Charli/CharliLine01">><<play_anim "Talk">>
+Charli: WHOA! Someone bounced into my castle! What brings you here?
+<<play_anim "Idle">><<stopvoice>>
+-> I've got an invitation for you!
+    <<playvoice "Charli/CharliLine02">><<play_anim "Talk">>
+    Charli: An invitation?
+    <<play_anim "Idle">><<stopvoice>>
+    -> It's a party! All the monsters are invited.
+        <<playvoice "Charli/CharliLine03">><<play_anim "Talk">>
+        Charli: Whoooooa YES!! But wait... my sky is so empty. My hot air balloons are all grounded!
+        <<play_anim "Idle">><<stopvoice>>
+        -> I'll help you!
+            <<playvoice "Charli/CharliLine04">><<play_anim "Talk">>
+            Charli: I've got fire, you've got legs, let's make this work.
+            <<play_anim "Idle">><<stopvoice>>
+            <<playvoice "Charli/CharliLine05">><<play_anim "Talk">>
+            Charli: I hereby lend you my fire power!
+            <<play_anim "Idle">><<stopvoice>>
             <<start_quest "Hot air balloon quest">>
--> I just wanted to ask about your castle! #line:0133a0a 
-    Charli: BOUNCY, right? I slime up the walls so it gets extra squish! #line:08bd869 
-    Charli: But without balloons floating around, it's like... only *half* bouncy. #line:03a3f7a 
-    -> What happened to the balloons? #line:09df09d 
-        Charli: They got sleepy. Cold. They need some fire... maybe from my favorite firefriend? #line:06a9f7f 
-        -> I'll help you! #line:01afb24 
-            Charli: I've got fire, you've got legs, let's make this work. #line:0fae319 
-            Charli: I hereby lend you my fire power! #line:080120c 
-            -> I brought you an invitation too! #line:032e6e6 
-                Charli: Fire up those balloons and I'm *so* there. #line:0ff0623 
+-> I just wanted to ask about your castle!
+    <<playvoice "Charli/CharliLine06">><<play_anim "Talk">>
+    Charli: BOUNCY, right? I slime up the walls so it gets extra squish!
+    <<play_anim "Idle">><<stopvoice>>
+    <<playvoice "Charli/CharliLine07">><<play_anim "Talk">>
+    Charli: But without balloons floating around, it's like... only *half* bouncy.
+    <<play_anim "Idle">><<stopvoice>>
+    -> What happened to the balloons?
+        <<playvoice "Charli/CharliLine08">><<play_anim "Talk">>
+        Charli: They got sleepy. Cold. They need some fire... maybe from my favorite firefriend?
+        <<play_anim "Idle">><<stopvoice>>
+        -> I'll help you!
+            <<playvoice "Charli/CharliLine04">><<play_anim "Talk">>
+            Charli: I've got fire, you've got legs, let's make this work.
+            <<play_anim "Idle">><<stopvoice>>
+            <<playvoice "Charli/CharliLine05">><<play_anim "Talk">>
+            Charli: I hereby lend you my fire power!
+            <<play_anim "Idle">><<stopvoice>>
+            -> I brought you an invitation too!
+                <<playvoice "Charli/CharliLine09">><<play_anim "Talk">>
+                Charli: Fire up those balloons and I'm *so* there.
+                <<play_anim "Idle">><<stopvoice>>
                 <<start_quest "Hot air balloon quest">>
--> Sorry, I think I'm lost. #line:0e9cbec 
-    Charli: That makes two of us! I always get lost when I don't leave any slime behind. #line:08945d0 
+-> Sorry, I think I'm lost.
+    <<playvoice "Charli/CharliLine10">><<play_anim "Talk">>
+    Charli: That makes two of us! I always get lost when I don't leave any slime behind.
+    <<play_anim "Idle">><<stopvoice>>
 ===
 title: Charli_InProgress
 ---
-Charli: Fire up those balloons and I'll join your party! #line:07c65db 
+<<playvoice "Charli/CharliLine11">><<play_anim "Talk">>
+Charli: Fire up those balloons and I'll join your party!
+<<play_anim "Idle">><<stopvoice>>
 ===
 title: Charli_Complete
 ---
-Charli: You did it! The sky looks so colorful again! #line:04c4570 
-Charli: I'll slime straight to your party. #line:0c1ee9d 
+<<playvoice "Charli/CharliLine12">><<play_anim "Talk">>
+Charli: You did it! The sky looks so colorful again!
+<<play_anim "Idle">><<stopvoice>>
+<<playvoice "Charli/CharliLine13">><<play_anim "Talk">>
+Charli: I'll slime straight to your party.
+<<play_anim "Idle">><<stopvoice>>
 <<complete_quest "Hot air balloon quest">>
 ===

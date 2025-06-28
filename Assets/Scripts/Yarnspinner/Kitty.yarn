@@ -1,31 +1,52 @@
 ﻿title: Kitty
 ---
-Kitty: Oh! You made it across, but the ice bridge collapsed right after you stepped off it! #line:0b04c9d 
-Kitty: That must've been scary. I'm so glad you're okay. #line:01332d3 
--> I came to invite you to a party! #line:010632c 
-    Kitty: A party? That sounds wonderful! I'd love to come and bring my balloons! #line:098f70f 
-    Kitty: But... after you crossed, the ice bridge broke. I can't reach my balloons anymore. #line:0762ac0 
-    Kitty: Would you help me gather my balloons from across the water?  #line:0047426 
-    Kitty: I'll share my ice magic so you can build paths! #line:0a9ae0d 
+<<playvoice "Kitty/KittyLine01">><<play_anim "Talk">>
+Kitty: Oh! You made it across, but the ice bridge collapsed right after you stepped off it!
+<<playvoice "Kitty/KittyLine02">>
+Kitty: That must've been scary. I'm so glad you're okay.
+<<play_anim "Idle">><<stopvoice>>
+-> I came to invite you to a party!
+    <<playvoice "Kitty/KittyLine03">><<play_anim "Talk">>
+    Kitty: A party? That sounds wonderful! I'd love to come and bring my balloons!
+    <<playvoice "Kitty/KittyLine04">>
+    Kitty: But... after you crossed, the ice bridge broke. I can't reach my balloons anymore.
+    <<playvoice "Kitty/KittyLine05">>
+    Kitty: Would you help me gather my balloons from across the water?
+    <<playvoice "Kitty/KittyLine06">>
+    Kitty: I'll share my ice magic so you can build paths!
+    <<play_anim "Idle">><<stopvoice>>
     <<start_quest "Frozen Balloons">>
--> Are you Kitty? #line:0512d87 
-    Kitty: That's me! I live in that little igloo over there, and I love meeting new friends. #line:0f65c5b 
-    Kitty: I was just worrying about the balloons. They drifted away across the lake... #line:09523de 
-    -> Can I help you get them back? #line:0538911 
-        Kitty: Really? That makes me so happy! #line:0fdebea 
-        Kitty: If you help me gather the balloons, I'll come for sure. I'll even lend you my ice power! #line:0a41b63 
+-> Are you Kitty?
+    <<playvoice "Kitty/KittyLine07">><<play_anim "Talk">>
+    Kitty: That's me! I live in that little igloo over there, and I love meeting new friends.
+    <<playvoice "Kitty/KittyLine08">>
+    Kitty: I was just worrying about the balloons. They drifted away across the lake...
+    <<play_anim "Idle">><<stopvoice>>
+    -> Can I help you get them back?
+        <<playvoice "Kitty/KittyLine09">><<play_anim "Talk">>
+        Kitty: Really? That makes me so happy!
+        <<playvoice "Kitty/KittyLine10">>
+        Kitty: If you help me gather the balloons, I'll come for sure. I'll even lend you my ice power!
+        <<play_anim "Idle">><<stopvoice>>
         <<start_quest "Frozen Balloons">>
--> I'll come back later #line:033defa 
-    Kitty: I'm glad you're safe, see you in a bit! #line:0e4851e 
+-> I'll come back later
+    <<playvoice "Kitty/KittyLine11">><<play_anim "Talk">>
+    Kitty: I'm glad you're safe, see you in a bit!
+    <<play_anim "Idle">><<stopvoice>>
 ===
 title: Kitty_InProgress
 ---
-Kitty: Keep going, you're doing great! I'll be waiting for you. #line:0b213c2 
+<<playvoice "Kitty/KittyLine12">><<play_anim "Talk">>
+Kitty: Keep going, you're doing great! I'll be waiting for you.
+<<play_anim "Idle">><<stopvoice>>
 ===
 title: Kitty_Complete
 ---
-Kitty: You found them all! Thank you so much. #line:05499cc 
-Kitty: I can't wait to come to your party. I'll bring all the balloons! #line:0554487 
+<<playvoice "Kitty/KittyLine13">><<play_anim "Talk">>
+Kitty: You found them all! Thank you so much.
+<<playvoice "Kitty/KittyLine14">>
+Kitty: I can't wait to come to your party. I'll bring all the balloons!
+<<play_anim "Idle">><<stopvoice>>
 <<complete_quest "Frozen Balloons">>
 ===
 
