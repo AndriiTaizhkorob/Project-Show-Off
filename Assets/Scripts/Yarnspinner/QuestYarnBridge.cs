@@ -4,17 +4,20 @@ using Yarn.Unity;
 public class QuestYarnBridge : MonoBehaviour
 {
     public QuestManager questManager;
+    private DialogueRunner runner;
 
     private void Start()
     {
-        var runner = Object.FindFirstObjectByType<DialogueRunner>();
+        runner = Object.FindFirstObjectByType<DialogueRunner>();
         if (runner != null)
         {
             runner.AddCommandHandler<string>("start_quest", StartQuestFromDialogue);
             runner.AddCommandHandler<string>("complete_quest", CompleteQuestFromDialogue);
             runner.AddCommandHandler("teleport_potato", TeleportHideAndSeek);
+            runner.AddCommandHandler<string>("play_anim", PlayAnimTrigger);
         }
     }
+
 
     public void StartQuestFromDialogue(string questName)
     {
@@ -62,6 +65,19 @@ public class QuestYarnBridge : MonoBehaviour
         {
             Debug.LogWarning("[Yarn] HideAndSeek component not found.");
         }
+    }
+    public void PlayAnimTrigger(string triggerName)
+    {
+        var allAnimators = Object.FindObjectsByType<Animator>(FindObjectsSortMode.None);
+        foreach (var animator in allAnimators)
+        {
+            if (animator != null && animator.isActiveAndEnabled)
+            {
+                animator.SetTrigger(triggerName);
+            }
+        }
+
+        Debug.Log($"[Yarn] Triggered animation: {triggerName}");
     }
 }
 
