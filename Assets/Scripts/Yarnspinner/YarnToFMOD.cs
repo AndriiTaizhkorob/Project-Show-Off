@@ -20,7 +20,8 @@ public class YarnAudioCommands : MonoBehaviour
     {
         // Play the FMOD event
         StopVoice();
-        FMODUnity.RuntimeManager.PlayOneShot("event:/VoiceLines/" + eventPath);
+        _instance = FMODUnity.RuntimeManager.CreateInstance("event:/VoiceLines/" + eventPath);
+        _instance.start();
     }
     private void StopVoice()
     {
