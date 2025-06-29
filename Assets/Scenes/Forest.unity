@@ -6509,6 +6509,7 @@ Transform:
   - {fileID: 276862888}
   - {fileID: 1332566996}
   - {fileID: 441281232}
+  - {fileID: 2014266341}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &523186826
@@ -12314,6 +12315,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
+--- !u!1 &902915236 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8220852635747222994, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
+  m_PrefabInstance: {fileID: 902915235}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &902915238 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7277317412723572228, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
@@ -24004,8 +24010,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2014266340}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 98, y: 4.20591, z: -21.4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 93.56083, y: 1.8174801, z: 7.236}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -24017,7 +24023,7 @@ Transform:
   - {fileID: 867135123}
   - {fileID: 800825210}
   - {fileID: 933056177}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 519630526}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2027087801
 PrefabInstance:
@@ -25083,6 +25089,8 @@ MonoBehaviour:
   mapUI: {fileID: 1670125032}
   toggleMapAction: {fileID: -3027366099666253581, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   playerMovementScript: {fileID: 153152216915900296}
+  hintUI: {fileID: 902915236}
+  tutorialManager: {fileID: 0}
 --- !u!1001 &1747678629005389023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25580,4 +25588,3 @@ SceneRoots:
   - {fileID: 1413090402}
   - {fileID: 1470791582}
   - {fileID: 1463543900}
-  - {fileID: 2014266341}

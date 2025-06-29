@@ -5,7 +5,7 @@ public class MainMenuLoader : MonoBehaviour
 {
     public InputActionReference startGameAction; // Assign "X" input here
     public string sceneToLoad = "Main Area";
-
+    public float reloadTime = 1.5f;
     private bool hasStarted = false;
 
     void Update()
@@ -21,7 +21,7 @@ public class MainMenuLoader : MonoBehaviour
     {
         if (LoadingScreenManager.Instance != null)
         {
-            LoadingScreenManager.Instance.SwitchToScene(sceneToLoad);
+            LoadingScreenManager.Instance.SwitchToScene(sceneToLoad, reloadTime);
         }
         else
         {

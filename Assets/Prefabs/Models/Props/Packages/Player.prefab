@@ -5201,6 +5201,7 @@ GameObject:
   - component: {fileID: 3351738902849938483}
   - component: {fileID: 1124176813416652725}
   - component: {fileID: 5524560352777693293}
+  - component: {fileID: 7532104918754654539}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -5367,6 +5368,24 @@ MonoBehaviour:
   _questPrefab: {fileID: 190299156425184860, guid: 736e9f4fdf4508045a4dee6aba86ed60, type: 3}
   _questSpawnPoint: {fileID: 0}
   _questDisplayParent: {fileID: 0}
+  spacing: 0
+--- !u!114 &7532104918754654539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7824938724847874318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee9e12b3c47e4e74c95f2055c89c4da1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapUI: {fileID: 0}
+  toggleMapAction: {fileID: -3027366099666253581, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  playerMovementScript: {fileID: 1848232455715120795}
+  hintUI: {fileID: 0}
+  tutorialManager: {fileID: 0}
 --- !u!1 &9185001748991850551
 GameObject:
   m_ObjectHideFlags: 0

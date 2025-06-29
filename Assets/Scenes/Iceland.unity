@@ -5569,6 +5569,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1244120595639304883, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
   m_PrefabInstance: {fileID: 586605633}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &586605638 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8220852635747222994, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
+  m_PrefabInstance: {fileID: 586605633}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &589663951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16571,6 +16576,8 @@ MonoBehaviour:
   mapUI: {fileID: 586605637}
   toggleMapAction: {fileID: -3027366099666253581, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   playerMovementScript: {fileID: 153152216915900296}
+  hintUI: {fileID: 586605638}
+  tutorialManager: {fileID: 0}
 --- !u!136 &1634869581088974105
 CapsuleCollider:
   m_ObjectHideFlags: 0
