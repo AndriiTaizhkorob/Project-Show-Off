@@ -33,7 +33,7 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
 
     public bool isCompleted = false;
     [HideInInspector] public bool isAccepted = false;
-    private bool isHandedIn = false;
+    public bool isHandedIn = false;
     private bool delayed = true;
 
     [Header("Quest details")]
