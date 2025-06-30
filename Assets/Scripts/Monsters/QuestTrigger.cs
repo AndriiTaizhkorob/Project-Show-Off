@@ -81,11 +81,11 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
 
     void Update()
     {
-        if (interaction.action.triggered && delayed && IsPlayerNearby() && dialogueNode.Length > 0)
+        if (interaction.action.triggered && delayed && IsPlayerNearby() && dialogueNode.Length > 0 && !isHandedIn)
         {
             StartDialogue();
         }
-        else if (interaction.action.triggered && delayed && IsPlayerNearby() && dialogueNode.Length == 0)
+        else if (interaction.action.triggered && delayed && IsPlayerNearby() && dialogueNode.Length == 0 && !isHandedIn)
         {
             NPCInteraction();
         }
