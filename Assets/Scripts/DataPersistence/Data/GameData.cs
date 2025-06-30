@@ -15,6 +15,8 @@ public class GameData
     public SerializableDictionary<string, bool> balloonProgress;
     public SerializableDictionary<string, bool> collectedItems;
     public string lastUsedDoorID;
+    public SerializableDictionary<string, bool> seenLetters;
+
 
 
     public GameData()
@@ -30,6 +32,6 @@ public class GameData
         this.balloonProgress = new SerializableDictionary<string, bool>();
         collectedItems = new SerializableDictionary<string, bool>();
         this.lastUsedDoorID = "";
-
+        this.seenLetters = new SerializableDictionary<string, bool>();
     }
 }

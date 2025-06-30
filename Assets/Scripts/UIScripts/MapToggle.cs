@@ -7,6 +7,7 @@ public class MapToggle : MonoBehaviour
     [SerializeField] private GameObject mapUI;
     [SerializeField] private InputActionReference toggleMapAction;
     [SerializeField] private MonoBehaviour playerMovementScript;
+    [SerializeField] private GameObject introLetterUI;
 
     [Header("UI Hiding")]
     [SerializeField] private GameObject hintUI; 
@@ -47,7 +48,8 @@ public class MapToggle : MonoBehaviour
         if (mapUI == null)
             return;
 
-        if (dialogueRunner != null && dialogueRunner.IsDialogueRunning)
+        if ((dialogueRunner != null && dialogueRunner.IsDialogueRunning) ||
+            (introLetterUI != null && introLetterUI.activeSelf))
             return;
 
         bool newState = !mapUI.activeSelf;
@@ -56,6 +58,7 @@ public class MapToggle : MonoBehaviour
         if (playerMovementScript != null)
             playerMovementScript.enabled = !newState;
     }
+
 }
 
 
