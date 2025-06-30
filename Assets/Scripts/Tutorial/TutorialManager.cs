@@ -17,7 +17,7 @@ public class TutorialStep
     public string powerHintMessage = "";
 }
 
-public class TutorialManager : MonoBehaviour
+public class TutorialManager : MonoBehaviour, IDataPersistence
 {
     [SerializeField] private float initialDelay = 3f;
 
@@ -39,19 +39,25 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private GameObject introLetterUI;
 
     private int currentStep = 0;
+    private bool tutorialCompleted = false;
 
-    private static bool tutorialCompletedThisSession = false;
+    [SerializeField] public string id;
+    [ContextMenu("Generate guid for id")]
+    private void GenerateGuid()
+    {
+        id = System.Guid.NewGuid().ToString();
+    }
 
     private void Start()
     {
-        if (tutorialCompletedThisSession)
+        if (tutorialCompleted)
         {
             tutorialUIRoot.SetActive(false);
             enabled = false;
             return;
         }
 
-        tutorialUIRoot.SetActive(false); // Hide UI before initial delay
+        tutorialUIRoot.SetActive(false);
         StartCoroutine(DelayedStart());
     }
 
@@ -65,8 +71,6 @@ public class TutorialManager : MonoBehaviour
         StartCoroutine(RunTutorial());
         StartCoroutine(PulseIcon());
     }
-
-
 
     IEnumerator RunTutorial()
     {
@@ -86,13 +90,13 @@ public class TutorialManager : MonoBehaviour
 
             if (step.waitUntilCondition)
             {
-                SetRowVisible(false); // hide UI immediately
+                SetRowVisible(false);
                 yield return new WaitUntil(() => IsMapClosed());
                 yield return new WaitForSeconds(delayBetweenSteps);
             }
             else
             {
-                yield return new WaitForSeconds(step.extraDelayAfterClick); // let text linger
+                yield return new WaitForSeconds(step.extraDelayAfterClick);
                 SetRowVisible(false);
                 yield return new WaitForSeconds(delayBetweenSteps);
             }
@@ -100,7 +104,7 @@ public class TutorialManager : MonoBehaviour
             currentStep++;
         }
 
-        tutorialCompletedThisSession = true;
+        tutorialCompleted = true;
         tutorialUIRoot.SetActive(false);
         enabled = false;
         gameObject.SetActive(false);
@@ -139,7 +143,6 @@ public class TutorialManager : MonoBehaviour
         SetRowVisible(true);
     }
 
-
     private void SetRowVisible(bool visible)
     {
         leftText.enabled = visible;
@@ -156,7 +159,6 @@ public class TutorialManager : MonoBehaviour
             }
         }
     }
-
 
     IEnumerator PulseIcon()
     {
@@ -176,6 +178,7 @@ public class TutorialManager : MonoBehaviour
     {
         return mapUI != null && !mapUI.activeSelf;
     }
+
     IEnumerator PopUpPowerIcons()
     {
         for (int i = 0; i < powerIcons.Count; i++)
@@ -205,6 +208,19 @@ public class TutorialManager : MonoBehaviour
         icon.color = color;
     }
 
+    public void LoadData(GameData data)
+    {
+        data.collectedItems.TryGetValue("tutorial_done", out tutorialCompleted);
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        if (data.collectedItems.ContainsKey("tutorial_done"))
+            data.collectedItems["tutorial_done"] = tutorialCompleted;
+        else
+            data.collectedItems.Add("tutorial_done", tutorialCompleted);
+    }
 }
+
 
 

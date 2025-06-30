@@ -345,6 +345,9 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
                 break;
             }
         }
+
+        if(isHandedIn)
+            gameObject.SetActive(false);
     }
 
     public void SaveData(ref GameData data)

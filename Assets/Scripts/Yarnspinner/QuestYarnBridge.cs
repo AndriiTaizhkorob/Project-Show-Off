@@ -14,7 +14,7 @@ public class QuestYarnBridge : MonoBehaviour
             runner.AddCommandHandler<string>("start_quest", StartQuestFromDialogue);
             runner.AddCommandHandler<string>("complete_quest", CompleteQuestFromDialogue);
             runner.AddCommandHandler("teleport_potato", TeleportHideAndSeek);
-            runner.AddCommandHandler<string>("play_anim", PlayAnimTrigger);
+            runner.AddCommandHandler<string, string>("play_anim", PlayAnimTrigger);
         }
     }
 
@@ -66,18 +66,31 @@ public class QuestYarnBridge : MonoBehaviour
             Debug.LogWarning("[Yarn] HideAndSeek component not found.");
         }
     }
-    public void PlayAnimTrigger(string triggerName)
+    public void PlayAnimTrigger(string characterName, string triggerName)
     {
-        var allAnimators = Object.FindObjectsByType<Animator>(FindObjectsSortMode.None);
-        foreach (var animator in allAnimators)
-        {
-            if (animator != null && animator.isActiveAndEnabled)
-            {
-                animator.SetTrigger(triggerName);
-            }
-        }
+        var character = GameObject.Find(characterName);
+        if (character == null)
+            return;
 
-        Debug.Log($"[Yarn] Triggered animation: {triggerName}");
+        var animator = character.GetComponent<Animator>();
+        if (animator == null)
+            return;
+
+        if (!HasTrigger(animator, triggerName))
+            return;
+
+        animator.SetTrigger(triggerName);
     }
+
+    private bool HasTrigger(Animator animator, string triggerName)
+    {
+        foreach (var param in animator.parameters)
+        {
+            if (param.name == triggerName && param.type == AnimatorControllerParameterType.Trigger)
+                return true;
+        }
+        return false;
+    }
+
 }
 

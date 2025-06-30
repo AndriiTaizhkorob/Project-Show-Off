@@ -17,7 +17,7 @@ public class QuestPanel : MonoBehaviour
     [SerializeField]
     private float spacing;
     private Vector3 _questPosition;
-    public GameObject map;
+    [SerializeField] private GameObject map;
     private int _questCount;
 
     private readonly List<QuestDisplay> _listDisplay = new();
@@ -25,8 +25,10 @@ public class QuestPanel : MonoBehaviour
 
     private void Awake()
     {
-        map = GameObject.Find("Map");
-        map.SetActive(false);
+        if (map != null)
+        {
+            map.SetActive(false);
+        }
     }
 
     void Start()
@@ -47,9 +49,9 @@ public class QuestPanel : MonoBehaviour
 
     private void Update()
     {
-        if (map.activeInHierarchy)
+        if (map != null && map.activeInHierarchy)
         {
-            foreach(QuestDisplay questLog in _listDisplay)
+            foreach (QuestDisplay questLog in _listDisplay)
             {
                 questLog.gameObject.SetActive(false);
             }
@@ -111,6 +113,6 @@ public class QuestPanel : MonoBehaviour
 
     private bool TextCheck(GameObject textObject, string textDescription)
     {
-       return textObject.GetComponent<QuestDisplay>()._questText.GetComponent<TMP_Text>().text == textDescription;
+        return textObject.GetComponent<QuestDisplay>()._questText.GetComponent<TMP_Text>().text == textDescription;
     }
 }

@@ -54,6 +54,16 @@ public class StartMenuExit : MonoBehaviour, IDataPersistence
     {
 
     }
+    public void CancelExit()
+    {
+        exitMenu.SetActive(false);
+        finishMenu.SetActive(false);
+        endingUI.SetActive(false);
+
+        var movement = player.GetComponent<Movement>();
+        if (movement != null)
+            movement.enabled = true;
+    }
 
     private static bool AllQuestComplete(bool list)
     {

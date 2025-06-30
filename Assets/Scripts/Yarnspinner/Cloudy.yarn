@@ -1,52 +1,52 @@
 ﻿title: Cloudy
 ---
-<<playvoice "Cloudy/CloudyLine01">><<play_anim "Talk">>
+<<playvoice "Cloudy/CloudyLine01">><<play_anim "Cloudy" "Talk">>
 Cloudy: Oh... hello. I didn't expect visitors. Not after what happened with my penguins...
-<<play_anim "IdleSad">><<stopvoice>>
+<<play_anim "Cloudy" "IdleSad">><<stopvoice>>
 -> What happened to your penguins?
-    <<playvoice "Cloudy/CloudyLine02">><<play_anim "Talk">>
+    <<playvoice "Cloudy/CloudyLine02">><<play_anim "Cloudy" "Talk">>
     Cloudy: I was playing with my teleportation magic... and I got too excited.
-    <<play_anim "IdleSad">><<stopvoice>>
-    <<playvoice "Cloudy/CloudyLine03">><<play_anim "Talk">>
+    <<play_anim "Cloudy" "IdleSad">><<stopvoice>>
+    <<playvoice "Cloudy/CloudyLine03">><<play_anim "Cloudy" "Talk">>
     Cloudy: Now they're scattered across Iceland. Alone. Confused.
-    <<play_anim "IdleSad">><<stopvoice>>
+    <<play_anim "Cloudy" "IdleSad">><<stopvoice>>
     -> That's awful! I came here to invite you to a party, but—
-        <<playvoice "Cloudy/CloudyLine04">><<play_anim "Talk">>
+        <<playvoice "Cloudy/CloudyLine04">><<play_anim "Cloudy" "Talk">>
         Cloudy: Oh... I couldn't possibly celebrate while they're missing.
-        <<play_anim "IdleSad">><<stopvoice>>
-        <<playvoice "Cloudy/CloudyLine05">><<play_anim "Talk">>
+        <<play_anim "Cloudy" "IdleSad">><<stopvoice>>
+        <<playvoice "Cloudy/CloudyLine05">><<play_anim "Cloudy" "Talk">>
         Cloudy: But if you help me bring them home, I promise I'll come. I'll even bring my penguin friends.
-        <<play_anim "IdleHappy">><<stopvoice>>
-        <<playvoice "Cloudy/CloudyLine06">><<play_anim "Talk">>
+        <<play_anim "Cloudy" "IdleHappy">><<stopvoice>>
+        <<playvoice "Cloudy/CloudyLine06">><<play_anim "Cloudy" "Talk">>
         Cloudy: Here, I'll give you a bit of my power. Just enough to earn their trust.
-        <<play_anim "IdleSad">><<stopvoice>>
+        <<play_anim "Cloudy" "IdleSad">><<stopvoice>>
         <<start_quest "Penguin search">>
 -> I brought you an invitation!
-    <<playvoice "Cloudy/CloudyLine07">><<play_anim "Talk">>
+    <<playvoice "Cloudy/CloudyLine07">><<play_anim "Cloudy" "Talk">>
     Cloudy: A party...? Oh, I couldn't possibly celebrate while my penguin friends are missing.
-    <<play_anim "IdleSad">><<stopvoice>>
-    <<playvoice "Cloudy/CloudyLine05">><<play_anim "Talk">>
+    <<play_anim "Cloudy" "IdleSad">><<stopvoice>>
+    <<playvoice "Cloudy/CloudyLine05">><<play_anim "Cloudy" "Talk">>
     Cloudy: But if you help me bring them home, I promise I'll come. I'll even bring my penguin friends.
-    <<play_anim "IdleHappy">><<stopvoice>>
-    <<playvoice "Cloudy/CloudyLine08">><<play_anim "Talk">>
+    <<play_anim "Cloudy" "IdleHappy">><<stopvoice>>
+    <<playvoice "Cloudy/CloudyLine08">><<play_anim "Cloudy" "Talk">>
     Cloudy: Take this, it'll help you lead them safely.
-    <<play_anim "IdleSad">><<stopvoice>>
+    <<play_anim "Cloudy" "IdleSad">><<stopvoice>>
     <<start_quest "Penguin search">>
 -> I have something else to do but I'll be right back
 ===
 title: Cloudy_InProgress
 ---
-<<playvoice "Cloudy/CloudyLine09">><<play_anim "Talk">>
+<<playvoice "Cloudy/CloudyLine09">><<play_anim "Cloudy" "Talk">>
 Cloudy: Are they safe? Are they warm? Please keep looking, I know they're out there.
-<<play_anim "IdleSad">><<stopvoice>>
+<<play_anim "Cloudy" "IdleSad">><<stopvoice>>
 ===
 title: Cloudy_Complete
 ---
-<<playvoice "Cloudy/CloudyLine10">><<play_anim "Talk">>
+<<playvoice "Cloudy/CloudyLine10">><<play_anim "Cloudy" "Talk">>
 Cloudy: They're home! Oh, thank you! I can't believe they're really back...
-<<play_anim "IdleHappy">><<stopvoice>>
-<<playvoice "Cloudy/CloudyLine11">><<play_anim "Talk">>
+<<play_anim "Cloudy" "IdleHappy">><<stopvoice>>
+<<playvoice "Cloudy/CloudyLine11">><<play_anim "Cloudy" "Talk">>
 Cloudy: I'll come to the party, and I'll bring my best friends. The penguins love parties.
-<<play_anim "IdleHappy">><<stopvoice>>
+<<play_anim "Cloudy" "IdleHappy">><<stopvoice>>
 <<complete_quest "Penguin search">>
 ===

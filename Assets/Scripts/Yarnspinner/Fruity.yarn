@@ -1,43 +1,43 @@
 ﻿title: Fruity
 ---
-<<playvoice "Fruity/FruityLine01">><<play_anim "Talk">>
+<<playvoice "Fruity/FruityLine01">><<play_anim "Fruity" "Talk">>
 Fruity: STAY AWAY FROM MY APPLES!
-<<play_anim "Idle">><<stopvoice>>
+<<play_anim "Fruity" "Idle">><<stopvoice>>
 -> Don't worry I won't take them!
-    <<playvoice "Fruity/FruityLine02">><<play_anim "Talk">>
+    <<playvoice "Fruity/FruityLine02">><<play_anim "Fruity" "Talk">>
     Fruity: Really? Then what are you doing here?
-    <<play_anim "Idle">><<stopvoice>>
+    <<play_anim "Fruity" "Idle">><<stopvoice>>
     -> I'm here to invite you to a party with all the other monsters
-        <<playvoice "Fruity/FruityLine03">><<play_anim "Talk">>
+        <<playvoice "Fruity/FruityLine03">><<play_anim "Fruity" "Talk">>
         Fruity: The other monsters? No way.
-        <<play_anim "Idle">><<stopvoice>>
+        <<play_anim "Fruity" "Idle">><<stopvoice>>
         -> What happened?
-            <<playvoice "Fruity/FruityLine04">><<play_anim "Talk">>
+            <<playvoice "Fruity/FruityLine04">><<play_anim "Fruity" "Talk">>
             Fruity: They stole my fruit!
-            <<play_anim "Idle">><<stopvoice>>
+            <<play_anim "Fruity" "Idle">><<stopvoice>>
             -> That's awful. How about I grow you some new fruit trees?
-                <<playvoice "Fruity/FruityLine05">><<play_anim "Talk">>
+                <<playvoice "Fruity/FruityLine05">><<play_anim "Fruity" "Talk">>
                 Fruity: Would you do that for me? That would be amazing
-                <<play_anim "Idle">><<stopvoice>>
+                <<play_anim "Fruity" "Idle">><<stopvoice>>
                 -> Yes! But only if you'll come to the party.
-                    <<playvoice "Fruity/FruityLine06">><<play_anim "Talk">>
+                    <<playvoice "Fruity/FruityLine06">><<play_anim "Fruity" "Talk">>
                     Fruity: Fine, I'll go to the party if you grow me new fruit trees.
-                    <<play_anim "Idle">><<stopvoice>>
+                    <<play_anim "Fruity" "Idle">><<stopvoice>>
                     <<start_quest "Tree quest">>
 -> Sorry, I'll come back later
 ===
 title: Fruity_InProgress
 ---
-<<playvoice "Fruity/FruityLine07">><<play_anim "Talk">>
+<<playvoice "Fruity/FruityLine07">><<play_anim "Fruity" "Talk">>
 Fruity: Did you finish growing new fruit trees?
-<<play_anim "Idle">><<stopvoice>>
+<<play_anim "Fruity" "Idle">><<stopvoice>>
 ===
 title: Fruity_Complete
 ---
-<<playvoice "Fruity/FruityLine08">><<play_anim "Talk">>
+<<playvoice "Fruity/FruityLine08">><<play_anim "Fruity" "Talk">>
 Fruity: You made me very happy! Thank you so much!
 <<playvoice "Fruity/FruityLine09">>
 Fruity: I'll go to the party and bring some fruit with me.
-<<play_anim "Idle">><<stopvoice>>
+<<play_anim "Fruity" "Idle">><<stopvoice>>
 <<complete_quest "Tree quest">>
 ===

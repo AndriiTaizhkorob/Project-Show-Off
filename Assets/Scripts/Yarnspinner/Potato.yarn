@@ -1,110 +1,79 @@
 ﻿title: Potato
 ---
-<<playvoice "Potato/PotatoLine01">>
-<<play_anim "Talk">>
+<<playvoice "Potato/PotatoLine01">><<play_anim "Potato" "Talk">>
 Potato: Hello!! Have you come to eat hamburgers with me? Or maybe... to play THE GAME??  
-<<play_anim "Idle">>
-<<stopvoice>>
+<<play_anim "Potato" "Idle">><<stopvoice>>
 -> I brought you an invitation!
-    <<playvoice "Potato/PotatoLine02">>
-    <<play_anim "Talk">>
+    <<playvoice "Potato/PotatoLine02">><<play_anim "Potato" "Talk">>
     Potato: A party? With *music* and *snacks* and *burgers*?! 
-    <<play_anim "Idle">>
-    <<stopvoice>>
-    <<playvoice "Potato/PotatoLine03">>
-    <<play_anim "Talk">>
+    <<play_anim "Potato" "Idle">><<stopvoice>>
+    <<playvoice "Potato/PotatoLine03">><<play_anim "Potato" "Talk">>
     Potato: YES. But wait! I can only party with CHAMPIONS. You must first beat me... in HIDE AND SEEK!
-    <<play_anim "Idle">>
-    <<stopvoice>>
-    <<playvoice "Potato/PotatoLine04">>
-    <<play_anim "Talk">>
+    <<play_anim "Potato" "Idle">><<stopvoice>>
+    <<playvoice "Potato/PotatoLine04">><<play_anim "Potato" "Talk">>
     Potato: But be warned, when we start, I go POOF! You won't see me until you FIND ME!  
-    <<play_anim "Idle">>
-    <<stopvoice>>
+    <<play_anim "Potato" "Idle">><<stopvoice>>
     -> I'm ready! 
-        <<playvoice "Potato/PotatoLine05">> 
-        <<play_anim "Talk">>
+        <<playvoice "Potato/PotatoLine05">><<play_anim "Potato" "Talk">>
         <<start_quest "Hide'n'Seek">>
         Potato: Let's play! I'm hiding near something crispy and DELICIOUS. 
-        <<play_anim "Idle">>
-        <<teleport_potato>>
-        <<stopvoice>>
+        <<play_anim "Potato" "Idle">><<teleport_potato>><<stopvoice>>
 -> What's “THE GAME”? 
-    <<playvoice "Potato/PotatoLine06">> 
-    <<play_anim "Talk">>
+    <<playvoice "Potato/PotatoLine06">><<play_anim "Potato" "Talk">>
     Potato: THE GAME is everything! THE GAME is the best! THE GAME is... HIDE AND SEEK!! 
-    <<play_anim "Idle">>
-    <<stopvoice>>
-    <<playvoice "Potato/PotatoLine07">> 
-    <<play_anim "Talk">>
+    <<play_anim "Potato" "Idle">><<stopvoice>>
+    <<playvoice "Potato/PotatoLine07">><<<play_anim "Potato" "Talk">>
     Potato: I'm the undisputed champion. But if you want me at your party, you'll have to BEAT ME! 
-    <<play_anim "Idle">>
-    <<stopvoice>>
-    <<playvoice "Potato/PotatoLine04">> 
-    <<play_anim "Talk">>
+    <<play_anim "Potato" "Idle">><<stopvoice>>
+    <<playvoice "Potato/PotatoLine04">><<play_anim "Potato" "Talk">>
     Potato: But be warned, when we start, I go POOF! You won't see me until you FIND ME! 
-    <<play_anim "Idle">>
-    <<stopvoice>>
+    <<play_anim "Potato" "Idle">><<stopvoice>>
     -> I'm in!
-        <<playvoice "Potato/PotatoLine05">>
-        <<play_anim "Talk">>
+        <<playvoice "Potato/PotatoLine05">><<play_anim "Potato" "Talk">>
         <<start_quest "Hide'n'Seek">>
         Potato: Let's play! I'm hiding near something crispy and DELICIOUS.  
-        <<play_anim "Idle">>
-        <<teleport_potato>>
-        <<stopvoice>>
+        <<play_anim "Potato" "Idle">><<teleport_potato>><<stopvoice>>
 -> I was just looking around. 
-    <<playvoice "Potato/PotatoLine08">> 
-    <<play_anim "Talk">>
+    <<playvoice "Potato/PotatoLine08">><<play_anim "Potato" "Talk">>
     Potato: That's how all great adventures start! And they end... with potatoes.  
-    <<play_anim "Idle">>
-    <<stopvoice>> 
+    <<play_anim "Potato" "Idle">><<stopvoice>>
 ===
 title: Potato_InProgress
 ---
 <<if $potato_progress == 1>>
-    <<playvoice "Potato/PotatoLine09">> 
-    <<play_anim "Talk">>
+    <<playvoice "Potato/PotatoLine09">><<play_anim "Potato" "Talk">>
     Potato: Next, I'll go to a place with clowns and laughter!  
-    <<play_anim "Idle">>
-    <<stopvoice>>
+    <<play_anim "Potato" "Idle">><<stopvoice>>
     -> I've seen a tent that looks like the right place 
 
 <<elseif $potato_progress == 2>>
-    <<playvoice "Potato/PotatoLine10">> 
-    <<play_anim "Talk">>
+    <<playvoice "Potato/PotatoLine10">><<play_anim "Potato" "Talk">>
     Potato: I'm getting hungry, maybe I'll hide near something big and breakfasty!  
-    <<play_anim "Idle">>
-    <<stopvoice>>
+    <<play_anim "Potato" "Idle">><<stopvoice>>
     -> Breakfast huh? Something made from flour and eggs  
 
 <<elseif $potato_progress == 3>>
-    <<playvoice "Potato/PotatoLine11">> 
-    <<play_anim "Talk">>
+    <<playvoice "Potato/PotatoLine11">><<play_anim "Potato" "Talk">>
     Potato: Now It's time for something fun! Let's take a ride 
-    <<play_anim "Idle">>
-    <<stopvoice>>
+    <<play_anim "Potato" "Idle">><<stopvoice>>
     -> Something to take a ride on. Let's look for attractions!  
 
 <<else>>
-    <<play_anim "Talk">>
+    <<play_anim "Potato" "Talk">>
     Potato: You're... too good. I may have to hide inside a sandwich next. 
-    <<play_anim "Idle">>
+    <<play_anim "Potato" "Idle">>
     -> One more time! 
+    
 <<endif>>
 <<teleport_potato>>
 ===
 title: Potato_Complete
 ---
-<<playvoice "Potato/PotatoLine12">> 
-<<play_anim "Talk">>
+<<playvoice "Potato/PotatoLine12">><<play_anim "Potato" "Talk">>
 Potato: YOU FOUND ME EVERY TIME! I'm officially impressed, and hungry.  
-<<play_anim "Idle">>
-<<stopvoice>>
-<<playvoice "Potato/PotatoLine13">> 
-<<play_anim "Talk">>
+<<play_anim "Potato" "Idle">><<stopvoice>>
+<<playvoice "Potato/PotatoLine13">><<play_anim "Potato" "Talk">>
 Potato: I'll bring mac & cheese and garlands to your party. 
-<<play_anim "Idle">>
-<<stopvoice>>
+<<play_anim "Potato" "Idle">><<stopvoice>>
 <<complete_quest "Hide'n'Seek">>
 ===
