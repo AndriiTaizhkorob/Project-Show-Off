@@ -112,6 +112,7 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
     private bool originalRotationStored = false;
     private void StartDialogue()
     {
+        delayed = false;
         if (dialogueRunner != null && !dialogueRunner.IsDialogueRunning)
         {
             string nodeToRun = dialogueStartNode;
@@ -193,6 +194,7 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
         }
 
         characterToRotate.rotation = originalRotation;
+        StartCoroutine(DelayActivation());
     }
 
 
@@ -319,6 +321,7 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(closeObj);
         isCompleted = false;
+        isHandedIn = true;
         player.GetComponent<QuestPanel>().ResetCurrent("<s>" + questDescription + "</s>");
     }
 
