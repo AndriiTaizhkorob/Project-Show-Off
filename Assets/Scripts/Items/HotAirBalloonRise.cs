@@ -118,6 +118,10 @@ public class HotAirBalloonRise : MonoBehaviour, IDataPersistence
     public void LoadData(GameData data)
     {
         data.balloonProgress.TryGetValue(id, out complete);
+        if (complete)
+        {
+            progressScale = progressLimit;
+        }
     }
 
     public void SaveData(ref GameData data)

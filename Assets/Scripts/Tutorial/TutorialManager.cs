@@ -36,6 +36,8 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private float iconPopDelay = 0.3f;
     [SerializeField] private TextMeshProUGUI powerHintText;
 
+    [SerializeField] private GameObject introLetterUI;
+
     private int currentStep = 0;
 
     private static bool tutorialCompletedThisSession = false;
@@ -55,11 +57,15 @@ public class TutorialManager : MonoBehaviour
 
     IEnumerator DelayedStart()
     {
+        while (introLetterUI != null && introLetterUI.activeSelf)
+            yield return null;
+
         yield return new WaitForSeconds(initialDelay);
         tutorialUIRoot.SetActive(true);
         StartCoroutine(RunTutorial());
         StartCoroutine(PulseIcon());
     }
+
 
 
     IEnumerator RunTutorial()
