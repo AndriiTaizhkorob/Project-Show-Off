@@ -13966,7 +13966,7 @@ PrefabInstance:
     - target: {fileID: 882129737928793925, guid: d0ced9062dcf1b04ba25916f2f6e0ef4, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 36221681dd95d934194b0b7dc66326ef, type: 2}
+      objectReference: {fileID: 2100000, guid: 4a3a93e2f45744f49a2bce31d3581471, type: 2}
     - target: {fileID: 919132149155446097, guid: d0ced9062dcf1b04ba25916f2f6e0ef4, type: 3}
       propertyPath: m_Name
       value: message board
@@ -17230,6 +17230,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1373326858448431330, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1915235169720334916, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -20389,7 +20393,7 @@ MonoBehaviour:
     showPowerHint: 0
     powerHintMessage: 
   - message: Press[icon]to Interact
-    inputAction: {fileID: 7040659881675835329, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    inputAction: {fileID: 392368643174621059, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     buttonIcon: {fileID: 2800000, guid: f79cc003c21d330438a289c50d31469c, type: 3}
     extraDelayAfterClick: 0.5
     waitUntilCondition: 0

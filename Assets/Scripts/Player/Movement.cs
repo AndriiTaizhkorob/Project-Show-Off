@@ -35,6 +35,7 @@ public class Movement : MonoBehaviour
 
     private void Start()
     {
+        endUI.SetActive(false);
         playerFootsteps = AudioManager.instance.CreateInstance(FMODEvents.instance.footSteps);
         playerJump = AudioManager.instance.CreateInstance(FMODEvents.instance.jump);
         playerLanding = AudioManager.instance.CreateInstance(FMODEvents.instance.landing);
