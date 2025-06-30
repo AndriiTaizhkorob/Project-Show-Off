@@ -13,6 +13,7 @@ public class StartMenuExit : MonoBehaviour, IDataPersistence
     [SerializeField] private GameObject endingUI;
     [SerializeField] private GameObject[] noButtons;
     private List<bool> completedQuests;
+    private GameObject player;
 
     void Start()
     {
@@ -20,10 +21,14 @@ public class StartMenuExit : MonoBehaviour, IDataPersistence
         exitMenu.SetActive(false);
         finishMenu.SetActive(false);
         credits.SetActive(false);
+
+        player = GameObject.Find("Player");
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        player.GetComponent<Movement>().StopSound();
+
         endingUI.SetActive(true);
 
         if (completedQuests.TrueForAll(AllQuestComplete) && completedQuests.Count > 0)
