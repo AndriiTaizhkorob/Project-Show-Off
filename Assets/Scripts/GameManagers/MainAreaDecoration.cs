@@ -13,7 +13,11 @@ public class MainAreaDecoration : MonoBehaviour, IDataPersistence
                 if (data.finishedQuests[i] && data.monsterNames[i] == decorationObjects[j].name)
                 {
                     decorationObjects[j].SetActive(true);
+                    Debug.Log("Scored");
                 }
+                Debug.Log(data.finishedQuests[i]);
+                Debug.Log(data.monsterNames[i]);
+                Debug.Log(decorationObjects[j].name);
             }
         }
     }
