@@ -9,9 +9,11 @@ public class MainAreaDecoration : MonoBehaviour, IDataPersistence
     {
         for (int i = 0; i < data.monsterNames.Count; i++)
         {
-            if (data.finishedQuests[i] && data.monsterNames[i] == decorationObjects[i].name)
-            {
-                decorationObjects[i].SetActive(true);
+            for(int j = 0; j < decorationObjects.Length; j++){            
+                if (data.finishedQuests[i] && data.monsterNames[i] == decorationObjects[j].name)
+                {
+                    decorationObjects[j].SetActive(true);
+                }
             }
         }
     }
