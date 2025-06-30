@@ -12,6 +12,7 @@ public class Movement : MonoBehaviour
     private Vector3 velocity;
 
     public GameObject characterUI;
+    private GameObject endUI;
 
     public float speed = 1.0f;
     public float jumpForce = 1.0f;
@@ -29,6 +30,7 @@ public class Movement : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody>();
         characterUI = GameObject.Find("characterUI");
+        endUI = GameObject.Find("EndUI");
     }
 
     private void Start()
@@ -40,7 +42,7 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        if (!characterUI.activeInHierarchy)
+        if (!characterUI.activeInHierarchy && !endUI.activeInHierarchy)
         {
             Moving();
             UpdateSound();

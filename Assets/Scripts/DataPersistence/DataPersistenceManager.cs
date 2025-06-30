@@ -83,6 +83,11 @@ public class DataPersistenceManager : MonoBehaviour
         dataHandler.Delete();
     }
 
+    public void DeleteSave()
+    {
+        dataHandler.Delete();
+    }
+
     private List<IDataPersistence> FindAllDataPersistanceObjects()
     {
         IEnumerable<IDataPersistence> dataPersistenceObjects = Object.FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None)

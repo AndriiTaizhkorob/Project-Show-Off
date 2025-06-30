@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,15 +17,20 @@ public class QuestPanel : MonoBehaviour
     [SerializeField]
     private float spacing;
     private Vector3 _questPosition;
+    public GameObject map;
     private int _questCount;
 
     private readonly List<QuestDisplay> _listDisplay = new();
     private List<GameObject> _listQuests = new();
 
+    private void Awake()
+    {
+        map = GameObject.Find("Map");
+        map.SetActive(false);
+    }
+
     void Start()
     {
-       
-
         for (var i = _listDisplay.Count - 1; i >= 0; i--)
         {
             Destroy(_listDisplay[i].gameObject);
@@ -37,6 +43,24 @@ public class QuestPanel : MonoBehaviour
             AddObjective(quest);
         }
         GameManager.Instance.QuestManager.OnQuestAdded += AddObjective;
+    }
+
+    private void Update()
+    {
+        if (map.activeInHierarchy)
+        {
+            foreach(QuestDisplay questLog in _listDisplay)
+            {
+                questLog.gameObject.SetActive(false);
+            }
+        }
+        else
+        {
+            foreach (QuestDisplay questLog in _listDisplay)
+            {
+                questLog.gameObject.SetActive(true);
+            }
+        }
     }
 
     private void AddObjective(Quest _quest)
