@@ -6,15 +6,14 @@ public class IntroLetterController : MonoBehaviour, IDataPersistence
     [SerializeField] private MonoBehaviour movementScript;
     [SerializeField] private CameraControls cameraControlScript;
 
-    private bool letterSeen = false;
+    public bool letterSeen = false;
 
-    [SerializeField] public string id;
-    [ContextMenu("Generate guid for id")]
-    private void GenerateGuid()
-    {
-        id = System.Guid.NewGuid().ToString();
-    }
     void Start()
+    {
+        LetterDisplay();
+    }
+
+    private void LetterDisplay()
     {
         if (!letterSeen)
         {
@@ -55,15 +54,13 @@ public class IntroLetterController : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData data)
     {
-        data.seenLetters.TryGetValue(id, out letterSeen);
+        letterSeen = data._letterSeen;
+        LetterDisplay();
     }
 
     public void SaveData(ref GameData data)
     {
-        if (data.seenLetters.ContainsKey(id))
-            data.seenLetters[id] = letterSeen;
-        else
-            data.seenLetters.Add(id, letterSeen);
+        data._letterSeen = letterSeen;
     }
 }
 

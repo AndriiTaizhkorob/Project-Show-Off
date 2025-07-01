@@ -5812,7 +5812,7 @@ MonoBehaviour:
   letterUI: {fileID: 764797244}
   movementScript: {fileID: 1654845622}
   cameraControlScript: {fileID: 317122129}
-  id: ad6aa060-966c-4bb6-a271-8210d8081642
+  letterSeen: 0
 --- !u!4 &329414812
 Transform:
   m_ObjectHideFlags: 0
@@ -11029,6 +11029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creditsTime: 10
+  exitEffect: {fileID: 873249073}
   exitMenu: {fileID: 1295103871}
   finishMenu: {fileID: 1295103870}
   credits: {fileID: 939208647}
