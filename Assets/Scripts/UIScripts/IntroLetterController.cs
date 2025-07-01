@@ -4,7 +4,6 @@ public class IntroLetterController : MonoBehaviour, IDataPersistence
 {
     [SerializeField] private GameObject letterUI;
     [SerializeField] private MonoBehaviour movementScript;
-    [SerializeField] private string letterId = "intro_letter";
     [SerializeField] private CameraControls cameraControlScript;
 
     private bool letterSeen = false;
@@ -56,15 +55,15 @@ public class IntroLetterController : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData data)
     {
-        data.seenLetters.TryGetValue(letterId, out letterSeen);
+        data.seenLetters.TryGetValue(id, out letterSeen);
     }
 
     public void SaveData(ref GameData data)
     {
-        if (data.seenLetters.ContainsKey(letterId))
-            data.seenLetters[letterId] = letterSeen;
+        if (data.seenLetters.ContainsKey(id))
+            data.seenLetters[id] = letterSeen;
         else
-            data.seenLetters.Add(letterId, letterSeen);
+            data.seenLetters.Add(id, letterSeen);
     }
 }
 
