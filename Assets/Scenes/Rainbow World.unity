@@ -20736,10 +20736,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3527781253550059320, guid: aaedb0717b4dd9e40a8e6036bf65837a, type: 3}
-      propertyPath: cancelDialogueAction
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 7039730354027430782, guid: aaedb0717b4dd9e40a8e6036bf65837a, type: 3}
       propertyPath: m_Name
       value: Dialogue System Variant
@@ -24413,6 +24409,14 @@ PrefabInstance:
     - target: {fileID: 1244120595639304883, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850897721857919247, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -62.80005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850897721857919247, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -73.400024
       objectReference: {fileID: 0}
     - target: {fileID: 6303298362097250186, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
       propertyPath: questManager
