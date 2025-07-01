@@ -65,23 +65,18 @@ public class QuestPanel : MonoBehaviour
         }
     }
 
-    private void AddObjective(Quest _quest)
+    private void AddObjective(Quest quest)
     {
-        for (var i = _listDisplay.Count - 1; i >= 0; i--)
-        {
-            var curObject = _listDisplay[i].transform.position;
+        var display = Instantiate(_questDisplayPrefab, _questDisplayParent);
+        display.Init(quest);
 
-            curObject.y -= _questPrefab.rect.height * 2 + spacing;
-            _listDisplay[i].gameObject.transform.position = curObject;
-        }
-
-        var display = Instantiate(_questDisplayPrefab, _questPosition, Quaternion.identity, _questDisplayParent);
         _listQuests.Add(display.gameObject);
-        display.Init(_quest);
         _listDisplay.Add(display);
-        Debug.Log(_quest.GetQuestName());
-        display.GetComponent<QuestImageSpawner>().questName = _quest.GetQuestName();
+
+        Debug.Log(quest.GetQuestName());
+        display.GetComponent<QuestImageSpawner>().questName = quest.GetQuestName();
     }
+
 
     public void ResetCurrent(string questDescription)
     {
@@ -89,27 +84,15 @@ public class QuestPanel : MonoBehaviour
 
         for (var i = _listDisplay.Count - 1; i >= 0; i--)
         {
-            var curObject = _listDisplay[i].transform.position;
-
             if (TextCheck(_listDisplay[i].gameObject, questDescription))
             {
-                _questCount = i;
-
-                Debug.Log("Correct");
                 Destroy(_listDisplay[i].gameObject);
-                _listDisplay.Remove(_listDisplay[i]);
-            }
-
-            if (i < _questCount)
-            {
-                curObject.y += _questPrefab.rect.height * 2 + spacing;
-
-                Debug.Log("<Moved up>");
-                Debug.Log(_listDisplay[i].transform.position);
-                _listDisplay[i].gameObject.transform.position = curObject;
+                _listDisplay.RemoveAt(i);
+                break;
             }
         }
     }
+
 
     private bool TextCheck(GameObject textObject, string textDescription)
     {
