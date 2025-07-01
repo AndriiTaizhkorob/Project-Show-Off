@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.VFX;
 
 public class StartMenuExit : MonoBehaviour, IDataPersistence
 {
     [SerializeField] private float creditsTime;
+    [SerializeField] private VisualEffect exitEffect;
     [SerializeField] private GameObject exitMenu;
     [SerializeField] private GameObject finishMenu;
     [SerializeField] private GameObject credits;
@@ -28,6 +30,8 @@ public class StartMenuExit : MonoBehaviour, IDataPersistence
     private void OnTriggerEnter(Collider other)
     {
         player.GetComponent<Movement>().StopSound();
+        player.GetComponent<FirePower>().StopSound();
+        player.GetComponent<IcePower>().StopSound();
 
         endingUI.SetActive(true);
 
@@ -48,6 +52,11 @@ public class StartMenuExit : MonoBehaviour, IDataPersistence
     public void LoadData(GameData data)
     {
         completedQuests = data.finishedQuests;
+
+        if (completedQuests.TrueForAll(AllQuestComplete) && completedQuests.Count > 0)
+        {
+            exitEffect.Play();
+        }
     }
 
     public void SaveData(ref GameData data)
