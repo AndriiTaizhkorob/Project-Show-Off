@@ -1360,7 +1360,7 @@ MonoBehaviour:
   isAccepted: 0
   isHandedIn: 0
   questName: Hot air balloon quest
-  questDescription: Fire Up Hot Air Balloons
+  questDescription: Hot Air Balloons
   itemAmount: 4
   Objects:
   - {fileID: 871511416}
@@ -11434,6 +11434,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a13bbd849e6a6c4a8ca548a394c9df3, type: 3}
+--- !u!224 &974821583 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5133052981189824187, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
+  m_PrefabInstance: {fileID: 2023666726}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &981069694
 GameObject:
   m_ObjectHideFlags: 0
@@ -24426,11 +24431,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
---- !u!224 &2023666727 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1031163072690248502, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
-  m_PrefabInstance: {fileID: 2023666726}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2023666728 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6578179903902387377, guid: 65354944ac8e70244b597487e5bc256c, type: 3}
@@ -26443,7 +26443,7 @@ PrefabInstance:
       objectReference: {fileID: 1685196011}
     - target: {fileID: 5524560352777693293, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: spacing
-      value: 70
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5524560352777693293, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: _questSpawnPoint
@@ -26452,7 +26452,7 @@ PrefabInstance:
     - target: {fileID: 5524560352777693293, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: _questDisplayParent
       value: 
-      objectReference: {fileID: 2023666727}
+      objectReference: {fileID: 974821583}
     - target: {fileID: 5843362487387984255, guid: 067c75e7b4f6be64e879f774977a52fd, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
       value: 1.2
