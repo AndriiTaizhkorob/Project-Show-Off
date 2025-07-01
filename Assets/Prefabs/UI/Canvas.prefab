@@ -5638,6 +5638,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5133052981189824187}
+  - component: {fileID: 8253572667948055529}
   m_Layer: 5
   m_Name: QuestSpawnPoint
   m_TagString: Untagged
@@ -5664,6 +5665,46 @@ RectTransform:
   m_AnchoredPosition: {x: 228, y: -64}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8253572667948055529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6578179903902387377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037908cc35adebc4788f348a169d88a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interaction: {fileID: 7040659881675835329, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  cameraMove: {fileID: 377673603695483797, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  characterUI: {fileID: 957087038370874891}
+  completeObj: {fileID: 6939482798570514058}
+  acceptObj: {fileID: 7277317412723572228}
+  closeObj: {fileID: 5194151206262327368}
+  checkRadius: 1
+  isCompleted: 0
+  isAccepted: 0
+  isHandedIn: 0
+  questName: Do not delet this component
+  questDescription: bla bla
+  itemAmount: 0
+  Objects: []
+  player: {fileID: 0}
+  questText: 
+  currentValue: 0
+  questAssigned: 0
+  dialogueNode: 
+  characterToRotate: {fileID: 0}
+  playerTransform: {fileID: 0}
+  dialogueStartNode: 
+  dialogueInProgressNode: 
+  dialogueCompleteNode: 
+  playerMovement: {fileID: 0}
 --- !u!1 &6649646343812230367
 GameObject:
   m_ObjectHideFlags: 0

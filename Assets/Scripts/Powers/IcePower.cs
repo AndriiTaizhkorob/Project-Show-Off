@@ -64,4 +64,9 @@ public class IcePower : MonoBehaviour
     {
         isActive = powerOwner.GetComponent<QuestTrigger>().isAccepted;
     }
+
+    public void StopSound()
+    {
+        icePowerSound.stop(STOP_MODE.ALLOWFADEOUT);
+    }
 }

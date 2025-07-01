@@ -22,6 +22,8 @@ public class SceneLoader : MonoBehaviour, IDataPersistence
         if (other.CompareTag("Player"))
         {
             player.GetComponent<Movement>().StopSound();
+            player.GetComponent<FirePower>().StopSound();
+            player.GetComponent<IcePower>().StopSound();
             player.GetComponent<Movement>().enabled = false;
             pendingDoorID = destinationDoorID;
             DataPersistenceManager.Instance.SaveGame();

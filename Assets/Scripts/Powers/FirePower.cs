@@ -106,4 +106,9 @@ public class FirePower : MonoBehaviour
     {
         isActive = powerOwner.GetComponent<QuestTrigger>().isAccepted;
     }
+
+    public void StopSound()
+    {
+        firePowerSound.stop(STOP_MODE.ALLOWFADEOUT);
+    }
 }

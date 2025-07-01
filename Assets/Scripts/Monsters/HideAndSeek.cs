@@ -1,6 +1,7 @@
 
 using FMODUnity;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.VFX;
@@ -26,9 +27,7 @@ public class HideAndSeek : MonoBehaviour, IDataPersistence
 
     void Start()
     {
-        tpSpots = GetComponent<QuestTrigger>().Objects;
-        questUI = GetComponent<QuestTrigger>().characterUI;
-        spotLimit = GetComponent<QuestTrigger>().itemAmount;
+
     }
 
     void Update()
@@ -62,11 +61,22 @@ public class HideAndSeek : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData data)
     {
+        tpSpots = GetComponent<QuestTrigger>().Objects;
+        questUI = GetComponent<QuestTrigger>().characterUI;
+        spotLimit = GetComponent<QuestTrigger>().itemAmount;
         spotNumber = (data.currentSpot > currentValue) ? data.currentSpot - 1 : data.currentSpot;
+        StartCoroutine(DelayTP(spotNumber));
     }
 
     public void SaveData(ref GameData data)
     {
         data.currentSpot = spotNumber;
+    }
+
+    IEnumerator DelayTP(int spot)
+    {
+        yield return new WaitForSeconds(0.01f);
+        if(inProgress && currentValue == spotNumber && currentValue != spotLimit)
+            transform.position = tpSpots[spot].transform.position;
     }
 }
