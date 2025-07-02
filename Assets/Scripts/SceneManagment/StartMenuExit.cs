@@ -46,16 +46,16 @@ public class StartMenuExit : MonoBehaviour, IDataPersistence
         player.GetComponent<FirePower>().StopSound();
         player.GetComponent<IcePower>().StopSound();
 
-        endingUI.SetActive(true);
-
         if (completedQuests.Contains(true) && completedQuests.Count > 0)
         {
+            endingUI.SetActive(true);
             finishMenu.SetActive(true);
             EventSystem.current.SetSelectedGameObject(null);
             EventSystem.current.SetSelectedGameObject(noButtons[1]);
         }
         else if(completedQuests.Count > 0)
         {
+            endingUI.SetActive(true);
             exitMenu.SetActive(true);
             EventSystem.current.SetSelectedGameObject(null);
             EventSystem.current.SetSelectedGameObject(noButtons[0]);
