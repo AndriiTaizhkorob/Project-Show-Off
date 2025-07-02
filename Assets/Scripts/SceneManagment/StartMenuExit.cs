@@ -48,13 +48,13 @@ public class StartMenuExit : MonoBehaviour, IDataPersistence
 
         endingUI.SetActive(true);
 
-        if (completedQuests.TrueForAll(AllQuestComplete) && completedQuests.Count == 7)
+        if (completedQuests.Contains(true) && completedQuests.Count > 0)
         {
             finishMenu.SetActive(true);
             EventSystem.current.SetSelectedGameObject(null);
             EventSystem.current.SetSelectedGameObject(noButtons[1]);
         }
-        else
+        else if(completedQuests.Count > 0)
         {
             exitMenu.SetActive(true);
             EventSystem.current.SetSelectedGameObject(null);
