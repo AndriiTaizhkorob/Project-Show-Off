@@ -56,8 +56,11 @@ public class LetterCounterForUI : MonoBehaviour, IDataPersistence
     {
         foreach(GameObject monster in currentMonsters)
         {
-            if (monster.GetComponent<QuestTrigger>().isHandedIn && !IsSaved(monster.name))
-                y += 1;
+            if (monster.GetComponent<QuestTrigger>())
+            {
+                if (!IsSaved(monster.name) && monster.GetComponent<QuestTrigger>().isHandedIn)
+                    y += 1;
+            }
         }
 
         lettersDelivered = x + y;

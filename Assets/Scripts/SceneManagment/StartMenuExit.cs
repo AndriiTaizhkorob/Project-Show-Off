@@ -17,6 +17,11 @@ public class StartMenuExit : MonoBehaviour, IDataPersistence
     private List<bool> completedQuests;
     private GameObject player;
 
+    void Awake()
+    {
+        exitEffect.Stop();
+    }
+
     void Start()
     {
         endingUI.SetActive(false);
@@ -27,6 +32,14 @@ public class StartMenuExit : MonoBehaviour, IDataPersistence
         player = GameObject.Find("Player");
     }
 
+    private void Update()
+    {
+        if (completedQuests.TrueForAll(AllQuestComplete) && completedQuests.Count == 7)
+        {
+            exitEffect.Play();
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         player.GetComponent<Movement>().StopSound();
@@ -35,7 +48,7 @@ public class StartMenuExit : MonoBehaviour, IDataPersistence
 
         endingUI.SetActive(true);
 
-        if (completedQuests.TrueForAll(AllQuestComplete) && completedQuests.Count > 0)
+        if (completedQuests.TrueForAll(AllQuestComplete) && completedQuests.Count == 7)
         {
             finishMenu.SetActive(true);
             EventSystem.current.SetSelectedGameObject(null);
@@ -52,11 +65,7 @@ public class StartMenuExit : MonoBehaviour, IDataPersistence
     public void LoadData(GameData data)
     {
         completedQuests = data.finishedQuests;
-
-        if (completedQuests.TrueForAll(AllQuestComplete) && completedQuests.Count > 0)
-        {
-            exitEffect.Play();
-        }
+        Debug.Log(completedQuests.Count);
     }
 
     public void SaveData(ref GameData data)

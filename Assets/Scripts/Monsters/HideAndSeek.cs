@@ -64,8 +64,11 @@ public class HideAndSeek : MonoBehaviour, IDataPersistence
         tpSpots = GetComponent<QuestTrigger>().Objects;
         questUI = GetComponent<QuestTrigger>().characterUI;
         spotLimit = GetComponent<QuestTrigger>().itemAmount;
+        currentValue = GetComponent<QuestTrigger>().currentValue;
         spotNumber = (data.currentSpot > currentValue) ? data.currentSpot - 1 : data.currentSpot;
-        StartCoroutine(DelayTP(spotNumber));
+
+        if(gameObject.activeInHierarchy)
+            StartCoroutine(DelayTP(spotNumber));
     }
 
     public void SaveData(ref GameData data)
@@ -77,6 +80,9 @@ public class HideAndSeek : MonoBehaviour, IDataPersistence
     {
         yield return new WaitForSeconds(0.01f);
         if(inProgress && currentValue == spotNumber && currentValue != spotLimit)
+        {
             transform.position = tpSpots[spot].transform.position;
+            spotNumber = spot + 1;
+        }    
     }
 }
