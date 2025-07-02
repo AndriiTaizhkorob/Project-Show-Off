@@ -14,7 +14,7 @@ public class StartMenuExit : MonoBehaviour, IDataPersistence
     [SerializeField] private GameObject credits;
     [SerializeField] private GameObject endingUI;
     [SerializeField] private GameObject[] noButtons;
-    private List<bool> completedQuests;
+    public List<bool> completedQuests;
     private GameObject player;
 
     void Awake()
@@ -34,7 +34,7 @@ public class StartMenuExit : MonoBehaviour, IDataPersistence
 
     private void Update()
     {
-        if (completedQuests.TrueForAll(AllQuestComplete) && completedQuests.Count == 7)
+        if (completedQuests.Count > 0)
         {
             exitEffect.Play();
         }
@@ -46,7 +46,7 @@ public class StartMenuExit : MonoBehaviour, IDataPersistence
         player.GetComponent<FirePower>().StopSound();
         player.GetComponent<IcePower>().StopSound();
 
-        if (completedQuests.Contains(true) && completedQuests.Count > 0)
+        if (completedQuests.TrueForAll(AllQuestComplete) && completedQuests.Count > 0)
         {
             endingUI.SetActive(true);
             finishMenu.SetActive(true);
