@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -34,10 +35,7 @@ public class StartMenuExit : MonoBehaviour, IDataPersistence
 
     private void Update()
     {
-        if (completedQuests.Count > 0)
-        {
-            exitEffect.Play();
-        }
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -46,7 +44,7 @@ public class StartMenuExit : MonoBehaviour, IDataPersistence
         player.GetComponent<FirePower>().StopSound();
         player.GetComponent<IcePower>().StopSound();
 
-        if (completedQuests.TrueForAll(AllQuestComplete) && completedQuests.Count > 0)
+        if (AllQuestsComplete() && completedQuests.Count == 7)
         {
             endingUI.SetActive(true);
             finishMenu.SetActive(true);
@@ -66,12 +64,18 @@ public class StartMenuExit : MonoBehaviour, IDataPersistence
     {
         completedQuests = data.finishedQuests;
         Debug.Log(completedQuests.Count);
+
+        if (completedQuests.Count > 0)
+        {
+            exitEffect.Play();
+        }
     }
 
     public void SaveData(ref GameData data)
     {
 
     }
+
     public void CancelExit()
     {
         exitMenu.SetActive(false);
@@ -83,9 +87,20 @@ public class StartMenuExit : MonoBehaviour, IDataPersistence
             movement.enabled = true;
     }
 
-    private static bool AllQuestComplete(bool list)
+    private bool AllQuestsComplete()
     {
-        return list = true;
+        int i = 0;
+
+        foreach (bool quest in completedQuests)
+        {
+            if(quest)
+                { i++; }
+        }
+
+        if (i >= 5)
+            return true;
+        else
+            return false;
     }
 
     public void ToStartMenu()
