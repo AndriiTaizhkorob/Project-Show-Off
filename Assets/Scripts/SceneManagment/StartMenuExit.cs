@@ -50,6 +50,7 @@ public class StartMenuExit : MonoBehaviour, IDataPersistence
             finishMenu.SetActive(true);
             EventSystem.current.SetSelectedGameObject(null);
             EventSystem.current.SetSelectedGameObject(noButtons[1]);
+            ToFinishTheGame();
         }
         else if(completedQuests.Count > 0)
         {
