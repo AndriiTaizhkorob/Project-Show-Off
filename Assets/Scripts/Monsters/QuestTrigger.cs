@@ -323,6 +323,7 @@ public class QuestTrigger : MonoBehaviour, IDataPersistence
         isCompleted = false;
         isHandedIn = true;
         player.GetComponent<QuestPanel>().ResetCurrent("<s>" + questDescription + "</s>");
+        player.GetComponent<QuestPanel>().ResetCurrent(questDescription);
     }
 
     public void LoadData(GameData data)
