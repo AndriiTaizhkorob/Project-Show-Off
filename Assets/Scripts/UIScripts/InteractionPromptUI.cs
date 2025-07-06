@@ -10,11 +10,13 @@ public class InteractionPromptUI : MonoBehaviour
 
     private Transform player;
     private DialogueRunner dialogueRunner;
+    private QuestTrigger questTrigger;
 
     void Start()
     {
         player = GameObject.FindWithTag("Player")?.transform;
         dialogueRunner = Object.FindFirstObjectByType<DialogueRunner>();
+        questTrigger = GetComponent<QuestTrigger>();
 
         if (promptUI != null)
         {
@@ -24,8 +26,16 @@ public class InteractionPromptUI : MonoBehaviour
 
     void Update()
     {
-        if (player == null || target == null || promptUI == null || dialogueRunner == null)
+        if (player == null || target == null || promptUI == null || dialogueRunner == null || questTrigger == null)
             return;
+
+        // Don't show prompt if quest is fully handed in
+        if (questTrigger.isHandedIn)
+        {
+            if (promptUI.activeSelf)
+                promptUI.SetActive(false);
+            return;
+        }
 
         float distance = Vector3.Distance(player.position, target.position);
         bool inRange = distance <= showDistance;
@@ -41,3 +51,4 @@ public class InteractionPromptUI : MonoBehaviour
         }
     }
 }
+
