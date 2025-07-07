@@ -3706,7 +3706,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1472870923290380058, guid: e53bd3c63bb6e6349837bda1a71363e2, type: 3}
   m_PrefabInstance: {fileID: 799158037}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &309073603
+--- !u!114 &309073605
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3715,7 +3715,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 309073599}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ed5a7776a7d52f4eb0654501d565a77, type: 3}
+  m_Script: {fileID: 11500000, guid: 8439f066cc563dd4f8f805a74fe22206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   promptUI: {fileID: 1916169050}
@@ -3723,7 +3723,7 @@ MonoBehaviour:
   showDistance: 3
   playerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
 --- !u!64 &309533674
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10349,7 +10349,7 @@ PrefabInstance:
       addedObject: {fileID: 309073600}
     - targetCorrespondingSourceObject: {fileID: 2250498960635059616, guid: e53bd3c63bb6e6349837bda1a71363e2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 309073603}
+      addedObject: {fileID: 309073605}
   m_SourcePrefab: {fileID: 100100000, guid: e53bd3c63bb6e6349837bda1a71363e2, type: 3}
 --- !u!1001 &811190519
 PrefabInstance:
